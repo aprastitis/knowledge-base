@@ -47,6 +47,15 @@ This knowledge base is built on these principles:
 - `/people` = distilled versions of key thinkers' frameworks
 - `sources.md` = provenance of every concept
 - `changelog.md` = KB evolution log
+- `index.md` = catalog of all pages (updated on every ingest)
+- `log.md` = chronological record of KB events
+
+## Key Source: LLM Wiki Pattern
+
+Karpathy's own description of the LLM Wiki pattern is captured in:
+- [[llm-wiki-pattern]] — detailed concept card covering the three layers, three operations (ingest/query/lint), and why this beats standard RAG
+
+The pattern is directly implemented here: `/concepts/llm-wiki-pattern.md` is the distilled version of this source.
 
 ## Related Concepts
 - [[elon-musk-5-step]] — Elon Musk's mental models are a key source for this KB
