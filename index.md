@@ -23,12 +23,14 @@
 ## People (`/people`)
 | Page | Summary | Category |
 |------|---------|----------|
+| [[elon-musk]] | Management heuristics: hands-on rule, failure philosophy, hiring, skip-levels | Leadership |
 | [[karpathy-knowledge-substrate]] | Personal KB as persistent second brain for AI agents | AI Framework |
 
 ## Raw Sources (`/raw`)
 | File | Summary | Source |
 |------|---------|--------|
 | [[llm-wiki-karpathy]] | Karpathy's original LLM Wiki gist — full raw text | GitHub Gist |
+| [[elon-musk-5-step-corporate-rebels]] | Detailed 5-step algorithm with Isaacson quotes + additional heuristics | Corporate Rebels |
 
 ---
 *Last updated: 2026-05-16*
