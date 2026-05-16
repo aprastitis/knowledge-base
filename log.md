@@ -1,5 +1,10 @@
 # Knowledge Base Log
 
+## [2026-05-16] ingest | Vibe Coder Pre-Launch Security Checklist
+**Source:** https://x.com/prajwaltomar_/status/2055294397475148123
+**Action:** Created `/engineering/vibe-coder-security-checklist.md` from tweet by @PrajwalTomar_ (5,600 likes) → added to `index.md`, `log.md`, `changelog.md`
+**Notes:** First engineering-focused card. Covers env vars, OWASP, SQL/XSS, rate limiting, secrets management. Source is a popular tweet rather than article or paper.
+
 ## [2026-05-16] ingest | LLM Wiki (Karpathy Gist)
 **Source:** https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 **Action:** Dropped raw to `/raw/llm-wiki-karpathy.md` → created `/concepts/llm-wiki-pattern.md` → updated `karpathy-knowledge-substrate.md` to reference it → updated `index.md`

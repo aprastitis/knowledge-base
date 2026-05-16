@@ -4,6 +4,7 @@ Log of every KB update — what changed, when, why.
 
 | Date | Action | Files Affected | Notes |
 |------|--------|----------------|-------|
+| 2026-05-16 | ingest: vibe-coder-security-checklist | engineering/vibe-coder-security-checklist.md, index.md, log.md, changelog.md | New card from @PrajwalTomar_ tweet — pre-launch security checklist for AI-built products |
 | 2026-05-16 | KB initialized | all | Full folder structure scaffolded, 4 seed concepts added |
 | 2026-05-16 | ingest: llm-wiki-karpathy | concepts/llm-wiki-pattern.md, people/karpathy-knowledge-substrate.md, index.md, log.md, sources.md | First raw material processed — created LLM Wiki Pattern concept card, updated Karpathy card, created index.md and log.md |
 | 2026-05-16 | ingest: elon-musk-5-step | mental-models/elon-musk-5-step.md, people/elon-musk.md, index.md, log.md, sources.md | Enriched 5-step card with Isaacson quotes; created new Elon Musk management heuristics card |

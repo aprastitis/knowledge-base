@@ -9,6 +9,7 @@
 | Page | Summary | Category |
 |------|---------|----------|
 | [[lean-engineering]] | Build minimum viable, validate, iterate; delete before optimize | Engineering Practice |
+| [[vibe-coder-security-checklist]] | Pre-launch security/privacy checklist for AI-built products — env vars, OWASP, rate limits, secrets management | Engineering Practice |
 
 ## First Principles (`/first-principles`)
 | Page | Summary | Category |
