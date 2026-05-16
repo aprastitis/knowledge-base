@@ -34,9 +34,12 @@ This checklist is for AI builders launching products with real users.
 - [ ] Input validation on all user-facing endpoints
 - [ ] File upload validation if applicable
 
-## Source
+## Related Concepts
+- [[lean-engineering]] — Both about not skipping the "boring" essentials. The checklist is essentially lean engineering applied to pre-launch: delete the security debt before it becomes a liability.
+- [[elon-musk-5-step]] — Step 2 (Delete) and step 3 (Simplify) are the core moves. The checklist enforces "don't skip the boring stuff" which aligns with Musk's philosophy that automation without deletion just makes failure faster.
+- [[physics-first-principles]] — First-principles thinking says: don't inherit security assumptions from other projects, reason from first principles about what your specific product actually needs.
 
-- Tweet: https://x.com/prajwaltomar_/status/2055294397475148123
+## Sources https://x.com/prajwaltomar_/status/2055294397475148123
 - Author: @PrajwalTomar_ (Prajwal Tomar)
 - Engagement: 5,600 likes, 540 retweets, 126 replies
 - Date: 2026-05-15
