@@ -4,6 +4,7 @@ Log of every KB update — what changed, when, why.
 
 | Date | Action | Files Affected | Notes |
 |------|--------|----------------|-------|
+| 2026-05-18 | ingest: hermes-kanban-docs | engineering/hermes-kanban.md, engineering/hermes-three-tier-memory.md, index.md, log.md, changelog.md | New card: Hermes Kanban multi-agent board — tool reference, Kanban vs delegate_task, core concepts |
 | 2026-05-17 | ingest: hermes-agent-masterclass | concepts/soul-md-identity-layer.md, concepts/self-evolving-skills.md, engineering/hermes-three-tier-memory.md, first-principles/gepa-prompt-evolution.md, index.md, log.md, changelog.md | 4 new cards from Akshay Pachaar's thread — SOUL.md, self-evolving skills, 3-tier memory, GEPA |
 
 | 2026-05-16 | KB initialized | all | Full folder structure scaffolded, 4 seed concepts added |

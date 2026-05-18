@@ -1,8 +1,11 @@
 # Knowledge Base Log
 
-## [2026-05-17] ingest | Hermes Agent Masterclass (Akshay Pachaar)
-**Source:** https://x.com/akshay_pachaar/status/2054564519280804028
-**Action:** Created 4 new cards from this thread (45K+ likes):
+## [2026-05-18] ingest | Hermes Kanban Documentation
+**Source:** https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban
+**Action:** Created `/engineering/hermes-kanban.md` — durable multi-agent task board card covering: Kanban vs delegate_task distinction, core concepts (Board/Task/Link/Comment/Workspace/Dispatcher/Tenant), the two-surface design (tools for agents, CLI for humans), full kanban_* tool reference, recommended handoff metadata shape, workload patterns Kanban covers that delegate_task can't
+→ Added to `index.md` → added backlink in `hermes-three-tier-memory.md` → updated `log.md`, `changelog.md`
+**Notes:** Major agent collaboration pattern. Key insight: Kanban is peer coordination (any profile reads/writes any task) vs delegate_task's hierarchical fork-join. Useful for multi-agent workflows Andreas might build with Hermes.
+
   - `/concepts/soul-md-identity-layer.md` — SOUL.md as identity layer
   - `/concepts/self-evolving-skills.md` — agent-authored playbooks + Curator
   - `/engineering/hermes-three-tier-memory.md` — three memory tier architecture
