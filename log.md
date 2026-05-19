@@ -6,8 +6,7 @@
 → Added to `index.md` → added backlink in `lean-engineering.md` → updated `log.md`, `changelog.md`
 **Notes:** Major engineering methodology card. Key insight: SDD is "first-principles applied to the spec-implementation gap." The templates (with [NEEDS CLARIFICATION] markers, WHAT-not-HOW constraints, phase gates) are the key discipline mechanism. Supports 30+ AI coding agents. Install via `uv tool install specify-cli`.
 **Source:** https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban
-**Action:** Created `/engineering/hermes-kanban.md` — durable multi-agent task board card covering: Kanban vs delegate_task distinction, core concepts (Board/Task/Link/Comment/Workspace/Dispatcher/Tenant), the two-surface design (tools for agents, CLI for humans), full kanban_* tool reference, recommended handoff metadata shape, workload patterns Kanban covers that delegate_task can't
-→ Added to `index.md` → added backlink in `hermes-three-tier-memory.md` → updated `log.md`, `changelog.md`
+**Action:** Updated `/engineering/hermes-kanban.md` — added: boards management CLI, board resolution order, dashboard switcher, quick start human workflow, gateway dispatcher config, idempotent create for automation/webhooks, bulk CLI verbs → committed ec1b183
 **Notes:** Major agent collaboration pattern. Key insight: Kanban is peer coordination (any profile reads/writes any task) vs delegate_task's hierarchical fork-join. Useful for multi-agent workflows Andreas might build with Hermes.
 
   - `/concepts/soul-md-identity-layer.md` — SOUL.md as identity layer
