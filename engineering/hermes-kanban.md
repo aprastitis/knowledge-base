@@ -120,6 +120,119 @@ Any profile that should work kanban tasks must load the `kanban-worker` skill (b
 - Call `kanban_heartbeat(note="...")` every few minutes during long operations
 - Complete with `kanban_complete(summary="...", metadata={...})`, or `kanban_block(reason="...")` if stuck
 
+### Boards (Multi-Project)
+
+Boards separate unrelated streams of work into isolated queues. New installs start with one board called `default` (DB at `~/.hermes/kanban.db` for back-compat). Single-project users never need to think about boards.
+
+**Per-board isolation is absolute:**
+- Separate SQLite DB per board (`~/.hermes/kanban/boards/<slug>/kanban.db`)
+- Separate `workspaces/` and `logs/` directories
+- Workers only see their board's tasks (dispatcher sets `HERMES_KANBAN_BOARD` env var)
+- No cross-board task linking (use free-text mentions instead)
+
+**Managing boards from CLI:**
+```bash
+# List all boards
+hermes kanban boards list
+
+# Create a new board
+hermes kanban boards create atm10-server \
+ --name "ATM10 Server" \
+ --description "Minecraft modded server ops" \
+ --icon 🎮 \
+ --switch  # optional: make it the active board
+
+# Operate on a specific board without switching
+hermes kanban --board atm10-server list
+hermes kanban --board atm10-server create "Restart ATM server" --assignee ops
+
+# Switch current board
+hermes kanban boards switch atm10-server
+hermes kanban boards show  # who's active right now?
+
+# Rename display name (slug is immutable)
+hermes kanban boards rename atm10-server "ATM10 (Prod)"
+
+# Archive (soft delete — moves to boards/_archived/<slug>-<ts>/)
+hermes kanban boards rm atm10-server
+
+# Hard delete — no recovery
+hermes kanban boards rm atm10-server --delete
+```
+
+**Board resolution order** (highest → lowest):
+1. Explicit `--board` on CLI call
+2. `HERMES_KANBAN_BOARD` env var (set by dispatcher for workers)
+3. `~/.hermes/kanban/current` (persisted by `hermes kanban boards switch`)
+4. `default`
+
+**Slug rules:** lowercase alphanumerics + hyphens + underscores, 1-64 chars, must start with alphanumeric. Uppercase auto-downcased; slashes/spaces/dots/.. rejected at CLI layer (path-traversal protection).
+
+**Managing boards from the dashboard:**
+- `hermes dashboard` → Kanban tab → board switcher at top (appears when >1 board exists)
+- Board dropdown persisted to browser localStorage
+- + New board modal (slug, display name, description, icon, auto-switch option)
+- Archive only on non-default boards; moves dir to `boards/_archived/`
+- All dashboard API endpoints accept `?board=<slug>`
+
+### Quick Start (Human Workflow)
+
+```bash
+# 1. Initialize the board
+hermes kanban init
+
+# 2. Start the gateway (hosts the embedded dispatcher)
+hermes gateway start
+
+# 3. Create a task
+hermes kanban create "research AI funding landscape" --assignee researcher
+
+# 4. Watch activity live
+hermes kanban watch
+
+# 5. See the board
+hermes kanban list
+hermes kanban stats
+```
+
+Once a task is assigned, the dispatcher spawns the profile as a worker — that worker calls `kanban_show()` directly, never shells out to `hermes kanban`.
+
+### Gateway-Embedded Dispatcher (Default)
+
+The dispatcher runs inside the gateway process. Nothing to install separately — if the gateway is up, ready tasks get picked up on the next tick (60s default).
+
+```yaml
+# config.yaml
+kanban:
+  dispatch_in_gateway: true   # default
+  dispatch_interval_seconds: 60  # default
+```
+
+Override at runtime: `HERMES_KANBAN_DISPATCH_IN_GATEWAY=0` for debugging.
+
+The standalone `hermes kanban daemon` is deprecated. Running both a gateway-embedded dispatcher AND a standalone daemon against the same `kanban.db` causes claim races and is not supported.
+
+### Idempotent Create (Automation / Webhooks)
+
+```bash
+hermes kanban create "nightly ops review" \
+ --assignee ops \
+ --idempotency-key "nightly-ops-$(date -u +%Y-%m-%d)" \
+ --json
+```
+
+First call creates the task; subsequent calls with the same key return the existing task id instead of duplicating.
+
+### Bulk CLI Verbs
+
+All lifecycle verbs accept multiple task ids:
+```bash
+hermes kanban complete t_abc t_def t_hij --result "batch wrap"
+hermes kanban archive t_abc t_def t_hij
+hermes kanban unblock t_abc t_def
+hermes kanban block t_abc "need input" --ids t_def t_hij
+```
+
 ## Related Concepts
 
 - [[hermes-three-tier-memory]] — Kanban persists state in SQLite; Hermes also has a three-tier memory architecture
