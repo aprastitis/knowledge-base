@@ -10,6 +10,7 @@
 ## Engineering (`/engineering`)
 | Page | Summary | Category |
 |------|---------|----------|
+| [[spec-driven-development]] | Specifications as executable source of truth; code serves specs, not the other way around | Engineering Practice |
 | [[lean-engineering]] | Build minimum viable, validate, iterate; delete before optimize | Engineering Practice |
 | [[vibe-coder-security-checklist]] | Pre-launch security/privacy checklist for AI-built products — env vars, OWASP, rate limits, secrets management | Engineering Practice |
 | [[hermes-three-tier-memory]] | Three distinct memory layers: frozen micro-files (Tier 1), SQLite FTS (Tier 2), external providers (Tier 3) | Agent Architecture |
@@ -39,4 +40,4 @@
 | [[elon-musk-5-step-corporate-rebels]] | Detailed 5-step algorithm with Isaacson quotes + additional heuristics | Corporate Rebels |
 
 ---
-*Last updated: 2026-05-17*
+*Last updated: 2026-05-19*

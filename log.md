@@ -1,6 +1,10 @@
 # Knowledge Base Log
 
-## [2026-05-18] ingest | Hermes Kanban Documentation
+## [2026-05-19] ingest | Spec-Driven Development (spec-kit / GitHub)
+**Source:** https://github.com/github/spec-kit
+**Action:** Created `/engineering/spec-driven-development.md` — comprehensive card covering: SDD core philosophy (specs generate code, not guide it), the 5-step workflow (constitution → specify → plan → tasks → implement), key commands, development phases, template-as-quality-constraint pattern, why it matters now (AI capabilities threshold, complexity growth, pace of change)
+→ Added to `index.md` → added backlink in `lean-engineering.md` → updated `log.md`, `changelog.md`
+**Notes:** Major engineering methodology card. Key insight: SDD is "first-principles applied to the spec-implementation gap." The templates (with [NEEDS CLARIFICATION] markers, WHAT-not-HOW constraints, phase gates) are the key discipline mechanism. Supports 30+ AI coding agents. Install via `uv tool install specify-cli`.
 **Source:** https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban
 **Action:** Created `/engineering/hermes-kanban.md` — durable multi-agent task board card covering: Kanban vs delegate_task distinction, core concepts (Board/Task/Link/Comment/Workspace/Dispatcher/Tenant), the two-surface design (tools for agents, CLI for humans), full kanban_* tool reference, recommended handoff metadata shape, workload patterns Kanban covers that delegate_task can't
 → Added to `index.md` → added backlink in `hermes-three-tier-memory.md` → updated `log.md`, `changelog.md`
