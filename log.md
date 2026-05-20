@@ -18,8 +18,13 @@
 
 ## [2026-05-20] ingest | Agentic Coding Principles & Practices
 **Source:** https://x.com/0xdepressionn/status/2055999112470839383
-**Action:** Created `/engineering/agentic-coding-principles.md` — 6 principles + 28 practices for production-quality AI-assisted development → added to `index.md` → added backilinks in `lean-engineering.md` and `spec-driven-development.md` → updated `log.md`, `changelog.md`
-**Notes:** Key concept: "meteor over fireball" — move beyond vibe coding (quick demos) to production-grade human-AI collaboration. All tool-specific references (CLAUDE.md, .cursor/rules, etc.) adapted generically. Natural fit with Hermes's Kanban board for multi-agent patterns. Source is 0xdepressionn's popular GitHub Pages guide.
+**Action:** Created `/engineering/agentic-coding-principles.md` — 6 principles + 28 practices for production-quality AI-assisted development
+**Notes:** Key concept: "meteor over fireball" — move beyond vibe coding (quick demos) to production-grade human-AI collaboration. All tool-specific references (CLAUDE.md, .cursor/rules, etc.) adapted generically. Natural fit with Hermes's Kanban board for multi-agent patterns.
+
+## [2026-05-20] ingest | Personal Operating System (Obsidian)
+**Source:** https://x.com/cyrilxbt/status/2056924424838815824
+**Action:** Created `/concepts/personal-operating-system.md` — 3-layer architecture (storage/intelligence/automation) + 8-folder vault + CLAUDE.md template + 5 workflows. Backlinks added to soul-md-identity-layer.md and self-evolving-skills.md. Updated `index.md`, `log.md`, `changelog.md`
+**Notes:** Natural fit with our KB: CLAUDE.md pattern = SOUL.md, 3-layer architecture = Hermes 3-tier memory, 8-folder vault = our KB structure, queue processor = our Kanban. Key insight: systems designed to survive "bad days" — when maintainers are overwhelmed but the system keeps running. Restored bird-twitter credentials to `/home/cerebro/.openclaw/workspace/skills/bird-twitter/.env` and added MEMORY.md note: **always use bird read for X posts, web_fetch is unreliable on X**.
 
 ## [2026-05-16] ingest | Vibe Coder Pre-Launch Security Checklist
 **Source:** https://x.com/prajwaltomar_/status/2055294397475148123

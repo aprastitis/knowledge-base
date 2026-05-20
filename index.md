@@ -6,6 +6,7 @@
 | [[llm-wiki-pattern]] | LLM-maintained persistent wiki vs RAG; three layers, three ops (ingest/query/lint) | Knowledge Management |
 | [[soul-md-identity-layer]] | Hand-authored static identity file — slot #1 in system prompt; the fixed frame for memory and skills | Agent Design |
 | [[self-evolving-skills]] | Agent-authored procedural playbooks with background curation; the agent writes its own SKILL.md files | Agent Self-Improvement |
+| [[personal-operating-system]] | Obsidian-based personal OS: 3-layer architecture (storage/intelligence/automation) designed to survive bad days and operate autonomously | Knowledge Management |
 
 ## Engineering (`/engineering`)
 | Page | Summary | Category |

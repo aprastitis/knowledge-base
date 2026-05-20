@@ -46,6 +46,7 @@ The agent's identity is **hand-authored and fixed**, not learned. This separates
 ## Related Concepts
 - [[hermes-three-tier-memory]] — Memory sits below SOUL.md in the system prompt; the three tiers determine what facts are always available vs searchable
 - [[self-evolving-skills]] — Skills are created and curated by the agent, but always executed through the lens of SOUL.md's identity
+- [[personal-operating-system]] — CyrilXBT's Obsidian-based OS uses the same CLAUDE.md pattern as SOUL.md — a single identity file that governs every workflow and AI interaction
 
 ## Source
 - https://x.com/akshay_pachaar/status/2054564519280804028 (Hermes Agent Masterclass by Akshay 🚀)

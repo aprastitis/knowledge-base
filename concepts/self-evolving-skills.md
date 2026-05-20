@@ -70,7 +70,7 @@ The in-agent learning loop has a known bias: **the agent tends toward self-congr
 - [[soul-md-identity-layer]] — Skills are always executed through the lens of SOUL.md's identity frame
 - [[hermes-three-tier-memory]] — Skills sit on top of memory; memory stores facts, skills store procedures
 - [[gepa-prompt-evolution]] — GEPA validates skills offline to address the self-congratulation weakness in the self-improvement loop
-- [[hermes-three-tier-memory]] — Skills sit on top of the memory system; skills are procedures, memory is facts
+- [[personal-operating-system]] — CyrilXBT's CLAUDE.md-driven workflows are a human-scale parallel: the agent follows self-authored procedural playbooks that run autonomously
 
 ## Source
 - https://x.com/akshay_pachaar/status/2054564519280804028 (Hermes Agent Masterclass by Akshay 🚀)
