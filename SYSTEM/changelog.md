@@ -4,7 +4,7 @@ Log of every KB update — what changed, when, why.
 
 | Date | Action | Files Affected | Notes |
 |------|--------|----------------|-------|
-| 2026-05-20 | ingest: personal-operating-system | concepts/personal-operating-system.md, concepts/soul-md-identity-layer.md, concepts/self-evolving-skills.md, index.md, log.md, changelog.md | New card: Obsidian Personal OS — 3-layer architecture (storage/intelligence/automation) + CLAUDE.md pattern + 5 workflows; backlinks from soul-md-identity-layer and self-evolving-skills |
+| 2026-05-20 | refactor: SYSTEM/ folder + cleanup | SYSTEM/README.md, SYSTEM/operations.md, SYSTEM/log.md, SYSTEM/changelog.md, SYSTEM/sources.md, index.md, raw/llm-wiki-karpathy.md, raw/elon-musk-5-step-corporate-rebels.md, log.md, changelog.md | Created SYSTEM/ folder (README + operations + moved log/changelog/sources); added wikilinks to raw cards; deleted redundant raw/spec-kit-github.md |
 | 2026-05-20 | ingest: agentic-coding-principles | engineering/agentic-coding-principles.md, index.md, lean-engineering.md, spec-driven-development.md, log.md, changelog.md | New card: Agentic Coding — 6 principles + 28 practices for production-quality AI collaboration; "meteor over fireball" framework |
 | 2026-05-19 | update: hermes-kanban-docs | engineering/hermes-kanban.md, log.md, changelog.md | Extended: boards management CLI, quick start, gateway dispatcher, idempotent create, bulk verbs |
 | 2026-05-19 | ingest: spec-kit | engineering/spec-driven-development.md, index.md, log.md, changelog.md | New card: Spec-Driven Development (SDD) — specifications as executable source of truth; code serves specs |

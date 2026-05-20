@@ -1,5 +1,15 @@
 # Knowledge Base Log
 
+## [2026-05-20] refactor | SYSTEM/ folder created + KB cleanup
+**Action:** Major KB infrastructure refactor — see SYSTEM/operations.md for full decision log
+- Created `SYSTEM/` folder with README (folder rules), operations.md (decision log)
+- Moved `log.md` and `changelog.md` to SYSTEM/
+- Moved `sources.md` to SYSTEM/sources.md
+- Deleted `raw/spec-kit-github.md` (redundant with existing spec-driven-development card)
+- Added wikilinks to raw cards: llm-wiki-karpathy.md → llm-wiki-pattern, personal-operating-system; elon-musk-5-step-corporate-rebels.md → elon-musk-5-step, people/elon-musk, vibe-coder-security-checklist
+- Updated index.md (added SYSTEM/sources, updated paths)
+**Notes:** Based on insights from personal-operating-system.md (CyrilXBT's Obsidian OS). KB now has explicit folder rules, operations log, and archive-never-delete policy.
+
 ## [2026-05-19] ingest | Spec-Driven Development (spec-kit / GitHub)
 **Source:** https://github.com/github/spec-kit
 **Action:** Created `/engineering/spec-driven-development.md` — comprehensive card covering: SDD core philosophy (specs generate code, not guide it), the 5-step workflow (constitution → specify → plan → tasks → implement), key commands, development phases, template-as-quality-constraint pattern, why it matters now (AI capabilities threshold, complexity growth, pace of change)

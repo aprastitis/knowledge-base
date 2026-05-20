@@ -7,6 +7,7 @@
 | [[SYSTEM/log]] | Running log of every KB change |
 | [[SYSTEM/changelog]] | Auto-generated change summary |
 | [[SYSTEM/operations]] | My decision log — why I placed things where |
+| [[SYSTEM/sources]] | Index of all material added to the KB with concept tags and source URLs |
 
 ## Concepts (`/concepts`)
 | Page | Summary | Category |
