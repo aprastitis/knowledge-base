@@ -1,5 +1,13 @@
 # Knowledge Base Index
 
+## System (`/SYSTEM`)
+| File | Purpose |
+|------|---------|
+| [[SYSTEM/README]] | Folder structure, rules, and KB documentation |
+| [[SYSTEM/log]] | Running log of every KB change |
+| [[SYSTEM/changelog]] | Auto-generated change summary |
+| [[SYSTEM/operations]] | My decision log — why I placed things where |
+
 ## Concepts (`/concepts`)
 | Page | Summary | Category |
 |------|---------|----------|
@@ -42,4 +50,4 @@
 | [[elon-musk-5-step-corporate-rebels]] | Detailed 5-step algorithm with Isaacson quotes + additional heuristics | Corporate Rebels |
 
 ---
-*Last updated: 2026-05-19*
+*Last updated: 2026-05-20*
