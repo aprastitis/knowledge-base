@@ -16,6 +16,11 @@
   → Added wikilinks across related cards → updated `index.md`, `log.md`, `changelog.md`
 **Notes:** Strong material — self-evolving skills and GEPA directly relevant to agent design patterns. Three-tier memory is clean architecture. Source is a comprehensive X thread by @akshay_pachaar.
 
+## [2026-05-20] ingest | Agentic Coding Principles & Practices
+**Source:** https://x.com/0xdepressionn/status/2055999112470839383
+**Action:** Created `/engineering/agentic-coding-principles.md` — 6 principles + 28 practices for production-quality AI-assisted development → added to `index.md` → added backilinks in `lean-engineering.md` and `spec-driven-development.md` → updated `log.md`, `changelog.md`
+**Notes:** Key concept: "meteor over fireball" — move beyond vibe coding (quick demos) to production-grade human-AI collaboration. All tool-specific references (CLAUDE.md, .cursor/rules, etc.) adapted generically. Natural fit with Hermes's Kanban board for multi-agent patterns. Source is 0xdepressionn's popular GitHub Pages guide.
+
 ## [2026-05-16] ingest | Vibe Coder Pre-Launch Security Checklist
 **Source:** https://x.com/prajwaltomar_/status/2055294397475148123
 **Action:** Created `/engineering/vibe-coder-security-checklist.md` from tweet by @PrajwalTomar_ (5,600 likes) → added to `index.md`, `log.md`, `changelog.md`

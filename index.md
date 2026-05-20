@@ -13,6 +13,7 @@
 | [[spec-driven-development]] | Specifications as executable source of truth; code serves specs, not the other way around | Engineering Practice |
 | [[lean-engineering]] | Build minimum viable, validate, iterate; delete before optimize | Engineering Practice |
 | [[vibe-coder-security-checklist]] | Pre-launch security/privacy checklist for AI-built products — env vars, OWASP, rate limits, secrets management | Engineering Practice |
+| [[agentic-coding-principles]] | Six principles and 28 practices for moving beyond vibe coding to production-quality AI-assisted development | Engineering Practice |
 | [[hermes-three-tier-memory]] | Three distinct memory layers: frozen micro-files (Tier 1), SQLite FTS (Tier 2), external providers (Tier 3) | Agent Architecture |
 | [[hermes-kanban]] | Durable SQLite-backed multi-agent task board with kanban_* tools; peer coordination vs delegate_task's hierarchical model | Agent Collaboration |
 

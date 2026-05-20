@@ -91,3 +91,4 @@ Three converging trends make SDD necessary:
 - [[llm-wiki-pattern]] — Documentation-as-code patterns
 - [[lean-engineering]] — Lean principles applied to engineering; SDD is the extreme version — minimum spec, validate, regenerate
 - [[first-principles]] — Reasoning from fundamental truths; SDD is first-principles applied to the spec-implementation gap
+- [[agentic-coding-principles]] — Agentic coding provides the human accountability and verification layer around AI-generated code; complements SDD's spec-first approach with human-in-the-loop discipline
