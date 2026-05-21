@@ -20,10 +20,12 @@
 ## Engineering (`/engineering`)
 | Page | Summary | Category |
 |------|---------|----------|
-| [[spec-driven-development]] | Specifications as executable source of truth; code serves specs, not the other way around | Engineering Practice |
+| [[agentic-coding-tools]] | Shift from copilot to autonomous agent; capability timeline; real production numbers (Shopify, Mercado Libre, Spotify); new features | Engineering Practice |
 | [[lean-engineering]] | Build minimum viable, validate, iterate; delete before optimize | Engineering Practice |
 | [[vibe-coder-security-checklist]] | Pre-launch security/privacy checklist for AI-built products — env vars, OWASP, rate limits, secrets management | Engineering Practice |
 | [[agentic-coding-principles]] | Six principles and 28 practices for moving beyond vibe coding to production-quality AI-assisted development | Engineering Practice |
+| [[advisor-pattern-for-ai-agents]] | Smaller model as executor + larger model as advisor; beats single large model; cost-effective agentic workflows | Engineering Practice |
+| [[scaffolding-for-ai-agents]] | Tooling around the model determines outcomes more than the model itself; scaffolding is the ceiling, model is the floor | Engineering Practice |
 | [[hermes-three-tier-memory]] | Three distinct memory layers: frozen micro-files (Tier 1), SQLite FTS (Tier 2), external providers (Tier 3) | Agent Architecture |
 | [[hermes-kanban]] | Durable SQLite-backed multi-agent task board with kanban_* tools; peer coordination vs delegate_task's hierarchical model | Agent Collaboration |
 
@@ -51,4 +53,4 @@
 | [[elon-musk-5-step-corporate-rebels]] | Detailed 5-step algorithm with Isaacson quotes + additional heuristics | Corporate Rebels |
 
 ---
-*Last updated: 2026-05-20*
+*Last updated: 2026-05-21*

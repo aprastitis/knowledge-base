@@ -54,3 +54,11 @@
 ## [2026-05-16] init | KB Scaffolded
 **Action:** Full folder structure created, 4 seed concept cards added, `sources.md` and `changelog.md` initialized
 **Notes:** Initial commit pushed to GitHub.
+## [2026-05-21] anthropic-claude-code-talk | 3 cards added
+**Action:** Processed Anthropic conference talk (YouTube: 6amLO7I9xdg) — extracted builder-relevant insights and created 3 engineering cards
+**Cards added:**
+- `engineering/agentic-coding-tools.md` — Agentic vs copilot; capability timeline; Shopify/Mercado Libre/Spotify production numbers; new features (Code Review Agent, Mobile, Claude Security)
+- `engineering/advisor-pattern-for-ai-agents.md` — Executor (small model) + advisor (large model) pattern; Yv Legal example; when to use/not use; implementation notes
+- `engineering/scaffolding-for-ai-agents.md` — Tooling determines outcomes more than model; context management, tool integration, security scanning; scaffolding as ceiling vs model as floor
+**Source:** Anthropic conference talk on Claude Code (YouTube video transcription via Whisper large-v3 CPU)
+**Notes:** Transcript also available in `skills/whisper-transcribe/transcripts/6amLO7I9xdg_plain.txt` for reference.
