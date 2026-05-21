@@ -236,9 +236,7 @@ hermes kanban block t_abc "need input" --ids t_def t_hij
 ## Related Concepts
 
 - [[hermes-three-tier-memory]] — Kanban persists state in SQLite; Hermes also has a three-tier memory architecture
-- [[delegate_task]] — The alternative primitive; function call vs work queue
-- [[kanban-worker-skill]] — The bundled skill that teaches agents how to interact with the board
-- [[kanban-orchestrator-skill]] — Skill for orchestrator profiles that fan out work to child tasks
+- `delegate_task`, `kanban-worker-skill`, `kanban-orchestrator-skill` — These are Hermes agent internals, not KB cards; see the [Hermes docs](https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban) for details
 
 ## Source
 

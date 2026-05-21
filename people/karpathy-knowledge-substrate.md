@@ -27,7 +27,7 @@ The KB makes you a more effective collaborator with AI because you don't have to
 ### Agent-Readable
 - Every concept card should be self-contained: context, summary, application
 - No assumed prior knowledge (write as if the AI just woke up with no memory)
-- Explicit links between related concepts (wiki-style `[[concept-name]]`)
+- Explicit links between related concepts (wiki-style wikilinks, e.g. `[[llm-wiki-pattern]]`)
 
 ### Quality Over Quantity
 - Raw material goes in /raw (untouched)
