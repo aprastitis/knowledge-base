@@ -26,6 +26,10 @@
 | [[agentic-coding-principles]] | Six principles and 28 practices for moving beyond vibe coding to production-quality AI-assisted development | Engineering Practice |
 | [[advisor-pattern-for-ai-agents]] | Smaller model as executor + larger model as advisor; beats single large model; cost-effective agentic workflows | Engineering Practice |
 | [[scaffolding-for-ai-agents]] | Tooling around the model determines outcomes more than the model itself; scaffolding is the ceiling, model is the floor | Engineering Practice |
+| [[progressive-disclosure-pattern]] | Three-level skill architecture: YAML frontmatter → SKILL.md body → linked files. Core pattern for building skills that trigger reliably | Engineering Practice |
+| [[skill-trigger-design]] | How to write the YAML description field (what + when), trigger phrase patterns, 90% trigger rate metric, fixing under/over-triggering | Engineering Practice |
+| [[ask-mode-before-code-mode]] | Two-step pattern: plan first in Ask mode, then execute in Code mode. Prevents expensive wrong turns on complex tasks | Engineering Practice |
+| [[agents-md-for-persistent-context]] | Keep a project-level context file with naming conventions, business logic, known quirks. Reduces start-from-zero tax on every session | Engineering Practice |
 | [[hermes-three-tier-memory]] | Three distinct memory layers: frozen micro-files (Tier 1), SQLite FTS (Tier 2), external providers (Tier 3) | Agent Architecture |
 | [[hermes-kanban]] | Durable SQLite-backed multi-agent task board with kanban_* tools; peer coordination vs delegate_task's hierarchical model | Agent Collaboration |
 
@@ -51,6 +55,8 @@
 |------|---------|--------|
 | [[llm-wiki-karpathy]] | Karpathy's original LLM Wiki gist — full raw text | GitHub Gist |
 | [[elon-musk-5-step-corporate-rebels]] | Detailed 5-step algorithm with Isaacson quotes + additional heuristics | Corporate Rebels |
+| [[anthropic-building-skills-guide]] | "The Complete Guide to Building Skills for Claude" — full PDF with skill architecture, triggering, testing patterns | Anthropic PDF |
+| [[openai-how-openai-uses-codex]] | "How OpenAI Uses Codex" — 7 use cases, best practices, engineering anecdotes from OpenAI teams | OpenAI PDF |
 
 ---
 *Last updated: 2026-05-21*

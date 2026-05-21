@@ -62,3 +62,16 @@
 - `engineering/scaffolding-for-ai-agents.md` — Tooling determines outcomes more than model; context management, tool integration, security scanning; scaffolding as ceiling vs model as floor
 **Source:** Anthropic conference talk on Claude Code (YouTube video transcription via Whisper large-v3 CPU)
 **Notes:** Transcript also available in `skills/whisper-transcribe/transcripts/6amLO7I9xdg_plain.txt` for reference.
+
+## [2026-05-21] skill-building-docs | 4 cards + 2 raw PDFs
+**Action:** Processed two PDFs — Anthropic "Complete Guide to Building Skills for Claude" and OpenAI "How OpenAI Uses Codex". Created 4 engineering cards + stored both PDFs as raw sources.
+**Cards added:**
+- `engineering/progressive-disclosure-pattern.md` — Three-level skill architecture (frontmatter → body → linked files). Core architectural pattern.
+- `engineering/skill-trigger-design.md` — How to write YAML description (what + when), 90% trigger rate metric, fixing under/over-triggering
+- `engineering/ask-mode-before-code-mode.md` — Two-step pattern from OpenAI: plan in Ask mode, execute in Code mode
+- `engineering/agents-md-for-persistent-context.md` — Project-level context file with conventions, business logic, known quirks
+**Raw sources added:**
+- `raw/anthropic-building-skills-guide.pdf` — Full PDF
+- `raw/openai-how-openai-uses-codex.pdf` — Full PDF
+**Source:** Andreas shared two PDF URLs from Anthropic and OpenAI
+**Notes:** Andreas confirmed we should store raw material alongside synthesized cards.
