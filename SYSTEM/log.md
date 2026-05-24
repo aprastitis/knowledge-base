@@ -75,3 +75,8 @@
 - `raw/openai-how-openai-uses-codex.pdf` — Full PDF
 **Source:** Andreas shared two PDF URLs from Anthropic and OpenAI
 **Notes:** Andreas confirmed we should store raw material alongside synthesized cards.
+
+## [2026-05-24] ingest | Evals / AI Evaluation Frameworks
+**Source:** Web search (Futurice, Arize AI, Evidently AI, Shakudo, Freeplay)
+**Action:** Created `/engineering/evals-ai-evaluation-frameworks.md` from web research. Covers 5 eval types (exact match, semantic similarity, LLM-as-judge, retrieval metrics, task-specific), key metrics (Pass@K, MRR, NDCG, BERTScore), framework references (Ragas, DeepEval, lm-evaluation-harness, AlpacaEval), eval vs benchmark distinction, getting started steps. Added wikilinks from 4 related engineering cards.
+**Notes:** Major gap filled — zero prior KB coverage on how to test AI outputs. Placed in engineering/ because evals are an operational engineering practice. Could expand later: per-eval-type deep dives, RAG-specific evals, code generation evals. Anthropic's building skills guide has testing patterns that should cross-reference this card.

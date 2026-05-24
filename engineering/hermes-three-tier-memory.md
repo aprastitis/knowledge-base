@@ -38,6 +38,7 @@ This is the core tradeoff design: Tier 1 is expensive to keep full (token cost) 
 - [[soul-md-identity-layer]] — Memory is the "moving part inside the fixed frame" of SOUL.md
 - [[self-evolving-skills]] — Skills are procedural memory; memory is factual memory. Different tiers for different types of knowledge
 - [[llm-wiki-pattern]] — Similar three-layer idea (ingest/query/lint) but for wiki vs agent memory
+- [[evals-ai-evaluation-frameworks]] — Eval design depends on what's being tested at each memory tier
 - [[hermes-kanban]] — Kanban uses SQLite for durable task state; different from the conversational memory tiers but shares the multi-layer persistence philosophy
 
 ## Source

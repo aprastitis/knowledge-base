@@ -51,5 +51,6 @@ When I'm building agent workflows, I should consider: which parts of this task a
 
 ## See Also
 
+- [[evals-ai-evaluation-frameworks]] — Evals inform model selection; how to measure whether routing decisions are right
 - [[agentic-coding-tools]] — How agentic coding tools work and when the advisor pattern applies
 - [[scaffolding-for-ai-agents]] — How the tooling around the model determines outcomes

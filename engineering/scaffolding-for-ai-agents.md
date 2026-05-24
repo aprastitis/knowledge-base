@@ -61,4 +61,5 @@ The Anthropic talk made this explicit: as models get more capable, the scaffoldi
 
 - [[agentic-coding-tools]] — How agentic coding tools use scaffolding
 - [[advisor-pattern-for-ai-agents]] — How advisor pattern acts as a form of scaffolding
+- [[evals-ai-evaluation-frameworks]] — Evals measure whether scaffolding actually works; the feedback loop for prompt and tool changes
 - [[vibe-coder-security-checklist]] — Security scaffolding for AI-assisted development

@@ -48,10 +48,10 @@ Outcome: Pushed to GitHub (knowledge-base & workspace)
 - Updated `memory/kb-state.md` with review findings
 - All wikilinks validated ✅ (no broken links found)
 **Gaps identified:**
-- No "evaluations/evals" card — critical for reliable AI systems
-- No "context window management" card — practical skill gap
-- No "tool use/tool definition" card — referenced but not defined
-- No "model routing" card — related to advisor pattern but not standalone
-- No "observability/telemetry" card — production debugging
-- No "chain-of-thought" card — referenced but not defined
+- No "evaluations/evals" card — **FILLED ✅** (see `engineering/evals-ai-evaluation-frameworks.md`)
+- No "context window management" card — still pending
+- No "tool use/tool definition" card — still pending
+- No "model routing" card — still pending
+- No "observability/telemetry" card — still pending
+- No "chain-of-thought" card — still pending
 **Outcome:** Pushed to GitHub.
