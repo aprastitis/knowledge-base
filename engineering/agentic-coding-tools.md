@@ -60,3 +60,4 @@ The gap between what these tools can do and what most teams use them for is mass
 - [[agentic-coding-principles]] — Six principles for moving beyond vibe coding to production-quality AI-assisted development
 - [[advisor-pattern-for-ai-agents]] — Using smaller models as executors with larger models as advisor
 - [[scaffolding-for-ai-agents]] — How the tooling around the model determines outcomes
+- [[raw/openai-how-openai-uses-codex]] — OpenAI's internal guide to Codex use cases, best practices, and engineering anecdotes

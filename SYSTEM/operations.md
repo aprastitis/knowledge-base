@@ -38,3 +38,20 @@ Outcome: Pushed to GitHub (knowledge-base & workspace)
 - `agents-md-for-persistent-context` — from OpenAI doc; already something I do partially but this clarifies the pattern
 - Stored both PDFs in `raw/` — Andreas confirmed raw material should be kept alongside synthesized cards
 **Outcome:** All pushed to GitHub.
+
+## [2026-05-24] Weekly KB Review — Maintenance + Gap Analysis
+**Review scope:** Queue check, wikilink validation, orphaned cards, gap analysis, state update
+**Decisions:**
+- `hermes-saas-audit.md` → archived (`.archive/`) — stale audit doc from 2025-05-18, not a KB card
+- Added wikilink to `raw/anthropic-building-skills-guide.md` from `engineering/skill-trigger-design.md`
+- Added wikilink to `raw/openai-how-openai-uses-codex.md` from `engineering/agentic-coding-tools.md`
+- Updated `memory/kb-state.md` with review findings
+- All wikilinks validated ✅ (no broken links found)
+**Gaps identified:**
+- No "evaluations/evals" card — critical for reliable AI systems
+- No "context window management" card — practical skill gap
+- No "tool use/tool definition" card — referenced but not defined
+- No "model routing" card — related to advisor pattern but not standalone
+- No "observability/telemetry" card — production debugging
+- No "chain-of-thought" card — referenced but not defined
+**Outcome:** Pushed to GitHub.

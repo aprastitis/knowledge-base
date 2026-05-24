@@ -83,3 +83,4 @@ When I build a skill, the description is the first thing I should get right. Wri
 
 - [[progressive-disclosure-pattern]] — The three-level system that makes triggering work
 - [[scaffolding-for-ai-agents]] — How tooling determines whether skills actually execute effectively
+- [[raw/anthropic-building-skills-guide]] — Anthropic's complete guide to building skills — the authoritative reference for trigger design, testing patterns, and skill architecture
