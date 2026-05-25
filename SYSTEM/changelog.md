@@ -1,3 +1,11 @@
+---
+type: system
+status: active
+date: 2026-05-20
+purpose: Auto-generated change summary for index. Mirrors recent entries from log.md.
+tags: [kb-infrastructure]
+---
+
 # Knowledge Base Changelog
 
 Log of every KB update — what changed, when, why.

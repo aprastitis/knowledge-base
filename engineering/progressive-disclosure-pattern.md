@@ -1,3 +1,13 @@
+---
+type: engineering
+status: active
+date: 2026-05-20
+summary: Three-level skill architecture: YAML frontmatter → SKILL.md body → linked files. Core pattern for triggering reliability.
+tags: [agent-design, knowledge-management]
+related: [[skill-trigger-design]], [[self-evolving-skills]]
+sources: [internal]
+---
+
 # Progressive Disclosure Pattern
 
 Skills use a three-level system that lets Claude access deep expertise without burning through context. Each level loads at a different point in the interaction.

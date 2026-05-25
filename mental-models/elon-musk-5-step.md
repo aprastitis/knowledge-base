@@ -1,3 +1,13 @@
+---
+type: mental-model
+status: active
+date: 2026-04-26
+summary: Question, delete, simplify, accelerate, automate — in that order; Elon's framework for solving any problem
+tags: [reasoning, decision-framework]
+related: [[physics-first-principles]], [[lean-engineering]]
+sources: [isaacson, corporate-rebels]
+---
+
 # Elon's 5-Step Process
 
 ## Type

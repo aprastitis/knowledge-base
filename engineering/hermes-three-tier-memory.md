@@ -1,3 +1,13 @@
+---
+type: engineering
+status: active
+date: 2026-05-25
+summary: Three distinct memory layers: frozen micro-files (Tier 1), SQLite FTS (Tier 2), external providers (Tier 3)
+tags: [hermes, agent-design]
+related: [[hermes-kanban]], [[soul-md-identity-layer]]
+sources: [akshay-pachaar]
+---
+
 # Hermes Three-Tier Memory System
 
 ## Type

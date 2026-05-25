@@ -1,3 +1,13 @@
+---
+type: engineering
+status: active
+date: 2026-05-20
+summary: Smaller model as executor + larger model as advisor; beats single large model; cost-effective agentic workflows
+tags: [agent-design, agentic-coding]
+related: [[hermes-kanban]], [[scaffolding-for-ai-agents]]
+sources: [internal]
+---
+
 # Advisor Pattern for AI Agents
 
 Using a **smaller model as executor + larger model as advisor** outperforms using the large model alone for many tasks. This pattern gets you near-top-tier quality at a fraction of the cost and latency.

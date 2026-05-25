@@ -1,3 +1,11 @@
+---
+type: system
+status: active
+date: 2026-05-20
+purpose: Index of all source material with concept tags and source URLs. Complete provenance trail.
+tags: [kb-infrastructure]
+---
+
 # Knowledge Base Sources
 
 Running index of all material added to the KB.

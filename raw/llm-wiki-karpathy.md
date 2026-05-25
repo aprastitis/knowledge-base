@@ -1,3 +1,13 @@
+---
+type: raw
+status: reference
+date: 2026-04-26
+summary: Karpathy's original LLM Wiki gist — full raw text on persistent wiki pattern for AI agents
+tags: [source/karpathy]
+related: []
+sources: [https://gist.github.com/karpathy]
+---
+
 # LLM Wiki — A Pattern for Building Personal Knowledge Bases with LLMs
 
 ## Related

@@ -1,3 +1,13 @@
+---
+type: concept
+status: active
+date: 2026-04-26
+summary: LLM-maintained persistent wiki vs RAG; three layers, three ops (ingest/query/lint)
+tags: [knowledge-management, agent-design]
+related: [[retrieval-first-principle]], [[karpathy-knowledge-substrate]]
+sources: [internal, karpathy-llm-wiki]
+---
+
 # LLM Wiki Pattern
 
 ## Type

@@ -1,3 +1,13 @@
+---
+type: engineering
+status: active
+date: 2026-05-20
+summary: How to write the YAML description field (what + when), trigger phrase patterns, 90% trigger rate metric
+tags: [agent-design, knowledge-management]
+related: [[progressive-disclosure-pattern]], [[self-evolving-skills]]
+sources: [internal]
+---
+
 # Skill Trigger Design
 
 The YAML frontmatter `description` field is the primary mechanism Claude uses to decide whether to load a skill. Getting this right is the difference between a skill that activates reliably and one that's ignored.

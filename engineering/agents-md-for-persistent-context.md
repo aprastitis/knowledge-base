@@ -1,3 +1,13 @@
+---
+type: engineering
+status: active
+date: 2026-05-20
+summary: Project-level context file with naming conventions, business logic, known quirks; reduces start-from-zero tax on every session
+tags: [engineering-practice, agentic-coding]
+related: [[ask-mode-before-code-mode]], [[spec-driven-development]]
+sources: [internal]
+---
+
 # AGENTS.md for Persistent Context
 
 AGENTS.md is a file in a project or repo that provides persistent context for AI agents. It contains information the agent can't infer from code alone — naming conventions, business logic, known quirks, dependencies, patterns.

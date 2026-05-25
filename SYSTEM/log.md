@@ -1,4 +1,24 @@
+---
+type: system
+status: active
+date: 2026-05-20
+purpose: Chronological record of every KB change — what was added/updated, when, source
+tags: [kb-infrastructure]
+---
+
 # Knowledge Base Log
+
+## [2026-05-25] kb-evolution | Frontmatter added to all cards + 3 MOCs created
+**Action:** Implemented KB evolution plan (Phase 1 foundation + Phase 2 structure)
+- Created `KB-EVOLUTION-DESIGN.md` — design document for frontmatter schema, tag taxonomy, MOC priorities, naming conventions, retrofit strategy
+- Created `concepts/MOC.md` — Map of Content for all 5 concept cards
+- Created `engineering/MOC.md` — Map of Content for all 14 engineering cards (organized by topic cluster)
+- Created `SYSTEM/MOC.md` — Map of Content for KB infrastructure files
+- Added YAML frontmatter to ALL content cards across all folders (26 cards total): concepts (5), engineering (14), first-principles (2), mental-models (1), people (2), raw (2)
+- Added YAML frontmatter to all SYSTEM files (5 files)
+- Skipped INBOX folder (not needed for Cerebro-only KB maintenance; see KB-EVOLUTION-DESIGN.md)
+- Retroactive frontmatter added during MOC creation (opportunistic retrofit)
+**Notes:** All new cards going forward will use `YYYY-MM-DD-[type]-[topic].md` naming and get frontmatter at creation time. Existing cards keep current names.
 
 ## [2026-05-20] refactor | SYSTEM/ folder created + KB cleanup
 **Action:** Major KB infrastructure refactor — see SYSTEM/operations.md for full decision log

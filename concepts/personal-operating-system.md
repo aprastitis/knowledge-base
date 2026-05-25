@@ -1,3 +1,13 @@
+---
+type: concept
+status: active
+date: 2026-04-26
+summary: Obsidian-based personal OS: 3-layer architecture (storage/intelligence/automation); survives bad days, operates autonomously
+tags: [knowledge-management, agent-design]
+related: [[retrieval-first-principle]], [[llm-wiki-pattern]]
+sources: [internal]
+---
+
 # Personal Operating System (Obsidian-Based)
 
 ## Type

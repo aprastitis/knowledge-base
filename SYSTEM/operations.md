@@ -1,3 +1,11 @@
+---
+type: system
+status: active
+date: 2026-05-20
+purpose: Decision log — why I placed things where, what I considered, what I skipped, outcomes. Append-only.
+tags: [kb-infrastructure]
+---
+
 # KB Operations Log
 
 Running log of KB maintenance decisions. Append-only — never edit past entries.
@@ -18,6 +26,11 @@ Decision: Applied 6 upgrades to my KB maintenance workflow (SYSTEM/ folder, oper
 Outcome: Pushed to GitHub (knowledge-base & workspace)
 
 <!-- Add entries below -->
+
+## 2026-05-25 — KB Evolution Implementation: Frontmatter + MOCs
+Source: Self-initiated based on `engineering/kb-evolution-plan.md`
+Decision: Created `KB-EVOLUTION-DESIGN.md` as working design before implementing. Decided to skip INBOX folder (our KB is Cerebro-managed, not human-capture, so INBOX adds complexity without solving a real problem). Retroactive frontmatter added opportunistically during MOC creation rather than mass-script.
+Outcome: Pushed to GitHub. All 26 content cards now have YAML frontmatter. 3 MOCs created. SYSTEM files also got frontmatter (type=system, purpose= instead of summary=).
 ## [2026-05-21] Anthropic Claude Code talk — 3 engineering cards
 **Material:** Anthropic conference talk (YouTube video, 46 min, Welsh Whisper transcription)
 **Decisions:**

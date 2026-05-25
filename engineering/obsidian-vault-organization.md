@@ -1,3 +1,13 @@
+---
+type: engineering
+status: active
+date: 2026-05-25
+summary: Complete system for organizing a vault: folder structure, naming convention, YAML properties, tag taxonomy, MOCs, inbox processing, quarterly review
+tags: [knowledge-management, engineering-practice]
+related: [[retrieval-first-principle]], [[kb-evolution-plan]]
+sources: [cyrilxbt]
+---
+
 # Obsidian Vault Organization System
 
 ## Type

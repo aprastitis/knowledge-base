@@ -1,3 +1,13 @@
+---
+type: person
+status: active
+date: 2026-04-26
+summary: Management heuristics: hands-on rule, failure philosophy, hiring, skip-levels; Elon's operational principles
+tags: [person, leadership]
+related: [[elon-musk-5-step]], [[lean-engineering]]
+sources: [isaacson]
+---
+
 # Elon Musk — Management Heuristics
 
 ## Type

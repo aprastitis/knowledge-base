@@ -1,3 +1,13 @@
+---
+type: raw
+status: reference
+date: 2026-04-26
+summary: Detailed 5-step algorithm with Isaacson quotes and additional management heuristics
+tags: [source/corporate-rebels]
+related: []
+sources: [https://corporate-rebels.com/blog/musks-algorithm-to-cut-bureaucracy]
+---
+
 # Elon Musk's 5-Step Algorithm (Corporate Rebels)
 
 ## Related

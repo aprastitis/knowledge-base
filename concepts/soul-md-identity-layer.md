@@ -1,3 +1,13 @@
+---
+type: concept
+status: active
+date: 2026-04-26
+summary: Hand-authored static identity file — slot #1 in system prompt; fixed frame for memory and skills
+tags: [agent-design]
+related: [[self-evolving-skills]], [[hermes-three-tier-memory]]
+sources: [internal]
+---
+
 # SOUL.md — Identity Layer
 
 ## Type

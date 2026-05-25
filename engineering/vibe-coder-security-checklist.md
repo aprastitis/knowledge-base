@@ -1,3 +1,13 @@
+---
+type: engineering
+status: active
+date: 2026-05-20
+summary: Pre-launch security/privacy checklist for AI-built products — env vars, OWASP, rate limits, secrets management
+tags: [engineering-practice, agentic-coding]
+related: [[agentic-coding-principles]], [[lean-engineering]]
+sources: [internal]
+---
+
 # Vibe Coder Pre-Launch Security Checklist
 
 > "If you launch without security, privacy, and abuse checks... you didn't ship a product. you shipped a liability."

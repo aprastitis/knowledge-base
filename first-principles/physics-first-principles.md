@@ -1,3 +1,13 @@
+---
+type: first-principles
+status: active
+date: 2026-04-26
+summary: Reason from fundamental truths, not analogy or convention; physics-style first-principles thinking applied to any domain
+tags: [reasoning]
+related: [[elon-musk-5-step]], [[karpathy-knowledge-substrate]]
+sources: [internal]
+---
+
 # First Principles Reasoning
 
 ## Type

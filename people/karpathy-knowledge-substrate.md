@@ -1,3 +1,13 @@
+---
+type: person
+status: active
+date: 2026-04-26
+summary: Personal KB as persistent second brain for AI agents; KB as substrate for AI to reason in your context
+tags: [person, knowledge-management, agent-design]
+related: [[llm-wiki-pattern]], [[retrieval-first-principle]]
+sources: [internal]
+---
+
 # Karpathy's Knowledge Substrate
 
 ## Type

@@ -1,3 +1,13 @@
+---
+type: engineering
+status: active
+date: 2026-05-25
+summary: Durable SQLite-backed multi-agent task board with kanban_* tools; peer coordination vs hierarchical delegate_task
+tags: [hermes, agent-design]
+related: [[hermes-three-tier-memory]], [[advisor-pattern-for-ai-agents]]
+sources: [internal]
+---
+
 # Hermes Kanban — Multi-Agent Task Board
 
 ## Type

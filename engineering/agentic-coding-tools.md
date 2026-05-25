@@ -1,3 +1,13 @@
+---
+type: engineering
+status: active
+date: 2026-05-20
+summary: Shift from copilot to autonomous agent; capability timeline; real production numbers from Shopify, Mercado Libre, Spotify
+tags: [agentic-coding, engineering-practice]
+related: [[agentic-coding-principles]], [[scaffolding-for-ai-agents]]
+sources: [internal]
+---
+
 # Agentic Coding Tools
 
 Tools like Claude Code represent a shift from **copilot** (completing your lines) to **autonomous agent** (owning tasks end-to-end). This card covers how to use them effectively as a builder, and what they mean for how I work.

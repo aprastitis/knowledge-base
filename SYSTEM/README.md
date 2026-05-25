@@ -1,3 +1,11 @@
+---
+type: system
+status: active
+date: 2026-05-25
+purpose: Folder structure, folder rules, archive never-delete policy, update schedule
+tags: [kb-infrastructure]
+---
+
 # SYSTEM/ — Knowledge Base Infrastructure
 
 This folder holds KB maintenance files — not content cards.

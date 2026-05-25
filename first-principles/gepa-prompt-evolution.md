@@ -1,3 +1,13 @@
+---
+type: first-principles
+status: active
+date: 2026-04-26
+summary: Offline skill optimization via execution traces; genetic-Pareto approach to evolving prompts
+tags: [reasoning, agent-design]
+related: [[evals-ai-evaluation-frameworks]], [[skill-trigger-design]]
+sources: [internal]
+---
+
 # GEPA — Genetic-Pareto Prompt Evolution
 
 ## Type

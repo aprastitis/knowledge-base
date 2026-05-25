@@ -1,3 +1,13 @@
+---
+type: engineering
+status: active
+date: 2026-05-20
+summary: How to test AI outputs systematically; eval types, metrics, frameworks, getting started with evals
+tags: [engineering-practice, agent-design]
+related: [[scaffolding-for-ai-agents]], [[spec-driven-development]]
+sources: [internal]
+---
+
 # Evaluations / Evals
 
 ## What are Evals?

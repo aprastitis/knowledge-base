@@ -1,3 +1,13 @@
+---
+type: concept
+status: active
+date: 2026-04-26
+summary: Agent-authored procedural playbooks with background curation; agent writes its own SKILL.md files
+tags: [agent-design, knowledge-management]
+related: [[soul-md-identity-layer]], [[progressive-disclosure-pattern]]
+sources: [internal]
+---
+
 # Self-Evolving Skills
 
 ## Type

@@ -1,3 +1,13 @@
+---
+type: engineering
+status: active
+date: 2026-05-20
+summary: Six principles and 28 practices for moving beyond vibe coding to production-quality AI-assisted development
+tags: [engineering-practice, agentic-coding]
+related: [[agentic-coding-tools]], [[lean-engineering]]
+sources: [internal]
+---
+
 # Agentic Coding Principles & Practices
 
 ## Type

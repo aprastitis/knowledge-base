@@ -1,3 +1,13 @@
+---
+type: engineering
+status: active
+date: 2026-05-25
+summary: 6-month roadmap to evolve KB toward retrieval-first, properties-driven system. Phases: foundation, structure, maintenance, intelligence.
+tags: [knowledge-management, engineering-practice]
+related: [[retrieval-first-principle]], [[obsidian-vault-organization]]
+sources: [internal]
+---
+
 # KB Evolution Plan
 
 ## Type

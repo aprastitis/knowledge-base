@@ -1,3 +1,13 @@
+---
+type: engineering
+status: active
+date: 2026-05-20
+summary: Tooling around the model determines outcomes more than the model itself; scaffolding is the ceiling, model is the floor
+tags: [agent-design, engineering-practice]
+related: [[agentic-coding-tools]], [[evals-ai-evaluation-frameworks]]
+sources: [internal]
+---
+
 # Scaffolding for AI Agents
 
 The tooling around an AI model determines outcomes more than the model itself. This is **scaffolding** — everything from prompt design to CI integration to context management. Good scaffolding makes the model better; bad scaffolding makes it worse.

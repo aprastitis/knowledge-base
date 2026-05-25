@@ -1,3 +1,13 @@
+---
+type: engineering
+status: active
+date: 2026-05-20
+summary: For complex tasks, start with Ask mode to create implementation plan, then execute in Code mode. Prevents expensive wrong turns.
+tags: [engineering-practice, agentic-coding]
+related: [[spec-driven-development]], [[lean-engineering]]
+sources: [internal]
+---
+
 # Ask Mode Before Code Mode
 
 For complex tasks, start with Ask mode to create an implementation plan, then switch to Code mode to execute. This two-step pattern prevents expensive wrong turns and keeps the model grounded.

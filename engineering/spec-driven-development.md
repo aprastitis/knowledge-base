@@ -1,3 +1,13 @@
+---
+type: engineering
+status: active
+date: 2026-05-20
+summary: Define what success looks like before writing code; spec-first development for clarity and alignment
+tags: [engineering-practice]
+related: [[ask-mode-before-code-mode]], [[lean-engineering]]
+sources: [github-spec-kit]
+---
+
 # Spec-Driven Development (SDD)
 
 **Source:** [github/spec-kit](https://github.com/github/spec-kit) | [spec-kit.github.io](https://github.github.io/spec-kit/)

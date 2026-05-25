@@ -1,3 +1,13 @@
+---
+type: engineering
+status: active
+date: 2026-05-20
+summary: Build minimum viable, validate, iterate; delete before optimize; apply Elon's 5-step to engineering
+tags: [engineering-practice]
+related: [[spec-driven-development]], [[agentic-coding-principles]]
+sources: [internal]
+---
+
 # Lean Engineering
 
 ## Type
