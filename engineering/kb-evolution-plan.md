@@ -10,10 +10,6 @@ sources: [internal]
 
 # KB Evolution Plan
 
-## Type
-Engineering Practice / Knowledge Management
-
-## Summary
 Our roadmap to evolve the aprastitis/knowledge-base from its current freeform state toward a retrieval-first, properties-driven system. Six-month phased approach covering properties, tagging, MOCs, naming conventions, inbox processing, and quarterly maintenance.
 
 ---

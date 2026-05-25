@@ -116,3 +116,10 @@ tags: [kb-infrastructure]
 - Added wikilinks from related cards: llm-wiki-pattern, personal-operating-system, kb-evolution-plan, soul-md-identity-layer
 **Notes:** This material triggered our KB evolution decision. Andreas asked to update KB and evolve our approach. Created evolution plan with 4 phases. Now following the plan for all new card additions.
 **Outcome:** Pushed to GitHub.
+
+## [2026-05-25] maintenance | KB cleanup — remove redundant ## Type headers, move SYSTEM/MOC.md
+Source: Andreas asked to ensure no conflicts with evolved approach
+Action: Removed `## Type` and `## Summary` from 9 cards that had both frontmatter and body-level metadata. Moved SYSTEM/MOC.md to correct location (SYSTEM/). Updated AGENTS.md with frontmatter-canonical rule.
+Cards cleaned: concepts/personal-operating-system, concepts/retrieval-first-principle, concepts/self-evolving-skills, concepts/soul-md-identity-layer, engineering/agentic-coding-principles, engineering/hermes-kanban, engineering/hermes-three-tier-memory, engineering/kb-evolution-plan, engineering/obsidian-vault-organization, first-principles/gepa-prompt-evolution
+KB is now conflict-free: frontmatter is canonical, no dual type systems.
+**Outcome:** Pushed to GitHub.

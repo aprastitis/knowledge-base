@@ -10,10 +10,6 @@ sources: [internal]
 
 # Self-Evolving Skills
 
-## Type
-Concept / Agent Self-Improvement Pattern
-
-## Summary
 Agents that create and maintain their own procedural playbooks (skills) rather than relying solely on pre-authored instructions. The agent encounters a problem → solves it through trial and error → saves the approach as a SKILL.md file → next time it loads the skill and follows the proven procedure instead of rediscovering it.
 
 ## How It Works in Hermes

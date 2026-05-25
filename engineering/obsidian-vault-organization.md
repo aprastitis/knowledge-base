@@ -10,10 +10,6 @@ sources: [cyrilxbt]
 
 # Obsidian Vault Organization System
 
-## Type
-Engineering Practice / Knowledge Management
-
-## Summary
 A complete system for organizing a knowledge vault (Obsidian or equivalent) so any note is findable in under 30 seconds. Built on retrieval-first principle. Covers folder structure, naming convention, properties system, tagging taxonomy, Maps of Content, inbox processing, search strategy, and quarterly maintenance.
 
 Source: CyrilXBT (X/Twitter thread, 2026-05-25)

@@ -10,10 +10,6 @@ sources: [internal]
 
 # Retrieval-First Principle
 
-## Type
-Concept / Knowledge Management
-
-## Summary
 Organize a knowledge base for retrieval, not storage. Every structural decision — folders, tags, naming — is evaluated by whether it makes finding information faster or slower.
 
 ## Core Insight

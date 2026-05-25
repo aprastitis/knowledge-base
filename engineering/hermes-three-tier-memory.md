@@ -10,10 +10,6 @@ sources: [akshay-pachaar]
 
 # Hermes Three-Tier Memory System
 
-## Type
-Engineering / Architecture
-
-## Summary
 Hermes uses three distinct memory layers, each designed for a different purpose and speed — from always-in-context tiny files to unlimited searchable conversation history.
 
 ## The Three Tiers

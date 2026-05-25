@@ -89,3 +89,16 @@ Created `kb-evolution-plan.md` with 4 phases:
 
 Going forward, ALL new cards will have YAML frontmatter with type/status/date/tags. Existing cards updated opportunistically as we interact with them.
 **Outcome:** All 3 pushed to GitHub.
+
+## [2026-05-25] Cleanup: Remove redundant ## Type headers + move SYSTEM/MOC.md
+Source: Self-initiated review triggered by Andreas asking to ensure no conflicts
+Issue found: 9 cards had BOTH frontmatter `type:` (new canonical) AND body `## Type` (old redundant). This dual type system created ambiguity — which one is authoritative?
+Resolution:
+- Frontmatter `type:` is canonical — all type info lives there
+- Removed `## Type` and `## Summary` from body of 9 cards (kept body content)
+- Kept `## Origin` where it exists (those are source attributions, not type metadata)
+- Cards cleaned: concepts/personal-operating-system, concepts/retrieval-first-principle, concepts/self-evolving-skills, concepts/soul-md-identity-layer, engineering/agentic-coding-principles, engineering/hermes-kanban, engineering/hermes-three-tier-memory, engineering/kb-evolution-plan, engineering/obsidian-vault-organization, first-principles/gepa-prompt-evolution
+Also: `SYSTEM/MOC.md` was at root level instead of inside `SYSTEM/`. Moved it to `SYSTEM/MOC.md`.
+Updated `AGENTS.md` with explicit rule: "Frontmatter is canonical — do NOT duplicate type/summary in body with ## Type / ## Summary headers."
+KB is now clean: 25 frontmatter-only cards, no dual type systems, MOC in correct location.
+**Outcome:** Pushed to GitHub.

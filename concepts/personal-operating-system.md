@@ -10,10 +10,6 @@ sources: [internal]
 
 # Personal Operating System (Obsidian-Based)
 
-## Type
-Knowledge Management Pattern — Personal Infrastructure
-
-## Summary
 An architecture for turning a note-taking vault (Obsidian) into a self-operating system that maintains itself during low-energy periods, compounds knowledge intelligently, and produces useful outputs without requiring manual curation. Built on three layers: storage, intelligence, and automation. Designed specifically to survive "bad days" — periods of overwhelm when most productivity systems collapse under their own maintenance burden.
 
 ## Origin

@@ -10,10 +10,6 @@ sources: [internal]
 
 # SOUL.md — Identity Layer
 
-## Type
-Concept / Agent Design Pattern
-
-## Summary
 SOUL.md is the top layer in the Hermes system prompt — a hand-authored, static file that defines who the agent is before anything else loads. It sets personality, tone, communication style, and hard limits. Memory and skills are "the moving parts inside the fixed frame" of the agent's identity.
 
 ## How It Works

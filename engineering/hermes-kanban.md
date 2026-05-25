@@ -10,10 +10,6 @@ sources: [internal]
 
 # Hermes Kanban — Multi-Agent Task Board
 
-## Type
-Engineering / Agent Collaboration
-
-## Summary
 Hermes Kanban is a durable SQLite-backed task board that lets multiple named agent profiles collaborate on work across agent boundaries. Tasks survive restarts, support human-in-the-loop, and are driven by agents through `kanban_*` tool calls rather than CLI commands.
 
 ## The Core Distinction: Kanban vs delegate_task

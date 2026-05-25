@@ -10,10 +10,6 @@ sources: [internal]
 
 # Agentic Coding Principles & Practices
 
-## Type
-Engineering Practice — AI Collaboration Framework
-
-## Summary
 Six principles and twenty-eight practices for moving beyond "vibe coding" with AI agents — from quick demos to production-quality, accountable software development. The core shift: treat AI coding agents as powerful but needing direction, not as autonomous black boxes that produce reliable results by default.
 
 ## Origin

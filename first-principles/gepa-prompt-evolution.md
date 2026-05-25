@@ -10,10 +10,6 @@ sources: [internal]
 
 # GEPA — Genetic-Pareto Prompt Evolution
 
-## Type
-First Principles / AI Optimization
-
-## Summary
 An offline skill optimization pipeline that reads execution traces to understand why things failed, then proposes targeted improvements through evolutionary search. Published as ICLR 2026 Oral paper. MIT licensed.
 
 ## The Problem GEPA Solves

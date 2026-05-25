@@ -33,3 +33,6 @@ Log of every KB update — what changed, when, why.
 
 ## 2026-05-25
 | ingest: obsidian-vault-organization + kb-evolution-plan | concepts/retrieval-first-principle.md, engineering/obsidian-vault-organization.md, engineering/kb-evolution-plan.md, index.md, SYSTEM/log.md, SYSTEM/changelog.md, SYSTEM/operations.md | 3 new cards from CyrilXBT thread: retrieval-first-principle (core concept), obsidian-vault-organization (full system), kb-evolution-plan (our 6-month evolution roadmap). Index updated. |
+
+## 2026-05-25
+| maintenance: remove redundant ## Type headers, move SYSTEM/MOC.md | 9 cards cleaned (removed duplicate body-level ## Type/## Summary), SYSTEM/MOC.md moved to SYSTEM/, AGENTS.md updated | KB is now conflict-free: frontmatter is canonical, no dual type systems, MOC in correct location |
