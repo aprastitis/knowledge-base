@@ -102,3 +102,15 @@ Also: `SYSTEM/MOC.md` was at root level instead of inside `SYSTEM/`. Moved it to
 Updated `AGENTS.md` with explicit rule: "Frontmatter is canonical — do NOT duplicate type/summary in body with ## Type / ## Summary headers."
 KB is now clean: 25 frontmatter-only cards, no dual type systems, MOC in correct location.
 **Outcome:** Pushed to GitHub.
+
+## [2026-05-25] Gstack ingest — 2 cards for Hermes KB reference
+**Material:** garrytan/gstack on GitHub — Garry Tan's AI team methodology
+**Decisions:**
+- `gstack-process-pattern.md` → engineering/ — implementable practice, process discipline, role-based AI team
+- `dispatch-routing-tiers.md` → engineering/ — complexity-based routing is an engineering decision framework
+- Both are KB reference cards for Hermes, not AGENTS.md instructions
+- Natural fit with existing cards: ask-mode-before-code-mode (simplified planning/implement split), advisor-pattern (role separation), scaffolding (tooling determines outcomes)
+- Source: #source/garrytan
+**KB use case:** Andreas points Hermes to KB for project reference. Cards written so Hermes can read and apply directly.
+**Notes:** gstack has 23 skills — we captured the philosophy and process discipline, not the specific slash commands. Hermes can adopt the methodology without implementing the slash command interface.
+**Outcome:** Pushed to GitHub.

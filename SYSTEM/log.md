@@ -123,3 +123,18 @@ Action: Removed `## Type` and `## Summary` from 9 cards that had both frontmatte
 Cards cleaned: concepts/personal-operating-system, concepts/retrieval-first-principle, concepts/self-evolving-skills, concepts/soul-md-identity-layer, engineering/agentic-coding-principles, engineering/hermes-kanban, engineering/hermes-three-tier-memory, engineering/kb-evolution-plan, engineering/obsidian-vault-organization, first-principles/gepa-prompt-evolution
 KB is now conflict-free: frontmatter is canonical, no dual type systems.
 **Outcome:** Pushed to GitHub.
+
+## [2026-05-25] ingest | Gstack — role-based AI team + dispatch routing
+**Source:** https://github.com/garrytan/gstack (Garry Tan, YC President & CEO)
+**Action:** Created 2 engineering cards
+**Cards added:**
+- `engineering/gstack-process-pattern.md` — 6 roles (CEO/Eng Manager/Designer/QA/Security/Release) + sprint process (Think → Plan → Build → Review → Test → Ship → Reflect). Key: process-not-tools, each step feeds into next, nothing falls through cracks.
+- `engineering/dispatch-routing-tiers.md` — 5 complexity tiers (Simple/Medium/Heavy/Full/Plan) that route tasks to right AI process level. Prevents over-engineering simple tasks and under-engineering complex ones.
+**Decisions:**
+- Both → engineering/ — implementable practices, not pure concepts
+- `gstack-process-pattern` → maps to our existing patterns (ask-mode, advisor-pattern, scaffolding); natural fit
+- `dispatch-routing-tiers` → complements gstack-process-pattern; useful for Hermes project workflows
+- Source tagged: #source/garrytan
+- Related links added: ask-mode-before-code-mode, advisor-pattern, scaffolding, vibe-coder-security-checklist, dispatch-routing-tiers
+**Notes:** Use case: Andreas points Hermes to KB for project reference. Cards designed for Hermes to read and apply — no AGENTS.md changes, all value in KB.
+**Outcome:** Pushed to GitHub.
