@@ -55,3 +55,24 @@ Outcome: Pushed to GitHub (knowledge-base & workspace)
 - No "observability/telemetry" card — still pending
 - No "chain-of-thought" card — still pending
 **Outcome:** Pushed to GitHub.
+
+## [2026-05-25] CyrilXBT Obsidian Vault Organization — 3 cards + KB evolution decision
+**Material:** CyrilXBT X thread on organizing Obsidian vaults for retrieval
+**Decisions:**
+- `retrieval-first-principle.md` → `concepts/` — pure principle, not tool-specific, fits our concepts folder
+- `obsidian-vault-organization.md` → `engineering/` — implementable practice, naming/properties/tagging all fit engineering
+- `kb-evolution-plan.md` → `engineering/` — roadmap is an engineering document, not a concept
+- All 3 created from single thread, clean material, high quality
+- Wikilinks added to: llm-wiki-pattern (related compounding pattern), personal-operating-system (related Obsidian OS), kb-evolution-plan (mutual reference), soul-md-identity-layer (related identity/KB overlap)
+- Source tagged: #source/cyrilxbt (applied tagging taxonomy from the card itself)
+**KB Evolution Decision:**
+Andreas asked to both add this material AND evolve our KB approach. The article describes a properties-driven, retrieval-first system. Our KB is currently a good wiki that could be great with structure. Key gaps: no YAML frontmatter, no tag taxonomy, no MOCs, no inbox processing habit.
+
+Created `kb-evolution-plan.md` with 4 phases:
+- Phase 1 (Foundation): frontmatter standard + tag taxonomy + opportunistic backlog tagging
+- Phase 2 (Structure): naming convention + first MOCs + INBOX activation
+- Phase 3 (Maintenance): inbox processing habit + quarterly review routine
+- Phase 4 (Intelligence): Claude integration + Dataview queries + automated reports
+
+Going forward, ALL new cards will have YAML frontmatter with type/status/date/tags. Existing cards updated opportunistically as we interact with them.
+**Outcome:** All 3 pushed to GitHub.

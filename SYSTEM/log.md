@@ -80,3 +80,19 @@
 **Source:** Web search (Futurice, Arize AI, Evidently AI, Shakudo, Freeplay)
 **Action:** Created `/engineering/evals-ai-evaluation-frameworks.md` from web research. Covers 5 eval types (exact match, semantic similarity, LLM-as-judge, retrieval metrics, task-specific), key metrics (Pass@K, MRR, NDCG, BERTScore), framework references (Ragas, DeepEval, lm-evaluation-harness, AlpacaEval), eval vs benchmark distinction, getting started steps. Added wikilinks from 4 related engineering cards.
 **Notes:** Major gap filled — zero prior KB coverage on how to test AI outputs. Placed in engineering/ because evals are an operational engineering practice. Could expand later: per-eval-type deep dives, RAG-specific evals, code generation evals. Anthropic's building skills guide has testing patterns that should cross-reference this card.
+
+## [2026-05-25] ingest | Obsidian Vault Organization + KB Evolution Plan
+**Source:** https://x.com/cyrilxbt/status/2058373087330959829 (CyrilXBT thread)
+**Action:** Created 3 new cards + updated index.md
+**Cards added:**
+- `concepts/retrieval-first-principle.md` — Core concept: organize for retrieval not storage; four retrieval dimensions; storage vs retrieval mindset comparison
+- `engineering/obsidian-vault-organization.md` — Full system: folder structure, naming convention (YYYY-MM-DD-[TYPE]-[TOPIC]), YAML properties, tag taxonomy (topic/status/source prefixes), MOCs, inbox processing, search strategy, quarterly review, Claude integration
+- `engineering/kb-evolution-plan.md` — Our 6-month roadmap: Phase 1 foundation (frontmatter, tag taxonomy), Phase 2 structure (naming, MOCs, INBOX), Phase 3 maintenance (processing habit, quarterly review), Phase 4 intelligence (Claude integration, Dataview, automated reports)
+**Decisions:**
+- All 3 cards from single X thread — clear material, fits KB structure
+- `retrieval-first-principle` → concepts/ (pure principle, not tool-specific)
+- `obsidian-vault-organization` → engineering/ (implementable practice)
+- `kb-evolution-plan` → engineering/ (roadmap is engineering document)
+- Added wikilinks from related cards: llm-wiki-pattern, personal-operating-system, kb-evolution-plan, soul-md-identity-layer
+**Notes:** This material triggered our KB evolution decision. Andreas asked to update KB and evolve our approach. Created evolution plan with 4 phases. Now following the plan for all new card additions.
+**Outcome:** Pushed to GitHub.
