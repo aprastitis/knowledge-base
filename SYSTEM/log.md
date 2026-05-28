@@ -138,3 +138,18 @@ KB is now conflict-free: frontmatter is canonical, no dual type systems.
 - Related links added: ask-mode-before-code-mode, advisor-pattern, scaffolding, vibe-coder-security-checklist, dispatch-routing-tiers
 **Notes:** Use case: Andreas points Hermes to KB for project reference. Cards designed for Hermes to read and apply — no AGENTS.md changes, all value in KB.
 **Outcome:** Pushed to GitHub.
+
+
+## 2026-05-28 — Hermes May 27 Updates: MCP Catalog + Krea 2 Image Generation
+**Source:** NousResearch X posts (May 27, 2026)
+**Action:** Created 2 cards — MCP Catalog (engineering) and Krea 2 (concepts)
+**Cards added:**
+- `engineering/hermes-native-mcp-catalog.md` — Hermes ships with native MCP server catalog; MCP is the standard protocol for connecting agents to external tools and data sources; discovery mechanism rather than manual integration
+- `concepts/krea-2-image-generation.md` — Krea 2 is a foundation image generation model trained from scratch for aesthetic quality + fine control; style transfer, moodboard input, adjustable creativity
+**Decisions:**
+- MCP Catalog → engineering/ — protocol/architecture concern for tool integration; fits with hermes-three-tier-memory and scaffolding-for-ai-agents
+- Krea 2 → concepts/ — foundation model capability card, not an engineering practice; fits with personal-operating-system (aesthetic quality matters in KM too)
+- Both are Hermes-specific; placed in KB as reference cards Andreas can share with Hermes
+- Source tagged: #source/nousresearch on both
+**Outcome:** Pushed to GitHub.
+

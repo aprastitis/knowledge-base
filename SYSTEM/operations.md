@@ -114,3 +114,13 @@ KB is now clean: 25 frontmatter-only cards, no dual type systems, MOC in correct
 **KB use case:** Andreas points Hermes to KB for project reference. Cards written so Hermes can read and apply directly.
 **Notes:** gstack has 23 skills — we captured the philosophy and process discipline, not the specific slash commands. Hermes can adopt the methodology without implementing the slash command interface.
 **Outcome:** Pushed to GitHub.
+
+## 2026-05-28 — Hermes May 27 Updates: MCP Catalog + Krea 2
+**Source:** NousResearch X posts (May 27, 2026) — @NousResearch
+**Decisions:**
+- MCP Catalog → `engineering/` — protocol/architecture for tool integration; MCP is the discovery layer for connecting agents to external systems; natural fit with hermes-three-tier-memory and scaffolding-for-ai-agents
+- Krea 2 → `concepts/` — foundation model capability; aesthetic quality + fine control is a capability description, not an engineering practice; fits with personal-operating-system (aesthetic coherence in KM)
+- Both tagged #source/nousresearch
+- Both designed as Hermes reference cards — Andreas can share with Hermes for context on new features
+- Krea 2 cross-linked to personal-operating-system (visual/aesthetic quality matters in personal KM)
+**Outcome:** Pushed to GitHub.
