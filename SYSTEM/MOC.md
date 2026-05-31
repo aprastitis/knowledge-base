@@ -30,7 +30,7 @@ Map of Content for KB infrastructure files in `/SYSTEM/`. These files are the op
 ### Evolution & Design
 | File | Purpose |
 |------|---------|
-| [[KB-EVOLUTION-DESIGN]] | Working design document for KB evolution. Frontmatter schemas, tag taxonomy, MOC priorities, naming conventions, retrofit strategy. |
+| [[../KB-EVOLUTION-DESIGN]] | Working design document for KB evolution. Frontmatter schemas, tag taxonomy, MOC priorities, naming conventions, retrofit strategy. |
 
 ---
 
