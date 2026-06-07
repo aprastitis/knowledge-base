@@ -17,6 +17,7 @@
 | [[concepts/self-evolving-skills]] | Agent-authored procedural playbooks with background curation; the agent writes its own SKILL.md files | Agent Self-Improvement |
 | [[concepts/retrieval-first-principle]] | Organize for retrieval, not storage. Every structural decision evaluated by whether it makes finding information faster. | Knowledge Management |
 | [[concepts/personal-operating-system]] | Obsidian-based personal OS: 3-layer architecture (storage/intelligence/automation) designed to survive bad days and operate autonomously | Knowledge Management |
+| [[concepts/krea-2-image-generation]] | Krea 2 is a foundation image generation model trained from scratch for aesthetic quality and fine control — style transfer, moodboard input, adjustable creativity | Creative AI |
 | [[concepts/context-engineering]] | Curating the optimal set of tokens in context — attention as finite budget, observation masking, LLM summarization, hybrid strategies | Agent Design |
 | [[concepts/model-context-protocol]] | Open protocol (JSON-RPC 2.0) for connecting AI apps to data sources and tools. USB-C of AI integration. Adopted by OpenAI, Google, Microsoft. | Tool Integration |
 
@@ -39,6 +40,7 @@
 | [[engineering/gstack-process-pattern]] | Garry Tan's AI team methodology — 6 roles (CEO/Eng Manager/Designer/QA/Security/Release) chained through sprint process (Think → Plan → Build → Review → Test → Ship → Reflect) | Engineering Practice |
 | [[engineering/dispatch-routing-tiers]] | Task complexity-based routing — 5 tiers (Simple/Medium/Heavy/Full/Plan) that determine which AI process and context to use. Prevents over/under-engineering. | Engineering Practice |
 | [[engineering/agents-md-for-persistent-context]] | Keep a project-level context file with naming conventions, business logic, known quirks. Reduces start-from-zero tax on every session | Engineering Practice |
+| [[engineering/hermes-native-mcp-catalog]] | Hermes ships with a native MCP server catalog — built-in directory of Model Context Protocol servers for connecting agents to external tools and data sources | Agent Architecture |
 | [[engineering/hermes-three-tier-memory]] | Three distinct memory layers: frozen micro-files (Tier 1), SQLite FTS (Tier 2), external providers (Tier 3) | Agent Architecture |
 | [[engineering/agent-observability-opentelemetry]] | Tracing every reasoning step, tool call, and model response as structured spans using OTel GenAI conventions — vendor-neutral, step-level, privacy by default | Engineering Practice |
 | [[engineering/multi-agent-orchestration-patterns]] | Five patterns for multi-agent coordination: sequential, concurrent, group chat, handoff, and magentic. Complexity should match the problem. | Engineering Practice |
