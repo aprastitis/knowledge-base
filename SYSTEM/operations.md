@@ -124,3 +124,28 @@ KB is now clean: 25 frontmatter-only cards, no dual type systems, MOC in correct
 - Both designed as Hermes reference cards — Andreas can share with Hermes for context on new features
 - Krea 2 cross-linked to personal-operating-system (visual/aesthetic quality matters in personal KM)
 **Outcome:** Pushed to GitHub.
+
+## 2026-06-07 — Research Sprint: 4 Cards from Gap Analysis
+**Trigger:** Weekly KB review (Sunday 2026-06-07). Checked `memory/kb-state.md` — last review was 2026-06-07, gaps still unfilled.
+**Research approach:**
+- Did web searches on 3 gap areas: context window management, tool use design, chain-of-thought
+- Hit Brave rate limit; pivoted to fetching known-good URLs (Anthropic blog, JetBrains Research, Digital Applied, Microsoft Learn)
+- Fetched 4 high-quality sources in parallel
+**Decisions:**
+1. `concepts/context-engineering.md` → `concepts/` — fundamental principle; fits alongside `retrieval-first-principle` (both are "organize/curate for X not Y" principles)
+2. `concepts/model-context-protocol.md` → `concepts/` — open protocol description; fits as a framework/concept, not engineering practice
+3. `engineering/agent-observability-opentelemetry.md` → `engineering/` — operational engineering practice; OTel implementation details
+4. `engineering/multi-agent-orchestration-patterns.md` → `engineering/` — implementable patterns; natural fit with gstack (magentic pattern) and hermes-kanban (peer coordination)
+**Why these 4 first:**
+- Context engineering: #1 gap from KB state, most foundational — attention management affects every agent interaction
+- Agent observability: #5 gap, increasingly critical as agents go to production
+- MCP: industry standard as of 2026, supplements existing hermes-native-mcp-catalog card (implementation vs protocol)
+- Multi-agent patterns: fills gap #6, maps to existing Hermes tools (kanban, gstack)
+**Skipped for now:** tool use design (#2 gap) — needed more research on best practices; will revisit
+**Tagged:** #source/web-research on all 4
+**Cross-links added:**
+- context-engineering → llm-wiki-pattern, scaffolding-for-ai-agents, ask-mode-before-code-mode, self-evolving-skills
+- agent-observability → scaffolding-for-ai-agents, agentic-coding-principles, evals-ai-evaluation-frameworks, self-evolving-skills
+- model-context-protocol → hermes-native-mcp-catalog, scaffolding-for-ai-agents, context-engineering, agentic-coding-tools
+- multi-agent-orchestration-patterns → gstack-process-pattern, hermes-kanban, dispatch-routing-tiers, context-engineering
+**Outcome:** Pushed to GitHub.

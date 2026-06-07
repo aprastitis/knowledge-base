@@ -153,3 +153,35 @@ KB is now conflict-free: frontmatter is canonical, no dual type systems.
 - Source tagged: #source/nousresearch on both
 **Outcome:** Pushed to GitHub.
 
+
+## 2026-06-07 — Research Sprint: 4 High-Priority Cards Added
+**Scope:** Weekly KB review (Sunday 2026-06-07) identified 4 high-priority gaps from the gap analysis + did web research to source material.
+**Cards added:**
+- `concepts/context-engineering.md` — From Anthropic's "Effective context engineering for AI agents" + JetBrains/TUM NeurIPS 2025 research. Covers: context rot, attention as finite budget, observation masking vs LLM summarization, hybrid strategies, just-in-time context retrieval, progressive disclosure.
+- `engineering/agent-observability-opentelemetry.md` — From Digital Applied's "AI Agent Observability 2026" guide (2026-05-27). Covers: why agents break differently, OTel GenAI semantic conventions (v1.41), mandatory metrics (duration + token usage), 4 agent span operations, MCP span enrichment, privacy by default, Python instrumentation example.
+- `concepts/model-context-protocol.md` — From Anthropic's MCP announcement + Wikipedia + Skilljar course. Covers: what MCP is, JSON-RPC 2.0 architecture, 3 primitives (tools/resources/prompts), why it matters (standardization, visibility, ecosystem), Linux Foundation donation Dec 2025, relationship to Hermes MCP catalog.
+- `engineering/multi-agent-orchestration-patterns.md` — From Microsoft Azure Architecture Center guide (updated 2026-05-12). Covers: 5 patterns (sequential, concurrent, group chat, handoff, magentic), when to use each, orchestrated vs choreographed distinction, shared state management, failure modes.
+**Decisions:**
+- All from web research, no material shared by Andreas this session
+- context-engineering → `concepts/` — it's a fundamental principle (like retrieval-first-principle), not a specific tool or practice
+- model-context-protocol → `concepts/` — protocol/standard description, fits with other concept cards about frameworks
+- agent-observability → `engineering/` — operational practice, implementation-specific
+- multi-agent-orchestration → `engineering/` — implementable engineering patterns
+- All 4 tagged #source/web-research
+- Context engineering fills the #1 gap from last week's KB state analysis
+- Agent observability fills the #5 gap (observability/telemetry)
+- MCP card supplements the existing hermes-native-mcp-catalog (catalog = implementation, MCP = protocol)
+- Multi-agent patterns cross-references hermes-kanban and gstack-process-pattern
+**Outcome:** All 4 pushed to GitHub.
+**Source:** NousResearch X posts (May 27, 2026)
+**Action:** Created 2 cards — MCP Catalog (engineering) and Krea 2 (concepts)
+**Cards added:**
+- `engineering/hermes-native-mcp-catalog.md` — Hermes ships with native MCP server catalog; MCP is the standard protocol for connecting agents to external tools and data sources; discovery mechanism rather than manual integration
+- `concepts/krea-2-image-generation.md` — Krea 2 is a foundation image generation model trained from scratch for aesthetic quality + fine control; style transfer, moodboard input, adjustable creativity
+**Decisions:**
+- MCP Catalog → engineering/ — protocol/architecture concern for tool integration; fits with hermes-three-tier-memory and scaffolding-for-ai-agents
+- Krea 2 → concepts/ — foundation model capability card, not an engineering practice; fits with personal-operating-system (aesthetic quality matters in KM too)
+- Both are Hermes-specific; placed in KB as reference cards Andreas can share with Hermes
+- Source tagged: #source/nousresearch on both
+**Outcome:** Pushed to GitHub.
+
