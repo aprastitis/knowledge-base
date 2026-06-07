@@ -4,7 +4,7 @@ status: active
 date: 2026-04-26
 summary: LLM-maintained persistent wiki vs RAG; three layers, three ops (ingest/query/lint)
 tags: [knowledge-management, agent-design]
-related: [[retrieval-first-principle]], [[karpathy-knowledge-substrate]]
+related: [[concepts/retrieval-first-principle]], [[people/karpathy-knowledge-substrate]]
 sources: [internal, karpathy-llm-wiki]
 ---
 
@@ -79,9 +79,9 @@ LLMs don't get bored, don't forget to update a cross-reference, and can touch 15
 **LLM's job:** everything else.
 
 ## Related Concepts
-- [[karpathy-knowledge-substrate]] — This document IS the source for Karpathy's KB pattern
-- [[physics-first-principles]] — The wiki approach is first-principles applied to knowledge management — not accepting "RAG is how you do KB with LLMs"
-- [[lean-engineering]] — LLM Wiki is lean: minimum viable structure, validate, iterate
+- [[people/karpathy-knowledge-substrate]] — This document IS the source for Karpathy's KB pattern
+- [[first-principles/physics-first-principles]] — The wiki approach is first-principles applied to knowledge management — not accepting "RAG is how you do KB with LLMs"
+- [[engineering/lean-engineering]] — LLM Wiki is lean: minimum viable structure, validate, iterate
 
 ## Sources
 - [Karpathy's LLM Wiki Gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)

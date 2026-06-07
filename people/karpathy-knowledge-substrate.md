@@ -4,7 +4,7 @@ status: active
 date: 2026-04-26
 summary: Personal KB as persistent second brain for AI agents; KB as substrate for AI to reason in your context
 tags: [person, knowledge-management, agent-design]
-related: [[llm-wiki-pattern]], [[retrieval-first-principle]]
+related: [[concepts/llm-wiki-pattern]], [[concepts/retrieval-first-principle]]
 sources: [internal]
 ---
 
@@ -37,7 +37,7 @@ The KB makes you a more effective collaborator with AI because you don't have to
 ### Agent-Readable
 - Every concept card should be self-contained: context, summary, application
 - No assumed prior knowledge (write as if the AI just woke up with no memory)
-- Explicit links between related concepts (wiki-style wikilinks, e.g. `[[llm-wiki-pattern]]`)
+- Explicit links between related concepts (wiki-style wikilinks, e.g. `[[concepts/llm-wiki-pattern]]`)
 
 ### Quality Over Quantity
 - Raw material goes in /raw (untouched)
@@ -63,14 +63,14 @@ This knowledge base is built on these principles:
 ## Key Source: LLM Wiki Pattern
 
 Karpathy's own description of the LLM Wiki pattern is captured in:
-- [[llm-wiki-pattern]] — detailed concept card covering the three layers, three operations (ingest/query/lint), and why this beats standard RAG
+- [[concepts/llm-wiki-pattern]] — detailed concept card covering the three layers, three operations (ingest/query/lint), and why this beats standard RAG
 
 The pattern is directly implemented here: `/concepts/llm-wiki-pattern.md` is the distilled version of this source.
 
 ## Related Concepts
-- [[elon-musk-5-step]] — Elon Musk's mental models are a key source for this KB
-- [[physics-first-principles]] — First principles reasoning is a core concept
-- [[lean-engineering]] — Engineering practices, including lean thinking, are captured
+- [[mental-models/elon-musk-5-step]] — Elon Musk's mental models are a key source for this KB
+- [[first-principles/physics-first-principles]] — First principles reasoning is a core concept
+- [[engineering/lean-engineering]] — Engineering practices, including lean thinking, are captured
 
 ## Sources
 - Internal (conversation with Andreas, inspired by Andrej Karpathy's writings on personal KBs for AI)

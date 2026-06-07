@@ -11,9 +11,9 @@ sources: [https://corporate-rebels.com/blog/musks-algorithm-to-cut-bureaucracy]
 # Elon Musk's 5-Step Algorithm (Corporate Rebels)
 
 ## Related
-- [[elon-musk-5-step]] — The concept card distilling this into a mental model. Links to lean-engineering (step 2: delete before optimize) and physics-first-principles (step 1: question every requirement from first principles).
+- [[mental-models/elon-musk-5-step]] — The concept card distilling this into a mental model. Links to lean-engineering (step 2: delete before optimize) and physics-first-principles (step 1: question every requirement from first principles).
 - [[people/elon-musk]] — The people card with additional Musk management heuristics.
-- [[vibe-coder-security-checklist]] — Delete step (step 2) and simplify step (step 3) apply directly: don't skip the boring stuff, but only after deleting what shouldn't exist.
+- [[engineering/vibe-coder-security-checklist]] — Delete step (step 2) and simplify step (step 3) apply directly: don't skip the boring stuff, but only after deleting what shouldn't exist.
 
 ## Sources
 - **URL:** https://www.corporate-rebels.com/blog/musks-algorithm-to-cut-bureaucracy

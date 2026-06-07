@@ -4,7 +4,7 @@ status: active
 date: 2026-04-26
 summary: Organize for retrieval, not storage. Every structural decision evaluated by retrieval speed.
 tags: [knowledge-management, reasoning]
-related: [[llm-wiki-pattern]], [[obsidian-vault-organization]]
+related: [[concepts/llm-wiki-pattern]], [[engineering/obsidian-vault-organization]]
 sources: [internal]
 ---
 

@@ -4,7 +4,7 @@ status: active
 date: 2026-05-20
 summary: For complex tasks, start with Ask mode to create implementation plan, then execute in Code mode. Prevents expensive wrong turns.
 tags: [engineering-practice, agentic-coding]
-related: [[spec-driven-development]], [[lean-engineering]]
+related: [[engineering/spec-driven-development]], [[engineering/lean-engineering]]
 sources: [internal]
 ---
 
@@ -88,5 +88,5 @@ This also applies to skill building — define the skill's structure and approac
 
 ## See Also
 
-- [[progressive-disclosure-pattern]] — The three-level system for skill architecture
-- [[skill-trigger-design]] — How to make skills trigger reliably
+- [[engineering/progressive-disclosure-pattern]] — The three-level system for skill architecture
+- [[engineering/skill-trigger-design]] — How to make skills trigger reliably

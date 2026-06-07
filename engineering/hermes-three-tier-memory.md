@@ -4,7 +4,7 @@ status: active
 date: 2026-05-25
 summary: Three distinct memory layers: frozen micro-files (Tier 1), SQLite FTS (Tier 2), external providers (Tier 3)
 tags: [hermes, agent-design]
-related: [[hermes-kanban]], [[soul-md-identity-layer]]
+related: [[engineering/hermes-kanban]], [[concepts/soul-md-identity-layer]]
 sources: [akshay-pachaar]
 ---
 
@@ -41,11 +41,11 @@ Every CLI and messaging conversation stored in SQLite with full-text search (FTS
 This is the core tradeoff design: Tier 1 is expensive to keep full (token cost) but always present. Tier 2 is cheap to store but requires an active retrieval action.
 
 ## Related Concepts
-- [[soul-md-identity-layer]] — Memory is the "moving part inside the fixed frame" of SOUL.md
-- [[self-evolving-skills]] — Skills are procedural memory; memory is factual memory. Different tiers for different types of knowledge
-- [[llm-wiki-pattern]] — Similar three-layer idea (ingest/query/lint) but for wiki vs agent memory
-- [[evals-ai-evaluation-frameworks]] — Eval design depends on what's being tested at each memory tier
-- [[hermes-kanban]] — Kanban uses SQLite for durable task state; different from the conversational memory tiers but shares the multi-layer persistence philosophy
+- [[concepts/soul-md-identity-layer]] — Memory is the "moving part inside the fixed frame" of SOUL.md
+- [[concepts/self-evolving-skills]] — Skills are procedural memory; memory is factual memory. Different tiers for different types of knowledge
+- [[concepts/llm-wiki-pattern]] — Similar three-layer idea (ingest/query/lint) but for wiki vs agent memory
+- [[engineering/evals-ai-evaluation-frameworks]] — Eval design depends on what's being tested at each memory tier
+- [[engineering/hermes-kanban]] — Kanban uses SQLite for durable task state; different from the conversational memory tiers but shares the multi-layer persistence philosophy
 
 ## Source
 - https://x.com/akshay_pachaar/status/2054564519280804028 (Hermes Agent Masterclass by Akshay 🚀)

@@ -4,7 +4,7 @@ status: active
 date: 2026-05-25
 summary: Complete system for organizing a vault: folder structure, naming convention, YAML properties, tag taxonomy, MOCs, inbox processing, quarterly review
 tags: [knowledge-management, engineering-practice]
-related: [[retrieval-first-principle]], [[kb-evolution-plan]]
+related: [[concepts/retrieval-first-principle]], [[engineering/kb-evolution-plan]]
 sources: [cyrilxbt]
 ---
 
@@ -190,21 +190,25 @@ Create when a topic has accumulated 20+ notes and navigation through backlinks a
 # Productivity MOC
 
 ## Core Framework Notes
+<!-- (placeholder — add cards as you create them) -->
 [[The PARA Method Explained]]
 [[Why Most Productivity Systems Fail]]
 [[Energy Management vs Time Management]]
 
 ## Tool Notes
+<!-- (placeholder — add cards as you create them) -->
 [[Obsidian Setup and Workflow]]
 [[Claude Code for Productivity]]
 [[N8N Automation Workflows]]
 
 ## Book Notes
+<!-- (placeholder — add cards as you create them) -->
 [[Getting Things Done - Key Ideas]]
 [[Deep Work - Key Ideas]]
 [[Atomic Habits - Key Ideas]]
 
 ## Project Applications
+<!-- (placeholder — add cards as you create them) -->
 [[Q2 2026 Productivity Audit]]
 [[Content Production System Build]]
 

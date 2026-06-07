@@ -4,7 +4,7 @@ status: active
 date: 2026-05-28
 summary: Hermes ships with a native MCP server catalog — built-in directory of Model Context Protocol servers for connecting agents to external tools and data sources
 tags: [hermes, mcp, protocol, tool-integration]
-related: [[scaffolding-for-ai-agents]], [[hermes-three-tier-memory]], [[skill-trigger-design]]
+related: [[engineering/scaffolding-for-ai-agents]], [[engineering/hermes-three-tier-memory]], [[engineering/skill-trigger-design]]
 sources: [#source/nousresearch]
 ---
 
@@ -46,7 +46,7 @@ MCP is the **protocol layer** of scaffolding. It handles the integration interfa
 - How to structure context around tool calls (prompt design)
 - What the agent should do with the outputs (workflow design)
 
-See [[scaffolding-for-ai-agents]] for how tooling infrastructure determines agent outcomes more than model capability.
+See [[engineering/scaffolding-for-ai-agents]] for how tooling infrastructure determines agent outcomes more than model capability.
 
 ## Sources
 

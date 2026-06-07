@@ -4,7 +4,7 @@ status: active
 date: 2026-04-26
 summary: Agent-authored procedural playbooks with background curation; agent writes its own SKILL.md files
 tags: [agent-design, knowledge-management]
-related: [[soul-md-identity-layer]], [[progressive-disclosure-pattern]]
+related: [[concepts/soul-md-identity-layer]], [[engineering/progressive-disclosure-pattern]]
 sources: [internal]
 ---
 
@@ -73,10 +73,10 @@ Critical skills can be pinned: `hermes curator pin <skill>` — protects from ar
 The in-agent learning loop has a known bias: **the agent tends toward self-congratulation** — it almost always thinks it performed well even when it didn't. This is why GEPA (offline optimization) exists as a separate layer.
 
 ## Related Concepts
-- [[soul-md-identity-layer]] — Skills are always executed through the lens of SOUL.md's identity frame
-- [[hermes-three-tier-memory]] — Skills sit on top of memory; memory stores facts, skills store procedures
-- [[gepa-prompt-evolution]] — GEPA validates skills offline to address the self-congratulation weakness in the self-improvement loop
-- [[personal-operating-system]] — CyrilXBT's CLAUDE.md-driven workflows are a human-scale parallel: the agent follows self-authored procedural playbooks that run autonomously
+- [[concepts/soul-md-identity-layer]] — Skills are always executed through the lens of SOUL.md's identity frame
+- [[engineering/hermes-three-tier-memory]] — Skills sit on top of memory; memory stores facts, skills store procedures
+- [[first-principles/gepa-prompt-evolution]] — GEPA validates skills offline to address the self-congratulation weakness in the self-improvement loop
+- [[concepts/personal-operating-system]] — CyrilXBT's CLAUDE.md-driven workflows are a human-scale parallel: the agent follows self-authored procedural playbooks that run autonomously
 
 ## Source
 - https://x.com/akshay_pachaar/status/2054564519280804028 (Hermes Agent Masterclass by Akshay 🚀)

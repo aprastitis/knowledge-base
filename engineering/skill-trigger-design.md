@@ -4,7 +4,7 @@ status: active
 date: 2026-05-20
 summary: How to write the YAML description field (what + when), trigger phrase patterns, 90% trigger rate metric
 tags: [agent-design, knowledge-management]
-related: [[progressive-disclosure-pattern]], [[self-evolving-skills]]
+related: [[engineering/progressive-disclosure-pattern]], [[concepts/self-evolving-skills]]
 sources: [internal]
 ---
 
@@ -91,6 +91,6 @@ When I build a skill, the description is the first thing I should get right. Wri
 
 ## See Also
 
-- [[progressive-disclosure-pattern]] — The three-level system that makes triggering work
-- [[scaffolding-for-ai-agents]] — How tooling determines whether skills actually execute effectively
+- [[engineering/progressive-disclosure-pattern]] — The three-level system that makes triggering work
+- [[engineering/scaffolding-for-ai-agents]] — How tooling determines whether skills actually execute effectively
 - [[raw/anthropic-building-skills-guide]] — Anthropic's complete guide to building skills — the authoritative reference for trigger design, testing patterns, and skill architecture

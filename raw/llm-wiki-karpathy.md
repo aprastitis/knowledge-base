@@ -11,8 +11,8 @@ sources: [https://gist.github.com/karpathy]
 # LLM Wiki — A Pattern for Building Personal Knowledge Bases with LLMs
 
 ## Related
-- [[llm-wiki-pattern]] — The engineered card version of this material. The pattern card synthesizes the key takeaways: three layers, three ops (ingest/query/lint), wiki vs RAG comparison.
-- [[personal-operating-system]] — CyrilXBT's Obsidian OS is an implementation of the wiki pattern. His 3-layer architecture (storage/intelligence/automation) mirrors Karpathy's raw/wiki/schema layers.
+- [[concepts/llm-wiki-pattern]] — The engineered card version of this material. The pattern card synthesizes the key takeaways: three layers, three ops (ingest/query/lint), wiki vs RAG comparison.
+- [[concepts/personal-operating-system]] — CyrilXBT's Obsidian OS is an implementation of the wiki pattern. His 3-layer architecture (storage/intelligence/automation) mirrors Karpathy's raw/wiki/schema layers.
 
 ## Sources
 - **URL:** https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f

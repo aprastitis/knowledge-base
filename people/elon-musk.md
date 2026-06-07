@@ -4,7 +4,7 @@ status: active
 date: 2026-04-26
 summary: Management heuristics: hands-on rule, failure philosophy, hiring, skip-levels; Elon's operational principles
 tags: [person, leadership]
-related: [[elon-musk-5-step]], [[lean-engineering]]
+related: [[mental-models/elon-musk-5-step]], [[engineering/lean-engineering]]
 sources: [isaacson]
 ---
 
@@ -53,8 +53,8 @@ Beyond the 5-step algorithm, Elon Musk applies additional management principles 
 **Application:** Middle management filters information and can insulate leadership from reality. Go directly to the people doing the work to get accurate information.
 
 ## Related Concepts
-- [[elon-musk-5-step]] — The 5-step algorithm is the core process framework
-- [[physics-first-principles]] — "Laws of physics are the only real rules" is first-principles thinking applied to organizational rules
+- [[mental-models/elon-musk-5-step]] — The 5-step algorithm is the core process framework
+- [[first-principles/physics-first-principles]] — "Laws of physics are the only real rules" is first-principles thinking applied to organizational rules
 
 ## Sources
 - [Corporate Rebels: Musk's Algorithm to Cut Bureaucracy](https://www.corporate-rebels.com/blog/musks-algorithm-to-cut-bureaucracy) (based on Walter Isaacson's biography)

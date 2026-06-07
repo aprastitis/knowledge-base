@@ -4,7 +4,7 @@ status: active
 date: 2026-04-26
 summary: Reason from fundamental truths, not analogy or convention; physics-style first-principles thinking applied to any domain
 tags: [reasoning]
-related: [[elon-musk-5-step]], [[karpathy-knowledge-substrate]]
+related: [[mental-models/elon-musk-5-step]], [[people/karpathy-knowledge-substrate]]
 sources: [internal]
 ---
 
@@ -45,8 +45,8 @@ The practice of reasoning from fundamental, indisputable truths rather than from
 - "The experts say..."
 
 ## Related Concepts
-- [[elon-musk-5-step]] — Step 1 (question requirements) is first principles applied to engineering
-- [[karpathy-knowledge-substrate]] — KB should be built on first principles, not inherited wisdom
+- [[mental-models/elon-musk-5-step]] — Step 1 (question requirements) is first principles applied to engineering
+- [[people/karpathy-knowledge-substrate]] — KB should be built on first principles, not inherited wisdom
 
 ## Sources
 - Internal (conversation with Andreas)

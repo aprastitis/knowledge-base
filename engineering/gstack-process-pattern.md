@@ -4,7 +4,7 @@ status: active
 date: 2026-05-25
 summary: Garry Tan's AI team methodology — 6 roles (CEO/Eng Manager/Designer/QA/Security/Release) chained through a sprint process (Think → Plan → Build → Review → Test → Ship → Reflect)
 tags: [agentic-coding, engineering-practice, knowledge-management]
-related: [[ask-mode-before-code-mode]], [[advisor-pattern-for-ai-agents]], [[scaffolding-for-ai-agents]], [[vibe-coder-security-checklist]]
+related: [[engineering/ask-mode-before-code-mode]], [[engineering/advisor-pattern-for-ai-agents]], [[engineering/scaffolding-for-ai-agents]], [[engineering/vibe-coder-security-checklist]]
 sources: [garrytan/gstack]
 ---
 
@@ -147,10 +147,10 @@ Stop after 3 failed fixes
 
 ## Related Patterns in Our KB
 
-- [[ask-mode-before-code-mode]] — Two-step pattern: plan in Ask mode, execute in Code mode. Similar to the Think → Build separation.
-- [[advisor-pattern-for-ai-agents]] — Smaller model as executor + larger model as advisor. Role separation applied to model routing.
-- [[scaffolding-for-ai-agents]] — Tooling determines outcomes more than model. Gstack is a scaffolding framework.
-- [[vibe-coder-security-checklist]] — Pre-launch security audit. Complementary to /cso role.
+- [[engineering/ask-mode-before-code-mode]] — Two-step pattern: plan in Ask mode, execute in Code mode. Similar to the Think → Build separation.
+- [[engineering/advisor-pattern-for-ai-agents]] — Smaller model as executor + larger model as advisor. Role separation applied to model routing.
+- [[engineering/scaffolding-for-ai-agents]] — Tooling determines outcomes more than model. Gstack is a scaffolding framework.
+- [[engineering/vibe-coder-security-checklist]] — Pre-launch security audit. Complementary to /cso role.
 
 ---
 

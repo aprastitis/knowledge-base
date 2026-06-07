@@ -12,60 +12,60 @@
 ## Concepts (`/concepts`)
 | Page | Summary | Category |
 |------|---------|----------|
-| [[llm-wiki-pattern]] | LLM-maintained persistent wiki vs RAG; three layers, three ops (ingest/query/lint) | Knowledge Management |
-| [[soul-md-identity-layer]] | Hand-authored static identity file — slot #1 in system prompt; the fixed frame for memory and skills | Agent Design |
-| [[self-evolving-skills]] | Agent-authored procedural playbooks with background curation; the agent writes its own SKILL.md files | Agent Self-Improvement |
-| [[retrieval-first-principle]] | Organize for retrieval, not storage. Every structural decision evaluated by whether it makes finding information faster. | Knowledge Management |
-| [[personal-operating-system]] | Obsidian-based personal OS: 3-layer architecture (storage/intelligence/automation) designed to survive bad days and operate autonomously | Knowledge Management |
-| [[krea-2-image-generation]] | Krea 2 is a foundation image generation model trained from scratch for aesthetic quality and fine control — style transfer, moodboard input, adjustable creativity | Creative AI |
+| [[concepts/llm-wiki-pattern]] | LLM-maintained persistent wiki vs RAG; three layers, three ops (ingest/query/lint) | Knowledge Management |
+| [[concepts/soul-md-identity-layer]] | Hand-authored static identity file — slot #1 in system prompt; the fixed frame for memory and skills | Agent Design |
+| [[concepts/self-evolving-skills]] | Agent-authored procedural playbooks with background curation; the agent writes its own SKILL.md files | Agent Self-Improvement |
+| [[concepts/retrieval-first-principle]] | Organize for retrieval, not storage. Every structural decision evaluated by whether it makes finding information faster. | Knowledge Management |
+| [[concepts/personal-operating-system]] | Obsidian-based personal OS: 3-layer architecture (storage/intelligence/automation) designed to survive bad days and operate autonomously | Knowledge Management |
+| [[concepts/krea-2-image-generation]] | Krea 2 is a foundation image generation model trained from scratch for aesthetic quality and fine control — style transfer, moodboard input, adjustable creativity | Creative AI |
 
 ## Engineering (`/engineering`)
 | Page | Summary | Category |
 |------|---------|----------|
-| [[agentic-coding-tools]] | Shift from copilot to autonomous agent; capability timeline; real production numbers (Shopify, Mercado Libre, Spotify); new features | Engineering Practice |
-| [[lean-engineering]] | Build minimum viable, validate, iterate; delete before optimize | Engineering Practice |
-| [[vibe-coder-security-checklist]] | Pre-launch security/privacy checklist for AI-built products — env vars, OWASP, rate limits, secrets management | Engineering Practice |
-| [[agentic-coding-principles]] | Six principles and 28 practices for moving beyond vibe coding to production-quality AI-assisted development | Engineering Practice |
-| [[advisor-pattern-for-ai-agents]] | Smaller model as executor + larger model as advisor; beats single large model; cost-effective agentic workflows | Engineering Practice |
-| [[obsidian-vault-organization]] | Complete system for organizing a vault: folder structure, naming convention, YAML properties, tag taxonomy, MOCs, inbox processing, quarterly review. | Knowledge Management |
-| [[kb-evolution-plan]] | Our 6-month roadmap to evolve our KB from freeform wiki to retrieval-first, properties-driven system. Phases: foundation, structure, maintenance, intelligence. | Knowledge Management |
-| [[evals-ai-evaluation-frameworks]] | How to test AI outputs systematically; eval types, metrics, frameworks, getting started | Engineering Practice |
-| [[scaffolding-for-ai-agents]] | Tooling around the model determines outcomes more than the model itself; scaffolding is the ceiling, model is the floor | Engineering Practice |
-| [[ask-mode-before-code-mode]] | Two-step pattern: plan first in Ask mode, then execute in Code mode. Prevents expensive wrong turns on complex tasks | Engineering Practice |
-| [[progressive-disclosure-pattern]] | Three-level skill architecture: YAML frontmatter → SKILL.md body → linked files. Core pattern for building skills that trigger reliably | Engineering Practice |
-| [[skill-trigger-design]] | How to write the YAML description field (what + when), trigger phrase patterns, 90% trigger rate metric, fixing under/over-triggering | Engineering Practice |
-| [[spec-driven-development]] | Define what success looks like before writing code; spec-first development for clarity and alignment | Engineering Practice |
-| [[gstack-process-pattern]] | Garry Tan's AI team methodology — 6 roles (CEO/Eng Manager/Designer/QA/Security/Release) chained through sprint process (Think → Plan → Build → Review → Test → Ship → Reflect) | Engineering Practice |
-| [[dispatch-routing-tiers]] | Task complexity-based routing — 5 tiers (Simple/Medium/Heavy/Full/Plan) that determine which AI process and context to use. Prevents over/under-engineering. | Engineering Practice |
-| [[agents-md-for-persistent-context]] | Keep a project-level context file with naming conventions, business logic, known quirks. Reduces start-from-zero tax on every session | Engineering Practice |
-| [[hermes-three-tier-memory]] | Three distinct memory layers: frozen micro-files (Tier 1), SQLite FTS (Tier 2), external providers (Tier 3) | Agent Architecture |
-| [[hermes-native-mcp-catalog]] | Hermes ships with a native MCP server catalog — built-in directory of Model Context Protocol servers for connecting agents to external tools and data sources | Agent Architecture |
-| [[hermes-kanban]] | Durable SQLite-backed multi-agent task board with kanban_* tools; peer coordination vs delegate_task's hierarchical model | Agent Collaboration |
+| [[engineering/agentic-coding-tools]] | Shift from copilot to autonomous agent; capability timeline; real production numbers (Shopify, Mercado Libre, Spotify); new features | Engineering Practice |
+| [[engineering/lean-engineering]] | Build minimum viable, validate, iterate; delete before optimize | Engineering Practice |
+| [[engineering/vibe-coder-security-checklist]] | Pre-launch security/privacy checklist for AI-built products — env vars, OWASP, rate limits, secrets management | Engineering Practice |
+| [[engineering/agentic-coding-principles]] | Six principles and 28 practices for moving beyond vibe coding to production-quality AI-assisted development | Engineering Practice |
+| [[engineering/advisor-pattern-for-ai-agents]] | Smaller model as executor + larger model as advisor; beats single large model; cost-effective agentic workflows | Engineering Practice |
+| [[engineering/obsidian-vault-organization]] | Complete system for organizing a vault: folder structure, naming convention, YAML properties, tag taxonomy, MOCs, inbox processing, quarterly review. | Knowledge Management |
+| [[engineering/kb-evolution-plan]] | Our 6-month roadmap to evolve our KB from freeform wiki to retrieval-first, properties-driven system. Phases: foundation, structure, maintenance, intelligence. | Knowledge Management |
+| [[engineering/evals-ai-evaluation-frameworks]] | How to test AI outputs systematically; eval types, metrics, frameworks, getting started | Engineering Practice |
+| [[engineering/scaffolding-for-ai-agents]] | Tooling around the model determines outcomes more than the model itself; scaffolding is the ceiling, model is the floor | Engineering Practice |
+| [[engineering/ask-mode-before-code-mode]] | Two-step pattern: plan first in Ask mode, then execute in Code mode. Prevents expensive wrong turns on complex tasks | Engineering Practice |
+| [[engineering/progressive-disclosure-pattern]] | Three-level skill architecture: YAML frontmatter → SKILL.md body → linked files. Core pattern for building skills that trigger reliably | Engineering Practice |
+| [[engineering/skill-trigger-design]] | How to write the YAML description field (what + when), trigger phrase patterns, 90% trigger rate metric, fixing under/over-triggering | Engineering Practice |
+| [[engineering/spec-driven-development]] | Define what success looks like before writing code; spec-first development for clarity and alignment | Engineering Practice |
+| [[engineering/gstack-process-pattern]] | Garry Tan's AI team methodology — 6 roles (CEO/Eng Manager/Designer/QA/Security/Release) chained through sprint process (Think → Plan → Build → Review → Test → Ship → Reflect) | Engineering Practice |
+| [[engineering/dispatch-routing-tiers]] | Task complexity-based routing — 5 tiers (Simple/Medium/Heavy/Full/Plan) that determine which AI process and context to use. Prevents over/under-engineering. | Engineering Practice |
+| [[engineering/agents-md-for-persistent-context]] | Keep a project-level context file with naming conventions, business logic, known quirks. Reduces start-from-zero tax on every session | Engineering Practice |
+| [[engineering/hermes-three-tier-memory]] | Three distinct memory layers: frozen micro-files (Tier 1), SQLite FTS (Tier 2), external providers (Tier 3) | Agent Architecture |
+| [[engineering/hermes-native-mcp-catalog]] | Hermes ships with a native MCP server catalog — built-in directory of Model Context Protocol servers for connecting agents to external tools and data sources | Agent Architecture |
+| [[engineering/hermes-kanban]] | Durable SQLite-backed multi-agent task board with kanban_* tools; peer coordination vs delegate_task's hierarchical model | Agent Collaboration |
 
 ## First Principles (`/first-principles`)
 | Page | Summary | Category |
 |------|---------|----------|
-| [[physics-first-principles]] | Reason from fundamental truths, not analogy or convention | Reasoning Framework |
-| [[gepa-prompt-evolution]] | Offline skill optimization via execution traces; genetic-Pareto approach to evolving prompts | AI Optimization |
+| [[first-principles/physics-first-principles]] | Reason from fundamental truths, not analogy or convention | Reasoning Framework |
+| [[first-principles/gepa-prompt-evolution]] | Offline skill optimization via execution traces; genetic-Pareto approach to evolving prompts | AI Optimization |
 
 ## Mental Models (`/mental-models`)
 | Page | Summary | Category |
 |------|---------|----------|
-| [[elon-musk-5-step]] | Question, delete, simplify, accelerate, automate — in that order | Decision Framework |
+| [[mental-models/elon-musk-5-step]] | Question, delete, simplify, accelerate, automate — in that order | Decision Framework |
 
 ## People (`/people`)
 | Page | Summary | Category |
 |------|---------|----------|
-| [[elon-musk]] | Management heuristics: hands-on rule, failure philosophy, hiring, skip-levels | Leadership |
-| [[karpathy-knowledge-substrate]] | Personal KB as persistent second brain for AI agents | AI Framework |
+| [[people/elon-musk]] | Management heuristics: hands-on rule, failure philosophy, hiring, skip-levels | Leadership |
+| [[people/karpathy-knowledge-substrate]] | Personal KB as persistent second brain for AI agents | AI Framework |
 
 ## Raw Sources (`/raw`)
 | File | Summary | Source |
 |------|---------|--------|
-| [[llm-wiki-karpathy]] | Karpathy's original LLM Wiki gist — full raw text | GitHub Gist |
-| [[elon-musk-5-step-corporate-rebels]] | Detailed 5-step algorithm with Isaacson quotes + additional heuristics | Corporate Rebels |
-| [[anthropic-building-skills-guide]] | "The Complete Guide to Building Skills for Claude" — full PDF with skill architecture, triggering, testing patterns | Anthropic PDF |
-| [[openai-how-openai-uses-codex]] | "How OpenAI Uses Codex" — 7 use cases, best practices, engineering anecdotes from OpenAI teams | OpenAI PDF |
+| [[raw/llm-wiki-karpathy]] | Karpathy's original LLM Wiki gist — full raw text | GitHub Gist |
+| [[raw/elon-musk-5-step-corporate-rebels]] | Detailed 5-step algorithm with Isaacson quotes + additional heuristics | Corporate Rebels |
+| [[raw/anthropic-building-skills-guide]] | "The Complete Guide to Building Skills for Claude" — full PDF with skill architecture, triggering, testing patterns | Anthropic PDF |
+| [[raw/openai-how-openai-uses-codex]] | "How OpenAI Uses Codex" — 7 use cases, best practices, engineering anecdotes from OpenAI teams | OpenAI PDF |
 
 ---
 *Last updated: 2026-05-25*

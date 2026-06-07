@@ -4,7 +4,7 @@ status: active
 date: 2026-05-20
 summary: Define what success looks like before writing code; spec-first development for clarity and alignment
 tags: [engineering-practice]
-related: [[ask-mode-before-code-mode]], [[lean-engineering]]
+related: [[engineering/ask-mode-before-code-mode]], [[engineering/lean-engineering]]
 sources: [github-spec-kit]
 ---
 
@@ -98,7 +98,7 @@ Three converging trends make SDD necessary:
 
 ## Related
 
-- [[llm-wiki-pattern]] — Documentation-as-code patterns
-- [[lean-engineering]] — Lean principles applied to engineering; SDD is the extreme version — minimum spec, validate, regenerate
-- [[physics-first-principles]] — Reasoning from fundamental truths; SDD is first-principles applied to the spec-implementation gap
-- [[agentic-coding-principles]] — Agentic coding provides the human accountability and verification layer around AI-generated code; complements SDD's spec-first approach with human-in-the-loop discipline
+- [[concepts/llm-wiki-pattern]] — Documentation-as-code patterns
+- [[engineering/lean-engineering]] — Lean principles applied to engineering; SDD is the extreme version — minimum spec, validate, regenerate
+- [[first-principles/physics-first-principles]] — Reasoning from fundamental truths; SDD is first-principles applied to the spec-implementation gap
+- [[engineering/agentic-coding-principles]] — Agentic coding provides the human accountability and verification layer around AI-generated code; complements SDD's spec-first approach with human-in-the-loop discipline

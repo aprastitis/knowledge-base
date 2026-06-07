@@ -4,7 +4,7 @@ status: active
 date: 2026-05-25
 summary: Task complexity-based routing — 5 tiers (Simple/Medium/Heavy/Full/Plan) that determine which AI process and context to use. Prevents over-engineering simple tasks and under-engineering complex ones.
 tags: [agentic-coding, engineering-practice, knowledge-management]
-related: [[gstack-process-pattern]], [[ask-mode-before-code-mode]], [[scaffolding-for-ai-agents]]
+related: [[engineering/gstack-process-pattern]], [[engineering/ask-mode-before-code-mode]], [[engineering/scaffolding-for-ai-agents]]
 sources: [garrytan/gstack]
 ---
 
@@ -145,6 +145,6 @@ The routing decision is not locked at the start — it evolves as work reveals c
 
 ## Related
 
-- [[gstack-process-pattern]] — The 6 roles and sprint process that the tiers route between
-- [[ask-mode-before-code-mode]] — Simplified two-tier version (plan vs implement)
-- [[scaffolding-for-ai-agents]] — Tooling determines outcomes; dispatch routing is a tooling decision
+- [[engineering/gstack-process-pattern]] — The 6 roles and sprint process that the tiers route between
+- [[engineering/ask-mode-before-code-mode]] — Simplified two-tier version (plan vs implement)
+- [[engineering/scaffolding-for-ai-agents]] — Tooling determines outcomes; dispatch routing is a tooling decision

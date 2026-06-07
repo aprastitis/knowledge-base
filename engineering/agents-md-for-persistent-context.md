@@ -4,7 +4,7 @@ status: active
 date: 2026-05-20
 summary: Project-level context file with naming conventions, business logic, known quirks; reduces start-from-zero tax on every session
 tags: [engineering-practice, agentic-coding]
-related: [[ask-mode-before-code-mode]], [[spec-driven-development]]
+related: [[engineering/ask-mode-before-code-mode]], [[engineering/spec-driven-development]]
 sources: [internal]
 ---
 
@@ -85,6 +85,6 @@ This reduces the "start from zero" tax on every session and makes subsequent wor
 
 ## See Also
 
-- [[progressive-disclosure-pattern]] — Three-level skill architecture
-- [[ask-mode-before-code-mode]] — Two-step pattern for complex tasks
-- [[scaffolding-for-ai-agents]] — How tooling around models determines outcomes
+- [[engineering/progressive-disclosure-pattern]] — Three-level skill architecture
+- [[engineering/ask-mode-before-code-mode]] — Two-step pattern for complex tasks
+- [[engineering/scaffolding-for-ai-agents]] — How tooling around models determines outcomes

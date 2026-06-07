@@ -4,7 +4,7 @@ status: active
 date: 2026-05-20
 summary: Build minimum viable, validate, iterate; delete before optimize; apply Elon's 5-step to engineering
 tags: [engineering-practice]
-related: [[spec-driven-development]], [[agentic-coding-principles]]
+related: [[engineering/spec-driven-development]], [[engineering/agentic-coding-principles]]
 sources: [internal]
 ---
 
@@ -55,11 +55,11 @@ Build the minimum viable version that solves the core problem, validate it works
 - **Validation theater**: Testing but not actually checking if it helps the user
 
 ## Related Concepts
-- [[elon-musk-5-step]] — Delete (step 2) and simplify (step 3) are the core lean moves
-- [[physics-first-principles]] — Don't inherit assumptions about "what we need"
-- [[spec-driven-development]] — SDD inverts the waterfall model entirely: specs generate code, not guide it
-- [[vibe-coder-security-checklist]] — The pre-launch counterpart to lean: building the minimum is great, but not if you skip security and privacy checks on the way out
-- [[agentic-coding-principles]] — Complements lean engineering with a structured framework for human-AI collaboration in coding tasks; the "meteor over fireball" principle
+- [[mental-models/elon-musk-5-step]] — Delete (step 2) and simplify (step 3) are the core lean moves
+- [[first-principles/physics-first-principles]] — Don't inherit assumptions about "what we need"
+- [[engineering/spec-driven-development]] — SDD inverts the waterfall model entirely: specs generate code, not guide it
+- [[engineering/vibe-coder-security-checklist]] — The pre-launch counterpart to lean: building the minimum is great, but not if you skip security and privacy checks on the way out
+- [[engineering/agentic-coding-principles]] — Complements lean engineering with a structured framework for human-AI collaboration in coding tasks; the "meteor over fireball" principle
 
 ## Sources
 - Internal (conversation with Andreas)

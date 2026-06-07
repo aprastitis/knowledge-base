@@ -4,7 +4,7 @@ status: active
 date: 2026-05-25
 summary: Durable SQLite-backed multi-agent task board with kanban_* tools; peer coordination vs hierarchical delegate_task
 tags: [hermes, agent-design]
-related: [[hermes-three-tier-memory]], [[advisor-pattern-for-ai-agents]]
+related: [[engineering/hermes-three-tier-memory]], [[engineering/advisor-pattern-for-ai-agents]]
 sources: [internal]
 ---
 
@@ -241,7 +241,7 @@ hermes kanban block t_abc "need input" --ids t_def t_hij
 
 ## Related Concepts
 
-- [[hermes-three-tier-memory]] — Kanban persists state in SQLite; Hermes also has a three-tier memory architecture
+- [[engineering/hermes-three-tier-memory]] — Kanban persists state in SQLite; Hermes also has a three-tier memory architecture
 - `delegate_task`, `kanban-worker-skill`, `kanban-orchestrator-skill` — These are Hermes agent internals, not KB cards; see the [Hermes docs](https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban) for details
 
 ## Source

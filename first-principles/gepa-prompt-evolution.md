@@ -4,7 +4,7 @@ status: active
 date: 2026-04-26
 summary: Offline skill optimization via execution traces; genetic-Pareto approach to evolving prompts
 tags: [reasoning, agent-design]
-related: [[evals-ai-evaluation-frameworks]], [[skill-trigger-design]]
+related: [[engineering/evals-ai-evaluation-frameworks]], [[engineering/skill-trigger-design]]
 sources: [internal]
 ---
 
@@ -50,9 +50,9 @@ RL/GRPO fine-tuning = expensive, time-consuming, harder to undo
 GEPA is the "try this before going to full fine-tuning" option.
 
 ## Related Concepts
-- [[self-evolving-skills]] — GEPA is the offline validation layer that addresses the self-congratulation weakness in the in-agent skill creation loop
-- [[physics-first-principles]] — Reason from execution traces rather than trusting the agent's self-assessment — this is first-principles thinking applied to AI improvement
-- [[lean-engineering]] — GEPA validates before shipping; it's the "don't skip testing" principle for agent skills
+- [[concepts/self-evolving-skills]] — GEPA is the offline validation layer that addresses the self-congratulation weakness in the in-agent skill creation loop
+- [[first-principles/physics-first-principles]] — Reason from execution traces rather than trusting the agent's self-assessment — this is first-principles thinking applied to AI improvement
+- [[engineering/lean-engineering]] — GEPA validates before shipping; it's the "don't skip testing" principle for agent skills
 
 ## Source
 - https://x.com/akshay_pachaar/status/2054564519280804028 (Hermes Agent Masterclass by Akshay 🚀)

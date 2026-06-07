@@ -4,7 +4,7 @@ status: active
 date: 2026-04-26
 summary: Question, delete, simplify, accelerate, automate — in that order; Elon's framework for solving any problem
 tags: [reasoning, decision-framework]
-related: [[physics-first-principles]], [[lean-engineering]]
+related: [[first-principles/physics-first-principles]], [[engineering/lean-engineering]]
 sources: [isaacson, corporate-rebels]
 ---
 
@@ -49,10 +49,10 @@ Every requirement must have a **name** attached — not a department. "The legal
 - The deletion benchmark: if you don't end up adding back at least 10% of what you removed, you didn't delete enough
 
 ## Related Concepts
-- [[physics-first-principles]] — The questioning (step 1) comes from first-principles thinking
-- [[lean-engineering]] — Delete & simplify are core lean principles
-- [[vibe-coder-security-checklist]] — Pre-launch security is the "don't skip" counterpart: build minimum AND secure it — automation without security just makes the breach faster
-- [[elon-musk]] — Additional Musk management principles beyond the 5-step algorithm
+- [[first-principles/physics-first-principles]] — The questioning (step 1) comes from first-principles thinking
+- [[engineering/lean-engineering]] — Delete & simplify are core lean principles
+- [[engineering/vibe-coder-security-checklist]] — Pre-launch security is the "don't skip" counterpart: build minimum AND secure it — automation without security just makes the breach faster
+- [[people/elon-musk]] — Additional Musk management principles beyond the 5-step algorithm
 
 ## Sources
 - [Corporate Rebels: Musk's Algorithm to Cut Bureaucracy](https://www.corporate-rebels.com/blog/musks-algorithm-to-cut-bureaucracy) (based on Walter Isaacson's biography)

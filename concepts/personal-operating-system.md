@@ -4,7 +4,7 @@ status: active
 date: 2026-04-26
 summary: Obsidian-based personal OS: 3-layer architecture (storage/intelligence/automation); survives bad days, operates autonomously
 tags: [knowledge-management, agent-design]
-related: [[retrieval-first-principle]], [[llm-wiki-pattern]]
+related: [[concepts/retrieval-first-principle]], [[concepts/llm-wiki-pattern]]
 sources: [internal]
 ---
 
@@ -190,10 +190,10 @@ This architecture maps closely to our own setup:
 
 | Obsidian OS | Our Equivalent |
 |-------------|----------------|
-| CLAUDE.md | [[soul-md-identity-layer]] (SOUL.md + MEMORY.md) |
-| 3-layer architecture | [[hermes-three-tier-memory]] |
+| CLAUDE.md | [[concepts/soul-md-identity-layer]] (SOUL.md + MEMORY.md) |
+| 3-layer architecture | [[engineering/hermes-three-tier-memory]] |
 | 8-folder vault structure | Our KB folder structure (concepts/, engineering/, etc.) |
-| Queue processor | [[hermes-kanban]] (Kanban board + delegate_task) |
+| Queue processor | [[engineering/hermes-kanban]] (Kanban board + delegate_task) |
 | Anti-breakdown design | Our heartbeat system / durability focus |
 | Generated outputs | KB log.md and changelog.md (auto-generated after updates) |
 
@@ -201,11 +201,11 @@ The key parallel: both systems are designed to **survive bad days** — periods 
 
 ## Related Concepts
 
-- [[soul-md-identity-layer]] — SOUL.md as the identity layer in our system; the CLAUDE.md template here is the same pattern
-- [[hermes-three-tier-memory]] — Hermes's three distinct memory layers parallel the 3-layer architecture
-- [[llm-wiki-pattern]] — Both systems use LLM-maintained structured storage as a core mechanism
-- [[self-evolving-skills]] — Agent-authored playbooks with background curation; parallels to how the CLAUDE.md and workflows evolve over time
-- [[hermes-kanban]] — Our multi-agent task board; maps to the queue processor workflow pattern
+- [[concepts/soul-md-identity-layer]] — SOUL.md as the identity layer in our system; the CLAUDE.md template here is the same pattern
+- [[engineering/hermes-three-tier-memory]] — Hermes's three distinct memory layers parallel the 3-layer architecture
+- [[concepts/llm-wiki-pattern]] — Both systems use LLM-maintained structured storage as a core mechanism
+- [[concepts/self-evolving-skills]] — Agent-authored playbooks with background curation; parallels to how the CLAUDE.md and workflows evolve over time
+- [[engineering/hermes-kanban]] — Our multi-agent task board; maps to the queue processor workflow pattern
 
 ## Sources
 

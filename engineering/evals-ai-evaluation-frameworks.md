@@ -4,7 +4,7 @@ status: active
 date: 2026-05-20
 summary: How to test AI outputs systematically; eval types, metrics, frameworks, getting started with evals
 tags: [engineering-practice, agent-design]
-related: [[scaffolding-for-ai-agents]], [[spec-driven-development]]
+related: [[engineering/scaffolding-for-ai-agents]], [[engineering/spec-driven-development]]
 sources: [internal]
 ---
 
@@ -155,11 +155,11 @@ The hardest parts:
 
 ## Related Cards
 
-- [[agentic-coding-tools]] — Testing is part of the autonomous coding workflow
-- [[advisor-pattern-for-ai-agents]] — Model selection is a routing decision that evals inform
-- [[scaffolding-for-ai-agents]] — Tooling around the model determines outcomes; evals measure whether that tooling works
-- [[hermes-three-tier-memory]] — Memory tiering affects eval design (what to test at each layer)
-- [[anthropic-building-skills-guide]] (raw) — Anthropic's guide covers testing patterns for skills
+- [[engineering/agentic-coding-tools]] — Testing is part of the autonomous coding workflow
+- [[engineering/advisor-pattern-for-ai-agents]] — Model selection is a routing decision that evals inform
+- [[engineering/scaffolding-for-ai-agents]] — Tooling around the model determines outcomes; evals measure whether that tooling works
+- [[engineering/hermes-three-tier-memory]] — Memory tiering affects eval design (what to test at each layer)
+- [[raw/anthropic-building-skills-guide]] (raw) — Anthropic's guide covers testing patterns for skills
 
 ## Sources
 

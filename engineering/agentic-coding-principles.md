@@ -4,7 +4,7 @@ status: active
 date: 2026-05-20
 summary: Six principles and 28 practices for moving beyond vibe coding to production-quality AI-assisted development
 tags: [engineering-practice, agentic-coding]
-related: [[agentic-coding-tools]], [[lean-engineering]]
+related: [[engineering/agentic-coding-tools]], [[engineering/lean-engineering]]
 sources: [internal]
 ---
 
@@ -196,11 +196,11 @@ The fundamental shift is from treating AI as an autonomous generator to treating
 
 ## Related Concepts
 
-- [[lean-engineering]] — Build minimum viable, validate, iterate; delete before optimize. Agentic coding shares the same "don't over-build" philosophy but applies it specifically to AI-assisted development
-- [[spec-driven-development]] — SDD inverts the waterfall model: specs generate code. Agentic coding complements this by providing the human accountability and verification layer around AI-generated code
-- [[vibe-coder-security-checklist]] — Pre-launch security/privacy checklist; agentic coding's security principle (Principle 3) and practices 16-18 extend this with ongoing AI-specific security vigilance
-- [[hermes-three-tier-memory]] — Hermes's memory architecture directly supports agentic coding's need for durable institutional knowledge (Practice 21) outside AI context windows
-- [[gepa-prompt-evolution]] — GEPA's genetic-Pareto approach to prompt optimization maps to agentic coding's Practice 19 (iterate on prompts based on outcomes)
+- [[engineering/lean-engineering]] — Build minimum viable, validate, iterate; delete before optimize. Agentic coding shares the same "don't over-build" philosophy but applies it specifically to AI-assisted development
+- [[engineering/spec-driven-development]] — SDD inverts the waterfall model: specs generate code. Agentic coding complements this by providing the human accountability and verification layer around AI-generated code
+- [[engineering/vibe-coder-security-checklist]] — Pre-launch security/privacy checklist; agentic coding's security principle (Principle 3) and practices 16-18 extend this with ongoing AI-specific security vigilance
+- [[engineering/hermes-three-tier-memory]] — Hermes's memory architecture directly supports agentic coding's need for durable institutional knowledge (Practice 21) outside AI context windows
+- [[first-principles/gepa-prompt-evolution]] — GEPA's genetic-Pareto approach to prompt optimization maps to agentic coding's Practice 19 (iterate on prompts based on outcomes)
 
 ## Sources
 

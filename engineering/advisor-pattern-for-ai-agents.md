@@ -4,7 +4,7 @@ status: active
 date: 2026-05-20
 summary: Smaller model as executor + larger model as advisor; beats single large model; cost-effective agentic workflows
 tags: [agent-design, agentic-coding]
-related: [[hermes-kanban]], [[scaffolding-for-ai-agents]]
+related: [[engineering/hermes-kanban]], [[engineering/scaffolding-for-ai-agents]]
 sources: [internal]
 ---
 
@@ -61,6 +61,6 @@ When I'm building agent workflows, I should consider: which parts of this task a
 
 ## See Also
 
-- [[evals-ai-evaluation-frameworks]] — Evals inform model selection; how to measure whether routing decisions are right
-- [[agentic-coding-tools]] — How agentic coding tools work and when the advisor pattern applies
-- [[scaffolding-for-ai-agents]] — How the tooling around the model determines outcomes
+- [[engineering/evals-ai-evaluation-frameworks]] — Evals inform model selection; how to measure whether routing decisions are right
+- [[engineering/agentic-coding-tools]] — How agentic coding tools work and when the advisor pattern applies
+- [[engineering/scaffolding-for-ai-agents]] — How the tooling around the model determines outcomes

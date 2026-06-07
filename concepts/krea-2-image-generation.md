@@ -4,7 +4,7 @@ status: active
 date: 2026-05-28
 summary: Krea 2 is a foundation image generation model trained from scratch for aesthetic quality and fine control — with style transfer, moodboard input, and adjustable creativity levels
 tags: [image-generation, krea, creative-ai, style-transfer, foundation-model]
-related: [[personal-operating-system]], [[retrieval-first-principle]]
+related: [[concepts/personal-operating-system]], [[concepts/retrieval-first-principle]]
 sources: [#source/nousresearch]
 ---
 
@@ -36,7 +36,7 @@ For creative workflows:
 
 ## Relationship to Personal Knowledge Management
 
-Aesthetic quality matters in knowledge work too — how information is presented affects how it's received. Tools like [[personal-operating-system]] show that Obsidian-based personal OS systems benefit from visual coherence. Krea 2 represents a similar principle at the generation layer: don't just produce images, produce images with intentional aesthetic direction.
+Aesthetic quality matters in knowledge work too — how information is presented affects how it's received. Tools like [[concepts/personal-operating-system]] show that Obsidian-based personal OS systems benefit from visual coherence. Krea 2 represents a similar principle at the generation layer: don't just produce images, produce images with intentional aesthetic direction.
 
 ## Sources
 

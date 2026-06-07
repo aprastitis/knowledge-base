@@ -4,7 +4,7 @@ status: active
 date: 2026-05-20
 summary: Three-level skill architecture: YAML frontmatter → SKILL.md body → linked files. Core pattern for triggering reliability.
 tags: [agent-design, knowledge-management]
-related: [[skill-trigger-design]], [[self-evolving-skills]]
+related: [[engineering/skill-trigger-design]], [[concepts/self-evolving-skills]]
 sources: [internal]
 ---
 
@@ -66,5 +66,5 @@ This pattern is the core architectural decision for any skill. Get the frontmatt
 
 ## See Also
 
-- [[skill-trigger-design]] — How to write the description field and test triggering
-- [[scaffolding-for-ai-agents]] — How tooling around the model determines outcomes
+- [[engineering/skill-trigger-design]] — How to write the description field and test triggering
+- [[engineering/scaffolding-for-ai-agents]] — How tooling around the model determines outcomes

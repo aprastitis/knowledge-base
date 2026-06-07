@@ -4,7 +4,7 @@ status: active
 date: 2026-05-20
 summary: Pre-launch security/privacy checklist for AI-built products — env vars, OWASP, rate limits, secrets management
 tags: [engineering-practice, agentic-coding]
-related: [[agentic-coding-principles]], [[lean-engineering]]
+related: [[engineering/agentic-coding-principles]], [[engineering/lean-engineering]]
 sources: [internal]
 ---
 
@@ -45,9 +45,9 @@ This checklist is for AI builders launching products with real users.
 - [ ] File upload validation if applicable
 
 ## Related Concepts
-- [[lean-engineering]] — Both about not skipping the "boring" essentials. The checklist is essentially lean engineering applied to pre-launch: delete the security debt before it becomes a liability.
-- [[elon-musk-5-step]] — Step 2 (Delete) and step 3 (Simplify) are the core moves. The checklist enforces "don't skip the boring stuff" which aligns with Musk's philosophy that automation without deletion just makes failure faster.
-- [[physics-first-principles]] — First-principles thinking says: don't inherit security assumptions from other projects, reason from first principles about what your specific product actually needs.
+- [[engineering/lean-engineering]] — Both about not skipping the "boring" essentials. The checklist is essentially lean engineering applied to pre-launch: delete the security debt before it becomes a liability.
+- [[mental-models/elon-musk-5-step]] — Step 2 (Delete) and step 3 (Simplify) are the core moves. The checklist enforces "don't skip the boring stuff" which aligns with Musk's philosophy that automation without deletion just makes failure faster.
+- [[first-principles/physics-first-principles]] — First-principles thinking says: don't inherit security assumptions from other projects, reason from first principles about what your specific product actually needs.
 
 ## Sources https://x.com/prajwaltomar_/status/2055294397475148123
 - Author: @PrajwalTomar_ (Prajwal Tomar)

@@ -4,7 +4,7 @@ status: active
 date: 2026-04-26
 summary: Hand-authored static identity file — slot #1 in system prompt; fixed frame for memory and skills
 tags: [agent-design]
-related: [[self-evolving-skills]], [[hermes-three-tier-memory]]
+related: [[concepts/self-evolving-skills]], [[engineering/hermes-three-tier-memory]]
 sources: [internal]
 ---
 
@@ -50,9 +50,9 @@ Everything that follows (the memory the agent writes, the skills it creates, the
 The agent's identity is **hand-authored and fixed**, not learned. This separates "who the agent is" (SOUL.md) from "what the agent knows" (memory) and "what the agent can do" (skills). Each layer has a different change cadence and authorship model.
 
 ## Related Concepts
-- [[hermes-three-tier-memory]] — Memory sits below SOUL.md in the system prompt; the three tiers determine what facts are always available vs searchable
-- [[self-evolving-skills]] — Skills are created and curated by the agent, but always executed through the lens of SOUL.md's identity
-- [[personal-operating-system]] — CyrilXBT's Obsidian-based OS uses the same CLAUDE.md pattern as SOUL.md — a single identity file that governs every workflow and AI interaction
+- [[engineering/hermes-three-tier-memory]] — Memory sits below SOUL.md in the system prompt; the three tiers determine what facts are always available vs searchable
+- [[concepts/self-evolving-skills]] — Skills are created and curated by the agent, but always executed through the lens of SOUL.md's identity
+- [[concepts/personal-operating-system]] — CyrilXBT's Obsidian-based OS uses the same CLAUDE.md pattern as SOUL.md — a single identity file that governs every workflow and AI interaction
 
 ## Source
 - https://x.com/akshay_pachaar/status/2054564519280804028 (Hermes Agent Masterclass by Akshay 🚀)

@@ -4,7 +4,7 @@ status: active
 date: 2026-05-20
 summary: Tooling around the model determines outcomes more than the model itself; scaffolding is the ceiling, model is the floor
 tags: [agent-design, engineering-practice]
-related: [[agentic-coding-tools]], [[evals-ai-evaluation-frameworks]]
+related: [[engineering/agentic-coding-tools]], [[engineering/evals-ai-evaluation-frameworks]]
 sources: [internal]
 ---
 
@@ -69,7 +69,7 @@ The Anthropic talk made this explicit: as models get more capable, the scaffoldi
 
 ## See Also
 
-- [[agentic-coding-tools]] — How agentic coding tools use scaffolding
-- [[advisor-pattern-for-ai-agents]] — How advisor pattern acts as a form of scaffolding
-- [[evals-ai-evaluation-frameworks]] — Evals measure whether scaffolding actually works; the feedback loop for prompt and tool changes
-- [[vibe-coder-security-checklist]] — Security scaffolding for AI-assisted development
+- [[engineering/agentic-coding-tools]] — How agentic coding tools use scaffolding
+- [[engineering/advisor-pattern-for-ai-agents]] — How advisor pattern acts as a form of scaffolding
+- [[engineering/evals-ai-evaluation-frameworks]] — Evals measure whether scaffolding actually works; the feedback loop for prompt and tool changes
+- [[engineering/vibe-coder-security-checklist]] — Security scaffolding for AI-assisted development
