@@ -185,3 +185,4 @@ KB is now conflict-free: frontmatter is canonical, no dual type systems.
 - Source tagged: #source/nousresearch on both
 **Outcome:** Pushed to GitHub.
 
+- 2026-06-08: Added [[engineering/harness-engineering]] — new discipline for AI agent reliability, 19 sections covering artifacts, three camps, five principles, build-to-delete paradox. Source: @sairahul1 X thread.

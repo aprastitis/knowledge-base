@@ -4,7 +4,7 @@ status: active
 date: 2026-05-20
 summary: Shift from copilot to autonomous agent; capability timeline; real production numbers from Shopify, Mercado Libre, Spotify
 tags: [agentic-coding, engineering-practice]
-related: [[engineering/agentic-coding-principles]], [[engineering/scaffolding-for-ai-agents]]
+related: [[engineering/agentic-coding-principles]], [[engineering/scaffolding-for-ai-agents]], [[engineering/harness-engineering]]
 sources: [internal]
 ---
 

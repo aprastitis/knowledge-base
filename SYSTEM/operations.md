@@ -149,3 +149,22 @@ KB is now clean: 25 frontmatter-only cards, no dual type systems, MOC in correct
 - model-context-protocol → hermes-native-mcp-catalog, scaffolding-for-ai-agents, context-engineering, agentic-coding-tools
 - multi-agent-orchestration-patterns → gstack-process-pattern, hermes-kanban, dispatch-routing-tiers, context-engineering
 **Outcome:** Pushed to GitHub.
+## 2026-06-08 — Harness Engineering Card Added
+
+**Source:** X thread by [@sairahul1](https://x.com/sairahul1/status/2063544956158185927), 2026-06-07
+
+**What I did:**
+- Read full X thread via `bird read` (credentials sourced from skills/bird-twitter/.env)
+- Created `engineering/2026-06-08-engineering-harness-engineering.md`
+- Added wikilink to `agentic-coding-principles.md` and `agentic-coding-tools.md` (backlinks)
+- Added entry to `index.md` under Engineering Practice
+
+**Placement decision:**
+- `engineering/` — This is a concrete engineering methodology/discipline, not a pure concept. Fits alongside agentic-coding-principles, agentic-coding-tools, and evals.
+- Not `first-principles/` — While it has philosophical elements (build-to-delete, context beats instructions), it's fundamentally a set of implementable practices and artifacts.
+- Not `mental-models/` — It's more prescriptive and concrete than a general reasoning framework.
+
+**Considered alternatives:**
+- Could have gone in `concepts/` as a new mental model, but the folder rules say "mental models, not implementable engineering practices" for mental-models. This is clearly engineering.
+
+**Related cards already cross-linked:** agentic-coding-principles, agentic-coding-tools, evals-ai-evaluation-frameworks, lean-engineering

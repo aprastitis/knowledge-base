@@ -45,3 +45,4 @@ Log of every KB update — what changed, when, why.
 
 ## 2026-05-25
 | ingest: gstack-process-pattern + dispatch-routing-tiers | engineering/gstack-process-pattern.md, engineering/dispatch-routing-tiers.md, index.md, SYSTEM/log.md, SYSTEM/changelog.md, SYSTEM/operations.md | 2 cards from Garry Tan's gstack: role-based AI team methodology (6 roles + sprint process), 5-tier dispatch routing (Simple/Medium/Heavy/Full/Plan). KB reference for Hermes project workflows. |
+- 2026-06-08: Added [[engineering/harness-engineering]] (new card, Engineering Practice)
