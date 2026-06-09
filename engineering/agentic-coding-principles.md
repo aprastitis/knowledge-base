@@ -206,3 +206,7 @@ The fundamental shift is from treating AI as an autonomous generator to treating
 
 - [Agentic Coding Principles & Practices](https://agentic-coding.github.io/) — 0xdepressionn (GitHub Pages)
 - [Speaking things into existence — Ethan Mollick](https://www.oneusefulthing.org/p/speaking-things-into-existence) (inspiration)
+
+## Relationship to Loop Engineering
+
+[[engineering/loop-engineering]] sharpens the same problems agentic coding principles identify: comprehension debt grows faster the more code the loop ships that you didn't write; verification is still on you even in a loop running unattended. Loop engineering makes these risks more acute, not less. The "build the loop like someone who intends to stay the engineer" framing is the direct application of Principle 1 (Developer Accountability) and Principle 2 (Understand and Verify).

@@ -154,6 +154,10 @@ Anthropic's honest numbers:
 
 That's a 22x cost increase. But the trend line matters: the $200 harness became $124 with one model upgrade. Better model → simpler harness → cheaper run → faster output.
 
+## Relationship to Loop Engineering
+
+[[engineering/loop-engineering]] is the direct successor to harness engineering — loop engineering sits one floor above the harness, adding scheduled automations, spawned helpers, and self-feeding work queues. Where harness engineering designs the environment a single agent runs inside, loop engineering designs the system that orchestrates agents on a schedule.
+
 ## Key Takeaway
 
 > The engineers winning in 2026 aren't writing the best code. They're designing the best constraints. And being willing to throw those constraints away the moment they stop earning their keep.

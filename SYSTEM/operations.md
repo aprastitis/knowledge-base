@@ -115,6 +115,31 @@ KB is now clean: 25 frontmatter-only cards, no dual type systems, MOC in correct
 **Notes:** gstack has 23 skills — we captured the philosophy and process discipline, not the specific slash commands. Hermes can adopt the methodology without implementing the slash command interface.
 **Outcome:** Pushed to GitHub.
 
+## 2026-06-09 — Loop Engineering Card Added
+**Source:** X thread by [@addyosmani](https://x.com/addyosmani/status/2064127981161959567), 2026-06-08
+
+**What I did:**
+- Read full tweet via `bird read --auth-token $AUTH_TOKEN --ct0 $CT0` (needed explicit flag passing, not just env sourcing)
+- Created `engineering/2026-06-09-engineering-loop-engineering.md`
+- Added backlinks to 6 related cards: harness-engineering (successor relationship), multi-agent-orchestration-patterns (patterns compose into loops), skill-trigger-design (skills as loop primitive), scaffolding-for-ai-agents (external memory principle), model-context-protocol (MCP connectors), agentic-coding-principles (comprehension debt / verification risks)
+- Updated `index.md` and `SYSTEM/changelog.md`
+
+**Placement decision:**
+- `engineering/` — loop engineering is an engineering methodology, not a concept or mental model. Fits alongside harness-engineering (its direct predecessor) and multi-agent-orchestration-patterns (the patterns it composes).
+- Not `concepts/` — despite having philosophical elements (comprehension debt, cognitive surrender), it's fundamentally a set of implementable practices with concrete building blocks.
+
+**Why this matters for our KB:**
+- This is the most concrete, actionable framing of "AI-assisted engineering at scale" we've seen — not principles, but a literal system you can build
+- The 6 primitives map directly to features Hermes already has or could have: automations (cron/scheduled), worktrees (git), skills (SKILL.md), MCP connectors (MCP servers), sub-agents (multi-agent kanban), external memory (memory layer)
+- The "build the loop like someone who intends to stay the engineer" framing is the best single-sentence articulation of the human-in-the-loop principle we've captured
+
+**Considered alternatives:**
+- Could have extended the harness-engineering card rather than creating a new one. Decided against it — loop engineering is a distinct discipline with its own identity, and a new card makes it findable on its own terms.
+- Could have put it in `concepts/` as a mental model. Rejected — it's too prescriptive and implementable for that folder.
+
+**Wikilinks added to:** harness-engineering, multi-agent-orchestration-patterns, skill-trigger-design, scaffolding-for-ai-agents, model-context-protocol, agentic-coding-principles
+**Outcome:** Pushed to GitHub.
+
 ## 2026-05-28 — Hermes May 27 Updates: MCP Catalog + Krea 2
 **Source:** NousResearch X posts (May 27, 2026) — @NousResearch
 **Decisions:**

@@ -73,3 +73,4 @@ The Anthropic talk made this explicit: as models get more capable, the scaffoldi
 - [[engineering/advisor-pattern-for-ai-agents]] — How advisor pattern acts as a form of scaffolding
 - [[engineering/evals-ai-evaluation-frameworks]] — Evals measure whether scaffolding actually works; the feedback loop for prompt and tool changes
 - [[engineering/vibe-coder-security-checklist]] — Security scaffolding for AI-assisted development
+- [[engineering/loop-engineering]] — External memory (the sixth primitive in loop engineering) is the direct application of this principle: the model forgets everything between runs, so memory must live on disk

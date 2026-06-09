@@ -79,4 +79,4 @@ The protocol supports **two-way communication**: the AI can ask a data source qu
 
 ---
 
-*Related: [[engineering/hermes-native-mcp-catalog]] (Hermes's built-in MCP server catalog) | [[engineering/scaffolding-for-ai-agents]] (tooling around the model) | [[concepts/context-engineering]] (runtime context retrieval via MCP tools)*
+*Related: [[engineering/hermes-native-mcp-catalog]] (Hermes's built-in MCP server catalog) | [[engineering/scaffolding-for-ai-agents]] (tooling around the model) | [[concepts/context-engineering]] (runtime context retrieval via MCP tools) | [[engineering/loop-engineering]] (MCP connectors are the fourth primitive in loop engineering — they let the loop touch real tools like Linear, Slack, and databases)*

@@ -29,6 +29,7 @@
 | [[engineering/vibe-coder-security-checklist]] | Pre-launch security/privacy checklist for AI-built products — env vars, OWASP, rate limits, secrets management | Engineering Practice |
 | [[engineering/agentic-coding-principles]] | Six principles and 28 practices for moving beyond vibe coding to production-quality AI-assisted development | Engineering Practice |
 | [[engineering/harness-engineering]] | New discipline (Feb 2026) for designing the constraints and feedback loops that make AI agents reliable — Agent = Model + Harness. Five artifacts, three camps, five universal principles, build-to-delete paradox. | Engineering Practice |
+| [[engineering/loop-engineering]] | Next evolution beyond harness engineering (Jun 2026) — designing systems that prompt agents for you. Five building blocks + external memory compose into self-running loops. Tool-agnostic (works in Claude Code or Codex). | Engineering Practice |
 | [[engineering/advisor-pattern-for-ai-agents]] | Smaller model as executor + larger model as advisor; beats single large model; cost-effective agentic workflows | Engineering Practice |
 | [[engineering/obsidian-vault-organization]] | Complete system for organizing a vault: folder structure, naming convention, YAML properties, tag taxonomy, MOCs, inbox processing, quarterly review. | Knowledge Management |
 | [[engineering/kb-evolution-plan]] | Our 6-month roadmap to evolve our KB from freeform wiki to retrieval-first, properties-driven system. Phases: foundation, structure, maintenance, intelligence. | Knowledge Management |
@@ -73,4 +74,4 @@
 | [[raw/openai-how-openai-uses-codex]] | "How OpenAI Uses Codex" — 7 use cases, best practices, engineering anecdotes from OpenAI teams | OpenAI PDF |
 
 ---
-*Last updated: 2026-06-07*
+*Last updated: 2026-06-09*

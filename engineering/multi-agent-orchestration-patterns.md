@@ -162,4 +162,4 @@ Mitigations: iteration limits, timeout budgets, circuit breakers, and explicit e
 
 ---
 
-*Related: [[engineering/gstack-process-pattern]] (magentic pattern in practice) | [[engineering/hermes-kanban]] (durable multi-agent task board) | [[engineering/dispatch-routing-tiers]] (routing by task complexity)*
+*Related: [[engineering/gstack-process-pattern]] (magentic pattern in practice) | [[engineering/hermes-kanban]] (durable multi-agent task board) | [[engineering/dispatch-routing-tiers]] (routing by task complexity) | [[engineering/loop-engineering]] (loop engineering composes these patterns into self-running systems that replace you as the prompter)*

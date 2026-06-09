@@ -94,3 +94,4 @@ When I build a skill, the description is the first thing I should get right. Wri
 - [[engineering/progressive-disclosure-pattern]] — The three-level system that makes triggering work
 - [[engineering/scaffolding-for-ai-agents]] — How tooling determines whether skills actually execute effectively
 - [[raw/anthropic-building-skills-guide]] — Anthropic's complete guide to building skills — the authoritative reference for trigger design, testing patterns, and skill architecture
+- [[engineering/loop-engineering]] — Skills are the third primitive in loop engineering; loop engineering uses skills as the durable project knowledge layer so agents don't re-derive context from zero every cycle
