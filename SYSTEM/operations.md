@@ -174,6 +174,18 @@ KB is now clean: 25 frontmatter-only cards, no dual type systems, MOC in correct
 - model-context-protocol → hermes-native-mcp-catalog, scaffolding-for-ai-agents, context-engineering, agentic-coding-tools
 - multi-agent-orchestration-patterns → gstack-process-pattern, hermes-kanban, dispatch-routing-tiers, context-engineering
 **Outcome:** Pushed to GitHub.
+## 2026-06-12 — Hermes Full Documentation Added to KB
+**Source:** Andreas asked to add the entire Hermes documentation from the local clone to the KB
+**Decision:** Created `engineering/hermes/` subfolder with 11 cards covering all major documentation areas
+**Decisions made:**
+- Placed all in `engineering/hermes/` — Hermes is a specific technical tool/agent framework, documentation belongs in engineering
+- Split source README.md into: README (overview), architecture (core loop + project structure), security, plugins, skills, observer-hooks, middleware, profiles, kanban, network-egress-isolation, contributing
+- Used existing `engineering/hermes-kanban.md` content as reference; now consolidated into `engineering/hermes/kanban.md`
+- network-egress-isolation → `security/` tag (it's a security doc)
+- observer-hooks and middleware → both telemetry-related but different purposes (read-only vs behavior-changing)
+**Policy change:** From now on, Hermes updates go directly into `engineering/hermes/` section. Andreas no longer needs separate RECOVERY.md in workspace — the KB is the canonical reference.
+**Outcome:** Pushed to GitHub.
+
 ## 2026-06-08 — Harness Engineering Card Added
 
 **Source:** X thread by [@sairahul1](https://x.com/sairahul1/status/2063544956158185927), 2026-06-07

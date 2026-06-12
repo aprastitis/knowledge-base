@@ -8,6 +8,30 @@ tags: [kb-infrastructure]
 
 # Knowledge Base Log
 
+## [2026-06-12] ingest | Hermes Full Documentation — 11 cards added
+**Source:** `/home/cerebro/.hermes/hermes-agent/` (local clone of NousResearch/hermes-agent)
+**Action:** Added entire Hermes documentation into KB as a dedicated `engineering/hermes/` section
+**Cards added:**
+- `engineering/hermes/README.md` — Overview, quick install, getting started, Nous Portal, CLI vs messaging comparison
+- `engineering/hermes/architecture.md` — Project structure, AIAgent class, agent loop, CLI architecture, TUI, toolsets, delegation, profiles
+- `engineering/hermes/security.md` — Trust model, OS-level isolation as the only boundary, in-process heuristics, plugin trust, deployment hardening
+- `engineering/hermes/plugins.md` — General plugins, memory providers, model providers, ABC + orchestrator pattern
+- `engineering/hermes/skills.md` — SKILL.md format, authoring standards, platform gating, conditional activation, curator system
+- `engineering/hermes/observer-hooks.md` — Read-only telemetry contract, pre/post API request, pre/post tool call, session lifecycle
+- `engineering/hermes/middleware.md` — Behavior-changing plugin hooks — llm_request, llm_execution, tool_request, tool_execution
+- `engineering/hermes/profiles.md` — Multi-instance isolated profiles, profile-aware paths, gateway token locks, multi-gateway
+- `engineering/hermes/kanban.md` — SQLite multi-agent task board, CLI, kanban_* toolsets, dispatcher, isolation model, rate limit trap
+- `engineering/hermes/network-egress-isolation.md` — Docker network segmentation for prompt injection defense
+- `engineering/hermes/contributing.md` — Dev setup, skill vs tool decision, cross-platform rules, dependency pinning, PR process
+**Decisions:**
+- All → `engineering/hermes/` — Hermes is a specific technical tool/agent framework; documentation fits engineering
+- Created `engineering/hermes/` as dedicated section (11 files, 1 for each major doc topic)
+- Used existing `engineering/hermes-kanban.md` as reference for kanban card (merged concepts)
+- Source paths tagged: local hermes-agent clone
+- Related to existing cards: hermes-native-mcp-catalog, hermes-three-tier-memory, hermes-kanban (now in subfolder)
+**Policy change:** From now on, Hermes updates go directly into KB `engineering/hermes/` section. No longer need to keep separate RECOVERY.md in workspace.
+**Outcome:** Pushed to GitHub.
+
 ## [2026-05-25] kb-evolution | Frontmatter added to all cards + 3 MOCs created
 **Action:** Implemented KB evolution plan (Phase 1 foundation + Phase 2 structure)
 - Created `KB-EVOLUTION-DESIGN.md` — design document for frontmatter schema, tag taxonomy, MOC priorities, naming conventions, retrofit strategy

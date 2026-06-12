@@ -46,6 +46,17 @@
 | [[engineering/hermes-three-tier-memory]] | Three distinct memory layers: frozen micro-files (Tier 1), SQLite FTS (Tier 2), external providers (Tier 3) | Agent Architecture |
 | [[engineering/agent-observability-opentelemetry]] | Tracing every reasoning step, tool call, and model response as structured spans using OTel GenAI conventions — vendor-neutral, step-level, privacy by default | Engineering Practice |
 | [[engineering/multi-agent-orchestration-patterns]] | Five patterns for multi-agent coordination: sequential, concurrent, group chat, handoff, and magentic. Complexity should match the problem. | Engineering Practice |
+| [[engineering/hermes/README]] | Hermes Agent — self-improving AI agent from Nous Research; CLI, messaging gateway, skills, memory, cron, kanban | Agent Framework |
+| [[engineering/hermes/architecture]] | Core agent loop, CLI architecture, TUI, project structure, toolsets, delegation, profiles | Agent Architecture |
+| [[engineering/hermes/security]] | Trust model, OS-level isolation as the only boundary, in-process heuristics, plugin trust, deployment hardening | Security |
+| [[engineering/hermes/plugins]] | General plugins, memory providers, model providers — ABC + orchestrator pattern | Extensibility |
+| [[engineering/hermes/skills]] | SKILL.md format, authoring standards, platform gating, conditional activation, curator system | Skills |
+| [[engineering/hermes/observer-hooks]] | Read-only telemetry contract — pre/post API request, pre/post tool call, session lifecycle hooks | Telemetry |
+| [[engineering/hermes/middleware]] | Behavior-changing plugin hooks — llm_request, llm_execution, tool_request, tool_execution | Middleware |
+| [[engineering/hermes/profiles]] | Multi-instance isolated profiles — profile-aware paths, gateway token locks, multi-gateway deployment | Profiles |
+| [[engineering/hermes/kanban]] | Durable SQLite multi-agent task board — CLI, kanban_* toolsets, dispatcher, isolation model, rate limit trap | Agent Collaboration |
+| [[engineering/hermes/network-egress-isolation]] | Docker network segmentation — internal + egress (proxy allowlist) networks for prompt injection defense | Security |
+| [[engineering/hermes/contributing]] | Dev setup, skill vs tool decision, cross-platform rules, dependency pinning, PR process | Contributing |
 | [[engineering/hermes-kanban]] | Durable SQLite-backed multi-agent task board with kanban_* tools; peer coordination vs delegate_task's hierarchical model | Agent Collaboration |
 
 ## First Principles (`/first-principles`)
