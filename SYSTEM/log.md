@@ -210,3 +210,17 @@ KB is now conflict-free: frontmatter is canonical, no dual type systems.
 **Outcome:** Pushed to GitHub.
 
 - 2026-06-08: Added [[engineering/harness-engineering]] — new discipline for AI agent reliability, 19 sections covering artifacts, three camps, five principles, build-to-delete paradox. Source: @sairahul1 X thread.
+
+## [2026-06-16] ingest | Hermes June 16 Updates: Async Subagents + Stripe Partnership
+**Source:** NousResearch/Hermes scan 2026-06-16 (via Andreas)
+**Action:** Created 2 cards from Hermes update scan
+**Cards added:**
+- `engineering/async-subagents.md` — The delegate tool is now non-blocking; parent agent continues while subagents run in the background; material architectural change (prior KB explicitly described delegate_task as synchronous)
+- `engineering/hermes-stripe-partnership.md` — Hermes + Stripe partnership; three new skills (stripe-link-cli, mpp-agent, stripe-projects); safety model for credential handling
+**Decisions:**
+- Both → `engineering/` — architectural/tooling changes and new capabilities, not pure concepts
+- `async-subagents` → tagged Agent Architecture; linked to multi-agent-orchestration-patterns and hermes/architecture
+- `hermes-stripe-partnership` → tagged Agent Framework; linked to hermes/skills and hermes/plugins
+- Source tagged: #source/nousresearch (Hermes scan)
+- Async subagents is a material change — prior KB documentation explicitly said delegate_task was synchronous. This update supersedes that.
+**Outcome:** Pushed to GitHub.

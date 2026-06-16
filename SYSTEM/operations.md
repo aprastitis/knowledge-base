@@ -205,3 +205,13 @@ KB is now clean: 25 frontmatter-only cards, no dual type systems, MOC in correct
 - Could have gone in `concepts/` as a new mental model, but the folder rules say "mental models, not implementable engineering practices" for mental-models. This is clearly engineering.
 
 **Related cards already cross-linked:** agentic-coding-principles, agentic-coding-tools, evals-ai-evaluation-frameworks, lean-engineering
+
+## 2026-06-16 — Hermes June 16 Updates: Async Subagents + Stripe Partnership
+**Source:** NousResearch/Hermes scan 2026-06-16 (shared by Andreas)
+**Decisions:**
+- `async-subagents.md` → `engineering/` — architectural change to a core tool (delegate_task); tagged Agent Architecture; linked to multi-agent-orchestration-patterns (concurrent pattern it enables) and hermes/architecture
+- `hermes-stripe-partnership.md` → `engineering/` — new Hermes capabilities; tagged Agent Framework; linked to hermes/skills and hermes/plugins
+- Both from same Hermes scan, processed together
+- Async subagents is a material change — prior KB explicitly described delegate_task as synchronous; the new card notes this supersedes that description
+- Source tagged: #source/nousresearch
+**Outcome:** Pushed to GitHub.
