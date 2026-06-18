@@ -31,6 +31,7 @@
 | [[engineering/harness-engineering]] | New discipline (Feb 2026) for designing the constraints and feedback loops that make AI agents reliable — Agent = Model + Harness. Five artifacts, three camps, five universal principles, build-to-delete paradox. | Engineering Practice |
 | [[engineering/loop-engineering]] | Next evolution beyond harness engineering (Jun 2026) — designing systems that prompt agents for you. Five building blocks + external memory compose into self-running loops. Tool-agnostic (works in Claude Code or Codex). | Engineering Practice |
 | [[engineering/async-subagents]] | The delegate tool is now non-blocking — parent agent continues while subagents run in the background | Agent Architecture |
+| [[engineering/2026-06-18-hermes-portal-teams]] | Hermes Portal team billing — shared credit pool, per-member spend caps, Spend Intelligence dashboard, multi-team membership | Agent Framework |
 | [[engineering/hermes-stripe-partnership]] | Hermes + Stripe partnership bringing three new skills for web payments, per-call APIs, and SaaS provisioning | Agent Framework |
 | [[engineering/advisor-pattern-for-ai-agents]] | Smaller model as executor + larger model as advisor; beats single large model; cost-effective agentic workflows | Engineering Practice |
 | [[engineering/obsidian-vault-organization]] | Complete system for organizing a vault: folder structure, naming convention, YAML properties, tag taxonomy, MOCs, inbox processing, quarterly review. | Knowledge Management |

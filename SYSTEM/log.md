@@ -224,3 +224,16 @@ KB is now conflict-free: frontmatter is canonical, no dual type systems.
 - Source tagged: #source/nousresearch (Hermes scan)
 - Async subagents is a material change — prior KB documentation explicitly said delegate_task was synchronous. This update supersedes that.
 **Outcome:** Pushed to GitHub.
+
+## [2026-06-18] ingest | Hermes Portal Teams — Team Billing
+**Source:** NousResearch tweet scan 2026-06-18 (via Andreas)
+**Action:** Created `engineering/2026-06-18-hermes-portal-teams.md`
+**What it covers:** Team billing for Hermes Portal — shared credit pool, per-member spend caps, Spend Intelligence dashboard, multi-team membership, single billing owner. First org-level deployment feature for Hermes.
+**Decisions:**
+- Placed in `engineering/hermes/` section alongside other Hermes product updates (async-subagents, hermes-stripe-partnership)
+- Tagged: hermes, billing, enterprise, agent-framework, team-deployment, cost-management
+- Linked to: hermes-stripe-partnership, hermes/profiles, hermes/architecture, async-subagents, multi-agent-orchestration-patterns
+- Source: #source/nousresearch
+**Why it matters:** Hermes going from personal agent to org-level AI infrastructure. Team billing + spend controls are prerequisites for deploying Hermes at scale.
+**Note:** First KB entry from a saved tweet scan report (memory/tweet-scans/). Cron now saves scan reports to file on each run, so Andreas can say "KB this" and I have the content ready.
+**Outcome:** Pushed to GitHub.

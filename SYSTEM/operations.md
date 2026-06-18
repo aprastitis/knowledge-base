@@ -215,3 +215,14 @@ KB is now clean: 25 frontmatter-only cards, no dual type systems, MOC in correct
 - Async subagents is a material change — prior KB explicitly described delegate_task as synchronous; the new card notes this supersedes that description
 - Source tagged: #source/nousresearch
 **Outcome:** Pushed to GitHub.
+
+## 2026-06-18 — Hermes Portal Teams: Team Billing
+**Source:** NousResearch tweet scan 2026-06-18 (Andreas confirmed worth KB-ing)
+**Decision:**
+- Card → `engineering/2026-06-18-hermes-portal-teams.md` — this is a Hermes Portal product feature, fits with other Hermes product updates in engineering/hermes/ section
+- Tagged: hermes, billing, enterprise, agent-framework, team-deployment, cost-management
+- Linked to: hermes-stripe-partnership, hermes/profiles, hermes/architecture, async-subagents, multi-agent-orchestration-patterns
+- Source: #source/nousresearch
+**Why here and not concepts:** It's a product feature with specific capabilities (credit pools, spend caps, dashboard), not a conceptual framework. Engineering is right.
+**Workflow improvement:** This was the first time I processed a saved tweet scan report from `memory/tweet-scans/`. The cron now saves full reports there so Andreas can say "KB this" later instead of processing immediately. File-based context solved the isolation problem.
+**Outcome:** Pushed to GitHub.
