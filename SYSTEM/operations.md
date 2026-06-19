@@ -226,3 +226,35 @@ KB is now clean: 25 frontmatter-only cards, no dual type systems, MOC in correct
 **Why here and not concepts:** It's a product feature with specific capabilities (credit pools, spend caps, dashboard), not a conceptual framework. Engineering is right.
 **Workflow improvement:** This was the first time I processed a saved tweet scan report from `memory/tweet-scans/`. The cron now saves full reports there so Andreas can say "KB this" later instead of processing immediately. File-based context solved the isolation problem.
 **Outcome:** Pushed to GitHub.
+
+## 2026-06-19 — Claude research report: Agentic-Loop Design for Hermes
+**Source:** Andreas asked Claude to produce a research report; URL: https://claude.ai/public/artifacts/72bd1d35-98b4-466b-81e4-71cc25aece54
+**Decisions:**
+
+- **Two-card split (raw + engineering).** Followed the precedent set by `anthropic-building-skills-guide` (raw) and `progressive-disclosure-pattern` / `skill-trigger-design` (engineering cards distilled from it). The raw/ card is auditable; the engineering/ card is what shows up in retrieval.
+
+- **Card name: `agentic-loop-pattern`.** Considered `agent-loop-design` and `inner-loop-pattern`. Chose `agentic-loop-pattern` because (a) it parallels the `loop-engineering` naming, (b) "inner-loop" might confuse with `async-subagents` and outer-loop scheduling, and (c) "agentic loop" is the term the report and both Anthropic/OpenAI use.
+
+- **Why this is a new card, not an extension of `loop-engineering`.** `loop-engineering` (Addy Osmani, 2026-06-08) is the *outer* loop — the system that schedules agents. The new card is the *inner* loop — the per-task iteration cycle inside a single agent (gather → act → verify → repeat). Different layer, different problems, different primitives. Adding it to loop-engineering would muddy the loop-engineering card's clean "outer loop" framing.
+
+- **Why this is engineering/ and not concepts/.** Engineering practice methodology with specific implementable controls (max_turns, compaction thresholds, four-part delegation contract, the six failure modes). Concepts/ cards are abstract frameworks; this is a set of tunable engineering primitives. Same reasoning as `harness-engineering` and `loop-engineering` going to engineering/.
+
+- **Source tagging: `#source/claude-artifact`** for the curated card. The card is a synthesis *of* the report, not first-party from Anthropic/OpenAI/Nous. Used additional tags `source/anthropic`, `source/openai`, `source/nousresearch`, `MiniMax` to capture the underlying primary sources the report drew from. This matches the precedent where `harness-engineering` is tagged with its X-thread source, not with the primary sources the X thread summarized.
+
+- **Cleanup decision: 58 citation icon URLs stripped from raw.** The Claude artifact rendering embeds decorative images like `![](claude-citation:/icon.png?validation=...&citation=BASE64 "Anthropic")` to surface source links. I parsed each to extract the label and the real URL, then wrote the result back as standard markdown `[Anthropic](https://...)`. The raw file is now 38 KB (was 95 KB) and is readable; all 58 source links preserved. This is a deviation from strict "verbatim" — the textual content is identical, but the decorative image markup is gone. Justified because: (a) raw/ is for *content*, not for the Claude.ai HTML rendering format, (b) the existing precedent of `anthropic-building-skills-guide` in raw/ is a PDF placeholder, not the actual binary, so the folder already treats "raw" as "preserved source material" not "byte-for-byte artifact."
+
+- **Did NOT extract a separate card for the "Stage 1–5 implementation plan" or the "Benchmarks that should change your design" section.** Both overlap with existing cards: `evals-ai-evaluation-frameworks` (eval set construction), `skill-trigger-design` (description as router), `loop-engineering` (build-evaluate-iterate), `agentic-coding-principles` (verification and failure modes). The new card links to these rather than duplicating.
+
+- **Did NOT create a separate card for the "Loop design by task type" section** (coding / research / file-ops / web-automation). Same reasoning — coding loops are well-covered by `agentic-coding-principles` and `harness-engineering`; research loops by `multi-agent-orchestration-patterns`; file-ops by `hermes-kanban`. The new card mentions the task-type playbooks briefly and points to the existing coverage.
+
+- **Did NOT create a separate "Hermes Agent" or "MiniMax" card.** Both are already well-covered: Hermes by `engineering/hermes/*` (11 cards in the dedicated subfolder), MiniMax by this card and the existing `engineering/MOC.md` cluster. Adding a top-level Hermes or MiniMax card would either duplicate or shadow the existing structure.
+
+**Caveats I added to the card (transparency):**
+- Vendor-reported numbers flagged as directional, not audited.
+- Hermes doc/code lag noted.
+- "Dumb loop" framing caveat added to prevent the wrong takeaway ("just write the harness and don't worry about the prompt") — the prompt/tools/description are where most failures actually are.
+- Multi-agent cost (~15× tokens) made prominent so we don't reflexively reach for it.
+
+**Outgoing links added (10 cards):** loop-engineering, harness-engineering, multi-agent-orchestration-patterns, progressive-disclosure-pattern, skill-trigger-design, hermes/skills, hermes/architecture, async-subagents, context-engineering, scaffolding-for-ai-agents, agentic-coding-principles, plus back-link to the new raw card.
+
+**Outcome:** Pushed to GitHub.

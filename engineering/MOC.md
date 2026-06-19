@@ -22,6 +22,14 @@ Map of Content for all engineering cards in `/engineering/`. This MOC organizes 
 |------|---------|
 | [[hermes-three-tier-memory]] | Three distinct memory layers: frozen micro-files (Tier 1), SQLite FTS (Tier 2), external providers (Tier 3). |
 | [[hermes-kanban]] | Durable SQLite-backed multi-agent task board with kanban_* tools. Peer coordination vs hierarchical delegate_task. |
+| [[2026-06-19-engineering-agentic-loop-pattern]] | Inner-loop pattern (gather → act → verify → repeat) for an agent task — activation gate, six controls, six failure modes. Curated distillation of Anthropic + OpenAI engineering guidance applied to Hermes + MiniMax. |
+| [[harness-engineering]] | Designing the agent's environment: AGENT.md / persistent context, plugin hooks, eval harness, guidance/corrections. Beyond prompt engineering — the harness is what surrounds the model. |
+| [[loop-engineering]] | Next evolution beyond harness engineering — designing systems that *prompt* agents for you. Five building blocks + external memory compose into self-running outer loops. |
+| [[multi-agent-orchestration-patterns]] | Five patterns for orchestrating multiple agents: sequential, concurrent, group chat, handoff, magentic. |
+| [[async-subagents]] | Delegation that doesn't block the parent chat. Sub-agents run in their own session, return a final report. Recent addition to Hermes (June 2026). |
+| [[hermes/skills]] | Skills are progressive-disclosure `SKILL.md` files. Description is the trigger; body loads on demand. Hermes self-authors skills from successful trajectories. |
+| [[hermes/architecture]] | Hermes internals: 90-iteration default budget, 50%/85% compaction triggers, system-prompt-stability rule, plugin hooks. |
+| [[hermes/skills-mcp-marketplace]] | Hermes + MCP integration: SKILL.md skills as the abstraction, MCP as the tool surface. Skill marketplace as the distribution channel. |
 
 ### Skill & Prompt Engineering
 | Card | Summary |
@@ -62,7 +70,7 @@ Map of Content for all engineering cards in `/engineering/`. This MOC organizes 
 - Should we have an `agentic-coding/MOC.md` to cluster the 4 agentic-coding cards together?
 
 ## Card Count
-14 cards (as of 2026-05-25)
+20 cards (as of 2026-06-19)
 
 ## Last Updated
-2026-05-25
+2026-06-19

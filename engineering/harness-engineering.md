@@ -4,7 +4,7 @@ status: active
 date: 2026-06-08
 summary: A new engineering discipline (emerged Feb 2026) for designing the constraints, feedback loops, and environment that make AI agents reliable in production. Agent = Model + Harness.
 tags: [engineering-practice, agentic-coding, ai-engineering, harness-engineering]
-related: [[engineering/agentic-coding-principles]], [[engineering/agentic-coding-tools]], [[engineering/evals-ai-evaluation-frameworks]], [[engineering/lean-engineering]]
+related: [[engineering/agentic-coding-principles]], [[engineering/agentic-coding-tools]], [[engineering/evals-ai-evaluation-frameworks]], [[engineering/lean-engineering]], [[engineering/2026-06-19-engineering-agentic-loop-pattern]]
 sources: [@sairahul1 (Rahul) on X, 2026-06-07](https://x.com/sairahul1/status/2063544956158185927)
 ---
 

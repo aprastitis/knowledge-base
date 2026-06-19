@@ -4,7 +4,7 @@ status: active
 date: 2026-06-09
 summary: The next evolution beyond harness engineering — designing systems that prompt agents for you, instead of prompting them directly. Five building blocks + external memory, composable into self-running loops.
 tags: [engineering-practice, agentic-coding, loop-engineering, automation, multi-agent]
-related: [[engineering/harness-engineering]], [[engineering/multi-agent-orchestration-patterns]], [[engineering/skill-trigger-design]], [[concepts/model-context-protocol]], [[engineering/scaffolding-for-ai-agents]], [[engineering/agentic-coding-principles]], [[engineering/ask-mode-before-code-mode]]
+related: [[engineering/harness-engineering]], [[engineering/multi-agent-orchestration-patterns]], [[engineering/skill-trigger-design]], [[concepts/model-context-protocol]], [[engineering/scaffolding-for-ai-agents]], [[engineering/agentic-coding-principles]], [[engineering/ask-mode-before-code-mode]], [[engineering/2026-06-19-engineering-agentic-loop-pattern]]
 sources: [https://x.com/addyosmani/status/2064127981161959567 (Addy Osmani, 2026-06-08)]
 ---
 
