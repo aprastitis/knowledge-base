@@ -48,6 +48,12 @@ MCP is the **protocol layer** of scaffolding. It handles the integration interfa
 
 See [[engineering/scaffolding-for-ai-agents]] for how tooling infrastructure determines agent outcomes more than model capability.
 
+## See Also
+
+- [[concepts/model-context-protocol]] — the protocol MCP catalog implements (JSON-RPC 2.0 spec; plain JSON over TCP in many addons)
+- [[engineering/hermes/2026-06-20-hermes-blender-mcp-skill]] — concrete example of a creative skill that uses the catalog to drive a desktop app (Blender) via MCP
+- [[engineering/scaffolding-for-ai-agents]] — protocol layer is part of scaffolding
+
 ## Sources
 
 - [NousResearch X: Hermes MCP Catalog announcement](https://x.com/NousResearch/status/2059638198075109769)

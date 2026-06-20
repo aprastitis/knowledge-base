@@ -30,6 +30,7 @@ Map of Content for all engineering cards in `/engineering/`. This MOC organizes 
 | [[hermes/skills]] | Skills are progressive-disclosure `SKILL.md` files. Description is the trigger; body loads on demand. Hermes self-authors skills from successful trajectories. |
 | [[hermes/architecture]] | Hermes internals: 90-iteration default budget, 50%/85% compaction triggers, system-prompt-stability rule, plugin hooks. |
 | [[hermes/skills-mcp-marketplace]] | Hermes + MCP integration: SKILL.md skills as the abstraction, MCP as the tool surface. Skill marketplace as the distribution channel. |
+| [[hermes/2026-06-20-hermes-blender-mcp-skill]] | Concrete creative optional skill — drives a running Blender instance over MCP/TCP with arbitrary bpy Python, scene queries, and viewport screenshots. Reference example for desktop-bridge skills. |
 
 ### Skill & Prompt Engineering
 | Card | Summary |
@@ -70,7 +71,7 @@ Map of Content for all engineering cards in `/engineering/`. This MOC organizes 
 - Should we have an `agentic-coding/MOC.md` to cluster the 4 agentic-coding cards together?
 
 ## Card Count
-20 cards (as of 2026-06-19)
+21 cards (as of 2026-06-20)
 
 ## Last Updated
-2026-06-19
+2026-06-20

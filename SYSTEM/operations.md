@@ -27,6 +27,33 @@ Outcome: Pushed to GitHub (knowledge-base & workspace)
 
 <!-- Add entries below -->
 
+## 2026-06-20 — Hermes Blender MCP Skill
+**Source:** NousResearch tweet scan 2026-06-20 (saved to `memory/tweet-scans/2026-06-20-nousresearch.md`); teaser reply https://x.com/NousResearch/status/2068099500040728918 + official docs https://hermes-agent.nousresearch.com/docs/user-guide/skills/optional/creative/creative-blender-mcp
+
+**Decisions:**
+- **Card → `engineering/hermes/2026-06-20-hermes-blender-mcp-skill.md`** — placed in the `engineering/hermes/` subfolder rather than at `engineering/` root because the card is concretely about a specific *optional skill*; the subfolder is where the SKILL.md format docs (`hermes/skills`) and the Hermes architecture docs live, so they're co-located. Other recent Hermes feature cards (Stripe, Portal Teams, Async Subagents) live at `engineering/` root because they're product/architectural changes rather than skill-specific. The Blender MCP card is skill-specific, so it gets the more specific home.
+- **Naming followed the established convention** — `YYYY-MM-DD-[type]-[topic].md` per `KB-EVOLUTION-DESIGN.md`. Avoided the 2026-06-08/09 wikilink-rename issue documented in `memory/kb-state.md`. No date-prefix cards at `engineering/` root for Hermes feature cards — they all live in `engineering/hermes/`.
+- **Source tagging:** `#source/nousresearch` + raw URL references in frontmatter `sources:` list. Same pattern as the other recent Hermes ingest cards.
+- **Caveat transparency:** the tweet was a brief teaser reply ("I've got some news"), not a release announcement. The skill itself already existed at v1.0.0 in the optional catalog. Ingested because (a) it fills a KB gap — no concrete creative-skill catalog entry existed; (b) it's the most explicit example we have of a creative optional skill that bridges to a real desktop app via MCP. Noted in the card's `## Source Notes` section so future readers don't expect this to be a "new feature" announcement.
+- **Why not extend `hermes/skills.md` instead of creating a new card?** Considered — `hermes/skills.md` already covers the SKILL.md format and the bundled/optional/hub split. But the Blender MCP card carries concrete implementation specifics (port number, wire format, command list, security caveats, Blender setup steps) that would bloat the format-overview card. The format card stays abstract; the Blender MCP card is a concrete worked example. They're cross-linked via the `See Also` section I added in `hermes/skills.md`.
+- **Cross-links chosen deliberately:**
+  - `engineering/hermes/skills` — most relevant; the Blender MCP skill *is* a SKILL.md file using the format this card documents
+  - `engineering/hermes-native-mcp-catalog` — the catalog this skill rides on; added a `See Also` section in the MCP catalog card pointing to the new card
+  - `concepts/model-context-protocol` — the underlying protocol; not heavy-handed, just mentioned as a related concept
+  - `engineering/2026-06-19-engineering-agentic-loop-pattern` — the gather→act→verify loop that Blender MCP workflows naturally fall into (mentioned in the card body)
+- **Security note added prominently in the card.** `execute_code` runs arbitrary Python in the Blender process. Sandbox = host OS, no approval gate. Flagged this in a dedicated `## Security / Safety Notes` section so anyone considering running this skill in a Hermes session sees the warning before reaching for it on production `.blend` files.
+
+**Caveats I added to the card (transparency):**
+- Tweet was a teaser, not a release — surfaced in `## Source Notes`.
+- Skill already existed at v1.0.0 — surfaced alongside the KB-gap justification.
+- `execute_code` safety — surfaced in its own section, not buried in prose.
+
+**Outgoing links added (4 cards):** `engineering/hermes/skills`, `engineering/hermes-native-mcp-catalog`, `concepts/model-context-protocol`, `engineering/2026-06-19-engineering-agentic-loop-pattern`.
+
+**Indexing:** added row to `index.md` (Engineering → Skills category), added row to `engineering/MOC.md` (Agent Architecture cluster), updated last-updated dates on both, and updated `SYSTEM/changelog.md` + this log.
+
+**Outcome:** Pushed to GitHub.
+
 ## 2026-05-25 — KB Evolution Implementation: Frontmatter + MOCs
 Source: Self-initiated based on `engineering/kb-evolution-plan.md`
 Decision: Created `KB-EVOLUTION-DESIGN.md` as working design before implementing. Decided to skip INBOX folder (our KB is Cerebro-managed, not human-capture, so INBOX adds complexity without solving a real problem). Retroactive frontmatter added opportunistically during MOC creation rather than mass-script.

@@ -8,6 +8,19 @@ tags: [kb-infrastructure]
 
 # Knowledge Base Log
 
+## [2026-06-20] ingest | Hermes Blender MCP Skill
+**Source:** NousResearch tweet scan 2026-06-20 (memory/tweet-scans/2026-06-20-nousresearch.md); teaser reply https://x.com/NousResearch/status/2068099500040728918 + official docs https://hermes-agent.nousresearch.com/docs/user-guide/skills/optional/creative/creative-blender-mcp
+**Action:** Created `engineering/hermes/2026-06-20-hermes-blender-mcp-skill.md`
+**What it covers:** Optional Hermes skill (author alireza78a, v1.0.0) wrapping `ahujasid/blender-mcp` addon. Drives a running Blender instance over plain UTF-8 JSON over TCP (port 9876). Four commands: `execute_code` (arbitrary bpy Python), `get_scene_info`, `get_object_info`, `get_viewport_screenshot`. One-time Blender setup: install addon → enable "Interface: Blender MCP" → sidebar "Start Server".
+**Backlinks added:** `engineering/hermes/skills.md` (See Also), `engineering/hermes-native-mcp-catalog.md` (See Also)
+**Decisions:**
+- Placed in `engineering/hermes/` — same subfolder as `hermes/skills`, `hermes/architecture`, etc. Most other Hermes feature cards live at `engineering/` root (e.g. `hermes-stripe-partnership`, `hermes-native-mcp-catalog`) but the Blender MCP skill is concretely about an *optional skill*, so the `engineering/hermes/` subfolder (where the SKILL.md format docs live) is a closer match
+- Naming follows `YYYY-MM-DD-[type]-[topic].md` per KB-EVOLUTION-DESIGN.md — `2026-06-20-hermes-blender-mcp-skill.md`
+- Source tagged `#source/nousresearch` + raw URL references
+- Cross-linked to: `hermes/skills` (the SKILL.md format), `hermes-native-mcp-catalog` (the catalog this skill rides on), `model-context-protocol` (the protocol), `2026-06-19-engineering-agentic-loop-pattern` (the gather→act→verify loop Blender workflows naturally fit)
+**Caveat noted in card:** the tweet was a brief teaser, not a release; the skill already existed at v1.0.0 in the optional catalog. Ingested because (a) it fills a KB gap (no concrete creative-skill catalog entry), (b) it's the most explicit example we have of a creative optional skill bridging to a real desktop app via MCP.
+**Outcome:** Pushed to GitHub.
+
 ## [2026-06-12] ingest | Hermes Full Documentation — 11 cards added
 **Source:** `/home/cerebro/.hermes/hermes-agent/` (local clone of NousResearch/hermes-agent)
 **Action:** Added entire Hermes documentation into KB as a dedicated `engineering/hermes/` section

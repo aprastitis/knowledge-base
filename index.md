@@ -34,6 +34,7 @@
 | [[engineering/async-subagents]] | The delegate tool is now non-blocking — parent agent continues while subagents run in the background | Agent Architecture |
 | [[engineering/2026-06-18-hermes-portal-teams]] | Hermes Portal team billing — shared credit pool, per-member spend caps, Spend Intelligence dashboard, multi-team membership | Agent Framework |
 | [[engineering/hermes-stripe-partnership]] | Hermes + Stripe partnership bringing three new skills for web payments, per-call APIs, and SaaS provisioning | Agent Framework |
+| [[engineering/hermes/2026-06-20-hermes-blender-mcp-skill]] | Optional Hermes skill (creative/blender-mcp) driving a running Blender instance over MCP/TCP — arbitrary bpy Python, scene queries, viewport screenshots | Skills |
 | [[engineering/advisor-pattern-for-ai-agents]] | Smaller model as executor + larger model as advisor; beats single large model; cost-effective agentic workflows | Engineering Practice |
 | [[engineering/obsidian-vault-organization]] | Complete system for organizing a vault: folder structure, naming convention, YAML properties, tag taxonomy, MOCs, inbox processing, quarterly review. | Knowledge Management |
 | [[engineering/kb-evolution-plan]] | Our 6-month roadmap to evolve our KB from freeform wiki to retrieval-first, properties-driven system. Phases: foundation, structure, maintenance, intelligence. | Knowledge Management |
@@ -90,4 +91,4 @@
 | [[raw/2026-06-19-raw-claude-agentic-loop-design-report]] | Claude research report (38 KB cleaned transcript) on agentic loop design — Anthropic + OpenAI engineering, Hermes Agent internals, MiniMax interleaved-thinking specifics | Claude Artifact |
 
 ---
-*Last updated: 2026-06-19*
+*Last updated: 2026-06-20*

@@ -159,3 +159,7 @@ Background skill-maintenance system that tracks usage on agent-created skills an
 | Bundled | `skills/` | Always available |
 | Optional | `optional-skills/` | `hermes skills install official/<cat>/<skill>` |
 | Hub | Nous Research Skills Hub | `hermes skills install <hub-id>` |
+
+## See Also
+
+- [[2026-06-20-hermes-blender-mcp-skill]] — concrete example of a creative optional skill that bridges to a desktop GUI app (Blender) over MCP/TCP. Useful as a reference for desktop-automation skills.
