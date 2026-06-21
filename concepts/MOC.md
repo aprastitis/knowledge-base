@@ -30,6 +30,18 @@ Map of Content for all concept cards in `/concepts/`. This MOC provides a topic-
 **Obsidian-based personal OS: 3-layer architecture (storage/intelligence/automation).** Designed to survive bad days and operate autonomously. Combines retrieval-first principles with agentic tooling.
 **Tags:** #knowledge-management #agent-design
 
+### [[context-engineering]]
+**Curating the optimal set of tokens in context — attention as finite budget.** Observation masking, LLM summarization, hybrid strategies. Anthropic + JetBrains research. The follow-up to prompt engineering once prompts get long enough to be a real engineering problem.
+**Tags:** #agent-design #context-management
+
+### [[model-context-protocol]]
+**Open protocol (JSON-RPC 2.0) for connecting AI applications to data sources and tools.** The USB-C of AI integration. Donated by Anthropic to the Linux Foundation's Agentic AI Foundation; adopted by OpenAI, Google, Microsoft.
+**Tags:** #protocol #tool-integration #standards
+
+### [[krea-2-image-generation]]
+**Krea 2 — foundation image generation model trained from scratch for aesthetic quality and fine control.** Style transfer, moodboard input, adjustable creativity. Reference implementation of image-gen as a first-class tool capability.
+**Tags:** #creative-ai #image-generation
+
 ---
 
 ## Related MOCs
@@ -42,7 +54,7 @@ Map of Content for all concept cards in `/concepts/`. This MOC provides a topic-
 - Do we need a `card-quality.md` standard to evaluate whether a concept card is "complete"?
 
 ## Card Count
-5 cards (as of 2026-05-25)
+8 cards (as of 2026-06-21)
 
 ## Last Updated
-2026-05-25
+2026-06-21 (weekly review: added context-engineering, model-context-protocol, krea-2-image-generation — these were added to the KB on 2026-06-07 and 2026-05-28 but the MOC was never refreshed)

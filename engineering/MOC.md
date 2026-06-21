@@ -29,7 +29,7 @@ Map of Content for all engineering cards in `/engineering/`. This MOC organizes 
 | [[async-subagents]] | Delegation that doesn't block the parent chat. Sub-agents run in their own session, return a final report. Recent addition to Hermes (June 2026). |
 | [[hermes/skills]] | Skills are progressive-disclosure `SKILL.md` files. Description is the trigger; body loads on demand. Hermes self-authors skills from successful trajectories. |
 | [[hermes/architecture]] | Hermes internals: 90-iteration default budget, 50%/85% compaction triggers, system-prompt-stability rule, plugin hooks. |
-| [[hermes/skills-mcp-marketplace]] | Hermes + MCP integration: SKILL.md skills as the abstraction, MCP as the tool surface. Skill marketplace as the distribution channel. |
+| [[hermes-native-mcp-catalog]] | Hermes ships with a built-in MCP server catalog — discovery + standardized interface for tool integrations. The distribution channel for skill ↔ tool wiring. |
 | [[hermes/2026-06-20-hermes-blender-mcp-skill]] | Concrete creative optional skill — drives a running Blender instance over MCP/TCP with arbitrary bpy Python, scene queries, and viewport screenshots. Reference example for desktop-bridge skills. |
 
 ### Skill & Prompt Engineering
@@ -71,7 +71,7 @@ Map of Content for all engineering cards in `/engineering/`. This MOC organizes 
 - Should we have an `agentic-coding/MOC.md` to cluster the 4 agentic-coding cards together?
 
 ## Card Count
-21 cards (as of 2026-06-20)
+21 cards (as of 2026-06-20) — corrected to reflect actual entries in this MOC
 
 ## Last Updated
-2026-06-20
+2026-06-21 (weekly review: replaced broken `hermes/skills-mcp-marketplace` reference with `hermes-native-mcp-catalog`)
