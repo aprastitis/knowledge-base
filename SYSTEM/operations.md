@@ -285,3 +285,36 @@ KB is now clean: 25 frontmatter-only cards, no dual type systems, MOC in correct
 **Outgoing links added (10 cards):** loop-engineering, harness-engineering, multi-agent-orchestration-patterns, progressive-disclosure-pattern, skill-trigger-design, hermes/skills, hermes/architecture, async-subagents, context-engineering, scaffolding-for-ai-agents, agentic-coding-principles, plus back-link to the new raw card.
 
 **Outcome:** Pushed to GitHub.
+
+## 2026-06-28 — Weekly KB Review: Hermes Kanban Merge + MOC Backfill
+**Source:** Self-initiated weekly review (cron)
+**Decisions:**
+
+### Hermes Kanban duplicate → merge to root card
+- **Kept `engineering/hermes-kanban.md`** (root, 248 lines, 2026-05-25) as canonical. Rationale:
+  - 6 incoming links from across the KB (`concepts/personal-operating-system`, `engineering/multi-agent-orchestration-patterns`, `engineering/advisor-pattern-for-ai-agents`, `engineering/hermes-three-tier-memory`, `engineering/MOC`, `index`)
+  - Conceptual depth: Kanban vs delegate_task comparison, core concepts section, workloads covered, recommended handoff metadata — these are KB-distinctive, not just docs regurgitation
+  - Dated earlier; was the canonical card first
+- **Archived `engineering/hermes/kanban.md`** to `.archive/2026-06-12-engineering-hermes-kanban-duplicate.md`. Rationale:
+  - Only 1 incoming link (index)
+  - Newer, shorter (97 lines)
+  - Mostly a subset of the root card with different framing
+  - Has unique operational content (rate-limit trap, multi-gateway config) — copied into root card before archiving
+- **Why not merge in the other direction (keep subfolder, archive root)?** The subfolder card is shallower; the root card has 6 incoming links that would all need updating; the root card has more conceptual depth that's KB-distinctive. Keeping the more-linked, deeper card is lower-risk.
+- **Why not keep both with different angles?** They overlap too much. The subfolder card's unique content (rate-limit trap, multi-gateway config, CLI verb catalog) is operational reference material that belongs in the same card as the conceptual material. Splitting "concepts" vs "operations" within one topic creates a navigation tax with no retrieval benefit.
+
+### MOC backfill + prefix consistency
+- **Fixed 3 broken wikilinks** in `engineering/MOC.md` — `[[engineering/hermes/skills]]`, `[[engineering/hermes/architecture]]`, `[[engineering/hermes/2026-06-20-hermes-blender-mcp-skill]]` → `[[engineering/hermes/skills]]`, `[[engineering/hermes/architecture]]`, `[[engineering/hermes/2026-06-20-hermes-blender-mcp-skill]]`. These were inconsistent with the rest of the MOC, which used `engineering/hermes/` prefix.
+- **Backfilled 13 missing cards** into the MOC. Root cause: the MOC was last fully refreshed on 2026-06-21; subsequent Hermes card additions (Hermes Reference cluster × 8, hermes-stripe-partnership, hermes-portal-teams, agent-observability-opentelemetry, gstack-process-pattern, dispatch-routing-tiers) were added to `index.md` but not backfilled into the MOC.
+- **Created two new clusters:**
+  - **Hermes Reference (`engineering/hermes/`)** — groups the 8 reference docs (README, security, plugins, observer-hooks, middleware, profiles, network-egress-isolation, contributing). Separated from Agent Architecture because they're documentation, not patterns.
+  - **AI Team Methodologies** — groups gstack-process-pattern + dispatch-routing-tiers. Both are about decomposing work into roles/tiers, which is a coherent cluster.
+- **Normalized all MOC wikilinks to folder-prefixed form.** Side benefit of the rewrite. Some engineering cards had bare-name links (e.g., `[[harness-engineering]]`) which work in Obsidian via basename resolution but break if files ever get cloned to a different vault. Folder-prefixed form is more portable.
+
+### Did not fix
+- **`[[card-name]]` placeholders in `KB-EVOLUTION-DESIGN.md` and `engineering/kb-evolution-plan.md`** (10 instances). These are template examples in code blocks showing the YAML frontmatter format. Intentional placeholders, not broken links. Last review's kb-state flagged these.
+- **`[[PARA Method]]`, `[[Atomic Habits]]`, etc. in `engineering/obsidian-vault-organization.md`** (9 instances). These are also intentional placeholder examples showing how to structure a productivity vault. Not KB cards we want.
+- **Open gaps unchanged**: Tool Use / Tool Definition, Chain-of-Thought, Model Routing, Prompt Versioning, Code Execution Sandboxing, RAG Retrieval Strategies. None of these has material ready to ingest; they're research topics for when Andreas has time.
+
+### New gap noted
+- **Hermes operational gotchas (medium priority)** — The rate-limit crash-loop pattern is exactly the kind of operational warning that would have saved me debugging time. Worth tracking more such gotchas (e.g., "what breaks when X env var is unset", "common config mistakes", "performance traps"). Not enough material yet for a dedicated card; flagged in kb-state for next review.

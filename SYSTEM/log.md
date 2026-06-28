@@ -269,3 +269,48 @@ KB is now conflict-free: frontmatter is canonical, no dual type systems.
 - The report's caveats section explicitly notes that the "90-turn hard cap" is imprecise (it's a configurable default, not immutable) and that some doc pages lag the code. Both notes are already captured in our existing Hermes cards.
 - The "+40.1% BrowseComp" and "90.2% multi-agent uplift" numbers are vendor/lab-reported — flagged in the card's Caveats section so we don't anchor on them as if they were independently audited.
 **Outcome:** Pushed to GitHub.
+
+## 2026-06-28 — Weekly KB Review (Sunday)
+**Person:** Cerebro (self-maintenance cron)
+**Action:** Maintenance pass — no new cards this week, but 2 quality issues fixed.
+
+### 1. Broken wikilinks in `engineering/MOC.md`: FIXED ✅
+**Problem:** `engineering/MOC.md` referenced `[[engineering/hermes/skills]]`, `[[engineering/hermes/architecture]]`, and `[[engineering/hermes/2026-06-20-hermes-blender-mcp-skill]]` (without the `engineering/` prefix). All other hermes subtree links in the MOC used the `engineering/hermes/` prefix. The bare-without-prefix form only works in Obsidian if the linked file is at the vault root, which it isn't — so these were effectively broken links.
+
+**Fix:** Rewrote `engineering/MOC.md` end-to-end with consistent `engineering/hermes/*` prefixes. All entries now use full folder-prefixed paths.
+
+### 2. Hermes Kanban duplicate cards: MERGED + ARCHIVED ✅
+**Problem:** Two cards covered the same topic:
+- `engineering/hermes-kanban.md` (248 lines, 2026-05-25) — older, deeper card; 6 incoming links from concepts + engineering cards
+- `engineering/hermes/kanban.md` (97 lines, 2026-06-12) — newer, shorter "operational reference" card; 1 incoming link (index only)
+
+Both were indexed. The newer subfolder card had unique operational content (Rate Limit Trap warning, Multi-Gateway Dispatch config) that wasn't in the older root card.
+
+**Fix:**
+- Enriched `engineering/hermes-kanban.md` with the unique operational content (Rate Limit Trap section explaining the 429 crash-loop and `failure_limit: 1` fix, Multi-Gateway Dispatch config, full CLI verb catalog). Updated frontmatter to include the 2026-06-28 sources and 3 additional related cards.
+- Archived `engineering/hermes/kanban.md` to `.archive/2026-06-12-engineering-hermes-kanban-duplicate.md` (archive never-delete policy).
+- Removed the duplicate row from `index.md`.
+
+### 3. Stale `engineering/MOC.md` (missing 13 cards): FIXED ✅
+**Problem:** The MOC claimed "21 cards" but the engineering folder actually has 34 content cards. Missing:
+- From Agent Architecture: `engineering/hermes-stripe-partnership`, `engineering/2026-06-18-hermes-portal-teams`
+- New Hermes Reference cluster (8 cards): `engineering/hermes/README`, `security`, `plugins`, `observer-hooks`, `middleware`, `profiles`, `network-egress-isolation`, `contributing`
+- From Skill & Prompt Engineering: `engineering/agent-observability-opentelemetry`
+- New AI Team Methodologies cluster (2 cards): `engineering/gstack-process-pattern`, `engineering/dispatch-routing-tiers`
+
+**Fix:** Rewrote `engineering/MOC.md` end-to-end with full cluster coverage. Card count now 34 across 8 clusters. Also normalized all wikilinks to folder-prefixed form (fixes the prefix inconsistency at the same time).
+
+### Queue
+- `memory/kb-queue.md` — empty (no items below the placeholder line)
+- `memory/kb-queue/` folder — only the 2026-05-20 migration note, nothing pending
+
+### Gaps Still Open (unchanged from 2026-06-14)
+- Tool Use / Tool Definition (high) — pending
+- Chain-of-Thought / Prompt Chaining (high) — pending
+- Model Routing (medium) — pending
+- Prompt Versioning / Diffing (medium) — pending
+- Code Execution Sandboxing (low) — pending
+- RAG Retrieval Strategies (low) — partially covered by llm-wiki-pattern
+
+### New Gap Noted (medium priority)
+- **Hermes operational gotchas** — the rate-limit crash-loop pattern we discovered during the Kanban merge is exactly the kind of operational warning that should have its own card (or at least a "Hermes operational gotchas" cluster). Not enough material yet for a dedicated card — log it and watch for more.

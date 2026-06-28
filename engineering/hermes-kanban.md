@@ -1,11 +1,19 @@
 ---
 type: engineering
 status: active
-date: 2026-05-25
-summary: Durable SQLite-backed multi-agent task board with kanban_* tools; peer coordination vs hierarchical delegate_task
-tags: [hermes, agent-design]
-related: [[engineering/hermes-three-tier-memory]], [[engineering/advisor-pattern-for-ai-agents]]
-sources: [internal]
+date: 2026-06-28
+summary: Durable SQLite-backed multi-agent task board with kanban_* tools; peer coordination vs hierarchical delegate_task. Includes operational warnings (rate-limit crash loop) and multi-gateway dispatch config.
+tags: [hermes, agent-design, kanban, multi-agent]
+related:
+  - engineering/hermes-three-tier-memory
+  - engineering/advisor-pattern-for-ai-agents
+  - engineering/hermes/architecture
+  - engineering/hermes/profiles
+  - engineering/multi-agent-orchestration-patterns
+sources:
+  - internal
+  - https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban
+  - https://github.com/NousResearch/hermes-agent/blob/main/docs/kanban/multi-gateway.md
 ---
 
 # Hermes Kanban — Multi-Agent Task Board
@@ -239,11 +247,49 @@ hermes kanban unblock t_abc t_def
 hermes kanban block t_abc "need input" --ids t_def t_hij
 ```
 
+## Kanban Rate Limit Trap (CRITICAL)
+
+**Symptom:** API usage spikes to quota limit in under an hour despite no user activity.
+
+**Root cause:** When workers hit a rate limit (HTTP 429), they crash and the dispatcher re-schedules within 60s. With the default `failure_limit=2`, each task needs 2 consecutive crashes before blocking. If the rate limit persists, this creates an infinite crash-loop.
+
+**Fix:**
+- Set `failure_limit: 1` in `config.yaml` — tasks block after the FIRST crash
+- Archive all stuck READY and RUNNING tasks before restart
+
+**Before re-enabling the dispatcher after a rate-limit episode:**
+1. Verify no READY/RUNNING tasks: `hermes kanban ls --status ready` and `hermes kanban ls --status running`
+2. If tasks exist, archive them: `hermes kanban archive <task-id>`
+3. Check API quota status
+
+## Multi-Gateway Dispatch Configuration
+
+Only one gateway owns the dispatcher (otherwise claim races):
+```yaml
+# Dispatch-owning gateway (default profile)
+kanban:
+  dispatch_in_gateway: true   # default
+
+# Non-dispatch gateways (other profiles)
+kanban:
+  dispatch_in_gateway: false
+```
+
+Or via env var: `HERMES_KANBAN_DISPATCH_IN_GATEWAY=false`.
+
+## CLI Command Reference (Quick)
+
+Full verb catalog: `init`, `create`, `list`/`ls`, `show`, `assign`, `link`/`unlink`, `comment`, `complete`, `block`/`unblock`, `archive`, `tail`, `watch`, `stats`, `runs`, `log`, `assignees`, `heartbeat`, `notify-*`, `dispatch`, `daemon` (deprecated), `gc`.
+
 ## Related Concepts
 
 - [[engineering/hermes-three-tier-memory]] — Kanban persists state in SQLite; Hermes also has a three-tier memory architecture
+- [[engineering/hermes/architecture]] — Core agent loop, plugin hooks, profile system that Kanban sits on top of
+- [[engineering/hermes/profiles]] — Kanban dispatches to named profiles with persistent memory
+- [[engineering/multi-agent-orchestration-patterns]] — Kanban as one of the coordination patterns (peer / work-queue, not hierarchical)
 - `delegate_task`, `kanban-worker-skill`, `kanban-orchestrator-skill` — These are Hermes agent internals, not KB cards; see the [Hermes docs](https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban) for details
 
 ## Source
 
 - https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban
+- https://github.com/NousResearch/hermes-agent/blob/main/docs/kanban/multi-gateway.md

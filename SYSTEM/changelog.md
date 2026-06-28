@@ -65,3 +65,6 @@ Log of every KB update — what changed, when, why.
 
 ## 2026-06-08
 | ingest: harness-engineering | engineering/2026-06-08-engineering-harness-engineering.md, index.md | New card: Harness Engineering — new discipline for AI agent reliability; Agent = Model + Harness; 5 artifacts, 3 camps, 5 universal principles, build-to-delete paradox
+
+## 2026-06-28
+| weekly-review-2026-06-28 | engineering/MOC.md, engineering/hermes-kanban.md, index.md, SYSTEM/log.md, SYSTEM/changelog.md, SYSTEM/sources.md, .archive/2026-06-12-engineering-hermes-kanban-duplicate.md | Weekly maintenance: (1) fixed 3 broken wikilinks in engineering/MOC.md (inconsistent `hermes/*` prefix → `engineering/hermes/*`); (2) merged duplicate Hermes Kanban cards — enriched root card with operational content (rate-limit crash-loop fix, multi-gateway dispatch config, CLI verb catalog), archived subfolder duplicate; (3) backfilled 13 missing cards into engineering/MOC.md (Hermes Reference cluster × 8, Agent Architecture × 2, Skill & Prompt Engineering × 1, new AI Team Methodologies cluster × 2), refreshed card count to 34.
