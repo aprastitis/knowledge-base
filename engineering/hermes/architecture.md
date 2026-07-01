@@ -143,7 +143,7 @@ Enable/disable per platform via `hermes tools` or `tools.<platform>.enabled/disa
 
 ## Delegation (delegate_task)
 
-`tools/delegate_tool.py` spawns a subagent with an isolated context + terminal session. Synchronous: parent waits for child's summary before continuing.
+`tools/delegate_tool.py` spawns a subagent with an isolated context + terminal session. **Asynchronous as of June 2026** — parent continues immediately while the subagent runs in the background; results return via background completion events. See [[engineering/async-subagents]] for the change. Earlier KB versions described `delegate_task` as synchronous; that framing is superseded.
 
 Two shapes:
 - **Single:** pass `goal` (+ optional `context`, `toolsets`)
@@ -153,7 +153,7 @@ Roles:
 - `role="leaf"` (default) — focused worker. Cannot call `delegate_task`, `clarify`, `memory`, `send_message`, `execute_code`
 - `role="orchestrator"` — retains `delegate_task` for spawning workers. Gated by `delegation.orchestrator_enabled` (default true) and bounded by `delegation.max_spawn_depth` (default 2)
 
-**Synchronicity rule:** delegate_task is **not** durable. For long-running work that must outlive the current turn, use `cronjob` or `terminal(background=True, notify_on_complete=True)` instead.
+**Durability rule:** Subagents run in the foreground of the gateway but **don't block the parent's chat context**. For long-running work that must outlive the current session entirely (e.g., across gateway restarts), use `cronjob` ([[engineering/hermes/cronjob]]) or `terminal(background=True, notify_on_complete=True)`. For cross-agent durable work that humans and other agents need to see, use Kanban ([[engineering/hermes-kanban]]).
 
 ## Profiles: Multi-Instance Support
 
@@ -181,3 +181,9 @@ Core mechanism: `_apply_profile_override()` sets `HERMES_HOME` before any module
 - **`_last_resolved_tool_names` is process-global** in `model_tools.py` — saved/restored around subagent execution
 - **The gateway has TWO message guards** — both must bypass approval/control commands
 - **Squash merges from stale branches can silently revert recent fixes** — verify with `git diff HEAD~1..HEAD`
+## See Also
+
+- [[engineering/async-subagents]] — The June 2026 change that made `delegate_task` non-blocking (supersedes the synchronous framing in earlier KB versions)
+- [[engineering/hermes/cronjob]] — The `cronjob` tool (referenced in the durability rule above)
+- [[engineering/hermes/messaging]] — The gateway platform adapters and overall architecture
+- [[engineering/hermes/profiles]] — Profile-based multi-instance isolation (referenced in the gateway token-lock rule)

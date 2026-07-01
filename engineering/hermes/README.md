@@ -11,6 +11,9 @@ related:
   - engineering/hermes-kanban
   - engineering/hermes-native-mcp-catalog
   - engineering/hermes-three-tier-memory
+  - engineering/hermes/messaging
+  - engineering/hermes/cronjob
+  - engineering/2026-06-21-hermes-blank-slate-setup
   - engineering/agentic-coding-principles
 ---
 
@@ -58,10 +61,20 @@ hermes model        # Choose LLM provider and model
 hermes tools        # Configure which tools are enabled
 hermes config set   # Set individual config values
 hermes gateway      # Start the messaging gateway (Telegram, Discord, etc.)
-hermes setup        # Run the full setup wizard
+hermes setup        # Run the setup wizard (Quick / Full / Blank Slate)
 hermes update       # Update to the latest version
 hermes doctor       # Diagnose any issues
 ```
+
+## Setup Modes
+
+`hermes setup` now offers three modes (added Blank Slate on 2026-06-20):
+
+- **Quick** (default) — Reasonable defaults; bundled skills + MCP catalog ready to go
+- **Full** (`hermes setup --portal`) — OAuth-driven; Nous as provider; Tool Gateway (web search, image gen, TTS, browser) auto-enabled
+- **Blank Slate** — Minimal baseline: provider + model + file ops + terminal only. No bundled skills, no MCP catalog. Add everything else manually. Best for power users, minimal-surface installs, or debugging whether a default-loaded skill is causing a problem.
+
+See [[engineering/2026-06-21-hermes-blank-slate-setup]] for full details.
 
 ## Nous Portal — Skip the API-Key Collection
 

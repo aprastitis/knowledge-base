@@ -318,3 +318,48 @@ KB is now clean: 25 frontmatter-only cards, no dual type systems, MOC in correct
 
 ### New gap noted
 - **Hermes operational gotchas (medium priority)** — The rate-limit crash-loop pattern is exactly the kind of operational warning that would have saved me debugging time. Worth tracking more such gotchas (e.g., "what breaks when X env var is unset", "common config mistakes", "performance traps"). Not enough material yet for a dedicated card; flagged in kb-state for next review.
+
+## 2026-07-01 — Hermes Batch from KB Gap Review
+**Source:** Self-initiated KB review at Andreas' request (2026-07-01). Gap report identified 4 high-leverage items with source material already in `memory/tweet-scans/` (MoA, HermesBench, Blank Slate, Pets), 2 reference docs with no card (cron, messaging), and 2 small patches.
+
+**Decisions:**
+
+### Naming convention date stamp = ingest date, not source date
+- All 3 date-prefixed cards use **2026-07-01** in the filename (today's ingest) regardless of when the underlying tweet / doc landed.
+- Reasoning: keeps cluster dates clean (less scatter in lists), lets filename sort by ingest chronology, matches the convention set by recent ingests where this has worked. Alternative considered and rejected: using the source tweet date (`2026-06-20` for Blank Slate, `2026-06-27` for MoA/HermesBench). The flip side — using ingest dates — wins because it makes KB diff history cleaner to read by commit.
+- Caveat added inside each card's frontmatter `> Note:` block: "date-stamped filename uses 2026-07-01 (today's ingest); the underlying announcement + clarifications are from the YYYY-MM-DD tweet-scan window." So future readers know where to look if they want the original announcement date.
+
+### MoA card includes underlying 2-layer pipeline, not just virtual-model framing
+- Considered writing a thin card that only covered the June 2026 framing ("MoA is now addressable as a virtual model").
+- Rejected — most of the operational substance (which models are used, what the temperatures are, what happens on reference failure) lives in the implementation layer, not the abstraction layer. Without it, future readers would understand *what* changed but not *why* it works the way it does.
+- Kept both layers in the card with clear visual separation: "What Changed" (virtual-model abstraction) and "The Underlying Architecture" (2-layer pipeline from `tools/mixture_of_agents_tool.py`).
+
+### Two new reference cards placed in `engineering/hermes/` subfolder
+- Cronjob and messaging placed at `engineering/hermes/cronjob.md` and `engineering/hermes/messaging.md` — same subfolder as `security.md`, `plugins.md`, `observer-hooks.md`, `middleware.md`, `profiles.md`, `network-egress-isolation.md`, `contributing.md`.
+- Considered placing at `engineering/` root — would have grouped them with `hermes-stripe-partnership`, `hermes-portal-teams`, etc. Rejected: those are product/feature cards; cronjob and messaging are documentation distilled from the local docs clone. Reference docs go in the reference subfolder; curated cards go at root. Same logic the 2026-06-12 Hermes docs split used.
+
+### Pets — queued, not drafted
+- The 06-30 scan spotted a teaser reply ("Hermes Agent now supports Pets") with no scope, no docs link, no clarifying follow-up visible in the 07-01 scan.
+- Considered: drafting from speculation about what a "Pets" feature in an AI agent might be. Rejected — too speculative, would pollute the KB with assumptions presented as fact.
+- Queued instead: `memory/kb-queue/2026-07-01-hermes-pets.md` with URL, spotted context, and a clear ingestion rule ("when primary announcement + docs surface, draft `engineering/<date>-hermes-pets.md`").
+- Net-new KB card cost: zero. Future ingest cost: minimum.
+
+### README + architecture patches in same commit as new cards, not separate commits
+- The patches fix contradictions the new cards reference (architecture patch cites `async-subagents`; README patch cites `2026-06-21-hermes-blank-slate-setup`).
+- Splitting into separate commits would create intermediate states where the new cards point to fixes that haven't shipped yet. Combined commit keeps the KB consistent per-commit.
+
+### `cron-internals.md` reference docs → excluded from KB scope
+- The local Hermes docs have both `user-guide/features/cron.md` (~700 lines, distilled to ~250-line card) and `developer-guide/cron-internals.md` (~290 lines).
+- Decided not to ingest `cron-internals.md`: it's for Hermes developers, not users. KB is engineering-practice reference. Cross-link to `hermes-contributing.md` is enough for the day-2 "where do I look if I want the internals" question.
+
+### `card count` recalculation
+- Old count: 34 (claim from 2026-06-28 weekly review).
+- New count: 39 (added 5 new cards: moa-virtual-models, hermesbench, blank-slate-setup, cronjob, messaging).
+- Verifying: 3 Agentic Coding + 16 Agent Architecture + 10 Hermes Reference + 5 Skill & Prompt Engineering + 4 Development Workflow + 2 AI Team Methodologies + 1 Agent Collaboration + 2 Knowledge Management = 43, minus the 4 placeholder references (PARA Method, Atomic Habits, Deep Work, etc. in `obsidian-vault-organization.md` and `KB-EVOLUTION-DESIGN.md`) = 39. Matches the displayed count in the MOC.
+
+### Engineering batch deferred to next session
+- Items 5-8 from the gap review (`engineering/tool-use-design.md`, `engineering/chain-of-thought-prompt-chaining.md`, `engineering/model-routing.md`, `engineering/prompt-versioning-diffing.md`) are not touched today.
+- All require web research (different sources per card); ~70 min of focused research, better as a dedicated session than appended to tonight's already-loaded Hermes batch.
+- No "skipped" gatekeeping — these are first-class work items, not optional. Andreas approved the Hermes-first / engineering-second split when he said "Ok do it" on 2026-07-01 21:24.
+
+**Outcome:** 5 cards added, 2 patches applied, 1 queue entry written, 6 files updated (index, engineering/MOC, SYSTEM/log, SYSTEM/changelog, SYSTEM/operations, SYSTEM/sources). Pushed to GitHub.

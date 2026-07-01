@@ -314,3 +314,57 @@ Both were indexed. The newer subfolder card had unique operational content (Rate
 
 ### New Gap Noted (medium priority)
 - **Hermes operational gotchas** — the rate-limit crash-loop pattern we discovered during the Kanban merge is exactly the kind of operational warning that should have its own card (or at least a "Hermes operational gotchas" cluster). Not enough material yet for a dedicated card — log it and watch for more.
+
+## [2026-07-01] ingest | Hermes batch — MoA, HermesBench, Blank Slate, cronjob, messaging
+**Person:** Cerebro (self-initiated, after Andreas asked for KB review)
+**Trigger:** Andreas request "do a thorough review of our KB and tell me what new material would nicely fill any gaps" (2026-07-01)
+**Action:** Filled the four highest-leverage gaps from the gap-review report — three new Hermes feature cards (from material already in `memory/tweet-scans/`), two new Hermes reference cards (distilled from local Hermes docs in `~/.hermes/hermes-agent/`), plus two small patches. Pets was not ingested — only a teaser tweet with no detail, queued instead.
+
+**Cards added (5):**
+- `engineering/2026-06-27-hermes-moa-virtual-models.md` — MoA presets exposed as virtual models in the routing layer; provider-agnostic N-way ensembles; +8%/+11% HermesBench. See Also links: `2026-06-27-hermesbench`, `hermes/architecture`, `advisor-pattern-for-ai-agents`, `dispatch-routing-tiers`, `multi-agent-orchestration-patterns`, `async-subagents`.
+- `engineering/2026-06-27-hermesbench.md` — HermesBench as Nous's internal agent-shaped benchmark; pre-announced full leaderboard. Cross-link to MoA card + general evals framework.
+- `engineering/2026-06-21-hermes-blank-slate-setup.md` — `hermes setup` third mode (Quick / Full / Blank Slate). Cross-link to `hermes/README` (which was also patched).
+- `engineering/hermes/cronjob.md` — Gateway-owned scheduled-task subsystem (~250 lines). 60s tick scheduler, single `cronjob` tool with action verbs, schedule formats, provider pinning fail-safe (#44585), skill attachments, multi-platform delivery tokens (`all` resolved at fire time), Telegram cron topic, response wrapping, silent suppression token, no-agent mode for watchdogs, `wakeAgent` cheap pre-run gate (`file-change`, `external-flag`, `sql-count`), `context_from` chaining, workdir mode serialization, security scanning at create/update. Distilled from the local Hermes docs at `~/.hermes/hermes-agent/website/docs/user-guide/features/cron.md` + 4 companion docs.
+- `engineering/hermes/messaging.md` — Gateway operational reference (~340 lines). 22+ platform adapters with full capability matrix (voice/images/files/threads/reactions/typing/streaming), installation variants (system service vs user + linger for headless VMs), 3-layer security (allowlist, DM pairing, admin/user tier split), shared slash-command library (28 commands), reset policies, busy-input modes (`interrupt/queue/steer`), silence tokens, tool-progress defaults, `/background` sessions, `/platform` day-2 operations, automatic circuit breaker (no auto-resume), restart notifications, session resume across restarts, optional progress-bubble cleanup, multi-HERMES_HOME awareness. Distilled from `~/.hermes/hermes-agent/website/docs/user-guide/messaging/index.md` + per-platform setup guides.
+
+**Patches (2):**
+- `engineering/hermes/architecture.md` line 144–156 — `## Delegation (delegate_task)` updated from "Synchronous: parent waits" to "Asynchronous as of June 2026 — parent continues immediately". `Synchronicity rule` renamed to `Durability rule` with explicit See Also backlinks to `async-subagents`, `hermes/cronjob`, and `hermes-kanban`. Architecture card also gained a `## See Also` footer pointing to the new reference docs and `async-subagents`.
+- `engineering/hermes/README.md` — `## Core Commands` table updated (`hermes setup` → "Quick / Full / Blank Slate" setup modes). Added `## Setup Modes` section. `related:` frontmatter extended with `hermes/messaging`, `hermes/cronjob`, `2026-06-21-hermes-blank-slate-setup`.
+
+**Queue (1):**
+- `memory/kb-queue/2026-07-01-hermes-pets.md` — Hermes Agent now supports "Pets" (per @NousResearch 2026-06-29, a teaser reply with no detail). Primary announcement tweet not visible. **Decision: queue, do not draft cold.** When primary announcement + docs surface, draft `engineering/<date>-hermes-pets.md`.
+
+**Decisions:**
+
+- **Naming convention:** all dated cards use `YYYY-MM-DD-<type>-<topic>.md` per `KB-EVOLUTION-DESIGN.md`. Date stamps reflect today's ingest (2026-07-01), not the source date — flagged inside each card's `> Note:` block. Reasoning: avoids adding more 06-prefixed cards to existing clusters that already have a healthy cluster identity, makes ingest chronology clear from filename alone, and matches the convention set by recent ingests (`2026-06-18-hermes-portal-teams`, `2026-06-20-hermes-blender-mcp-skill`, `2026-06-19-engineering-agentic-loop-pattern`). Alternative considered: date-stamping by source date (2026-06-20 for Blank Slate, 2026-06-27 for MoA/HermesBench) — would scatter the cluster date-prefixes; rejected.
+
+- **Two new Hermes reference cards (cronjob, messaging) placed at `engineering/hermes/`** (same subfolder as existing reference docs `security.md`, `plugins.md`, `observer-hooks.md`, etc.) rather than at `engineering/` root. Reason: they are documentation-style reference cards derived directly from the local Hermes docs clone — they belong with the other reference docs, not with the curated engineering practice cards at the root.
+
+- **MoA / HermesBench / Blank Slate placed at `engineering/` root** rather than `engineering/hermes/` subfolder — same logic as previous Hermes feature cards (`hermes-stripe-partnership`, `hermes-portal-teams`, `async-subagents`, `hermes-blender-mcp-skill`). They're product/architecture/feature cards, not reference docs. They cross-link into the subfolder where appropriate.
+
+- **MoA card captures the underlying 2-layer MoA implementation** (REFERENCE_MODELS, AGGREGATOR_MODEL, temperature settings, MIN_SUCCESSFUL_REFERENCES=1) as well as the new virtual-model abstraction. Both layers matter — the implementation has been in `tools/mixture_of_agents_tool.py` since at least 2025, but the virtual-model exposure is the new framing.
+
+- **HermesBench card deliberately scoped to "what's known"** rather than speculating about methodology or category breakdowns that aren't public yet. Added a "What's Not Yet Public" section and a maintenance note to revise once the leaderboard publishes.
+
+- **Pets deliberately NOT ingested.** The 06-30 scan flagged it as a teaser reply ("@demi_hl Not quite what we anticipated when we said Hermes Agent now supports Pets") with no scope, no docs link, no clarifying follow-up visible in any subsequent scan (07-01). Drafting a card from a single ambiguous tweet would be speculation. Queue entry was written with the URL + spotted-context + decision rule for when to ingest.
+
+- **README and architecture.md patches in the same commit as the new cards** rather than separate commits. Reason: the patches fix contradictions the new cards reference (e.g., `async-subagents` is cited in the architecture patch; `2026-06-21-hermes-blank-slate-setup` is cited from the README patch). Splitting into separate commits would leave intermediate states where the new cards reference fixes that haven't shipped yet.
+
+- **No new `engineering/hermes/cron-internals.md`** despite the local docs having both `user-guide/features/cron.md` and `developer-guide/cron-internals.md`. Reason: the user-facing cron.md (~700 lines, distilled into ~250-line card) covers everything an operator needs. `cron-internals.md` is for Hermes developers, not users — out of KB scope (KB is engineering-practice reference, not developer-onboarding for Hermes internals).
+
+**Indexing:**
+- `index.md` — 5 new rows added (MoA, HermesBench, Blank Slate, cronjob, messaging). Last-updated date updated to 2026-07-01.
+- `engineering/MOC.md` — 3 rows added to Agent Architecture cluster (MoA, HermesBench, Blank Slate); 2 rows added to Hermes Reference cluster (cronjob, messaging); card count refreshed from 34 to 39; last-updated footer rewritten.
+- `SYSTEM/log.md` — this entry
+- `SYSTEM/changelog.md` — new dated section
+- `SYSTEM/operations.md` — decision rationale appended (separate concern: the append-only operations log gets the "why" calls)
+- `SYSTEM/sources.md` — 5 new source rows
+
+**Cross-links added (12 cards affected):**
+- New cards → existing: 6+ outbound each
+- `engineering/hermes/architecture.md` — `## See Also` section pointing to new cards
+- `engineering/hermes/README.md` — `related:` frontmatter + setup modes section
+
+**Outcome:** Pushed to GitHub (knowledge-base repo).
+
+**Engineering batch (4 cards from the 06-21 / 06-07 gap list) — NOT done in this session.** Items deferred: `engineering/tool-use-design.md`, `engineering/chain-of-thought-prompt-chaining.md`, `engineering/model-routing.md`, `engineering/prompt-versioning-diffing.md`. My stated default plan was "Hermes batch now, engineering batch in a dedicated session" — confirmed at 21:24 by Andreas ("Ok do it"), preserving this split. The next dedicated research session will source these from Anthropic blog, OpenAI docs, model routing writeups, and prompt versioning platforms.

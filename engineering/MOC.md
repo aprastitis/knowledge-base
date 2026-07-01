@@ -33,6 +33,9 @@ Map of Content for all engineering cards in `/engineering/`. This MOC organizes 
 | [[engineering/hermes/2026-06-20-hermes-blender-mcp-skill]] | Concrete creative optional skill — drives a running Blender instance over MCP/TCP with arbitrary bpy Python, scene queries, and viewport screenshots. Reference example for desktop-bridge skills. |
 | [[engineering/hermes-stripe-partnership]] | Hermes + Stripe partnership: three new skills (stripe-link-cli, mpp-agent, stripe-projects) for web payments, per-call APIs, SaaS provisioning. Safety model for credential handling. |
 | [[engineering/2026-06-18-hermes-portal-teams]] | Hermes Portal team billing — shared credit pool, per-member spend caps, Spend Intelligence dashboard, multi-team membership. First org-level deployment feature. |
+| [[engineering/2026-06-21-hermes-blank-slate-setup]] | `hermes setup` third mode (Blank Slate) — minimal-baseline install with provider + model + file + terminal only. Best for power users, minimal-surface installs, debugging. |
+| [[engineering/2026-06-27-hermes-moa-virtual-models]] | MoA (mixture-of-agents) presets exposed as virtual models in the routing layer; provider-agnostic N-way ensembles; +8%/+11% HermesBench vs Opus 4.8 / GPT 5.5. |
+| [[engineering/2026-06-27-hermesbench]] | Nous Research's internal benchmark suite — reasoning, coding, tool-use, multi-step. Basis for MoA release numbers. Full leaderboard pre-announced. |
 
 ### Hermes Reference (`engineering/hermes/`)
 | Card | Summary |
@@ -45,6 +48,8 @@ Map of Content for all engineering cards in `/engineering/`. This MOC organizes 
 | [[engineering/hermes/profiles]] | Multi-instance isolated profiles — profile-aware paths, gateway token locks, multi-gateway deployment. |
 | [[engineering/hermes/network-egress-isolation]] | Docker network segmentation — internal + egress (proxy allowlist) networks for prompt injection defense. |
 | [[engineering/hermes/contributing]] | Dev setup, skill vs tool decision, cross-platform rules, dependency pinning, PR process. |
+| [[engineering/hermes/cronjob]] | Scheduled-task subsystem — gateway-owned 60s tick, single `cronjob` tool, skill attachments, multi-platform delivery, no-agent mode for watchdogs, `wakeAgent` gate. |
+| [[engineering/hermes/messaging]] | Gateway — 22+ platform adapters (Telegram, Discord, Slack, WhatsApp, Signal, Email…), allowlist + pairing + admin/user tiers, shared slash commands, circuit breakers, day-2 ops. |
 
 ### Skill & Prompt Engineering
 | Card | Summary |
@@ -93,7 +98,7 @@ Map of Content for all engineering cards in `/engineering/`. This MOC organizes 
 - Should the Hermes Reference cluster be merged into Agent Architecture, or kept separate? The reference cards are more "docs" than "patterns" — kept separate for now.
 
 ## Card Count
-34 cards (as of 2026-06-28): 3 Agentic Coding + 13 Agent Architecture + 8 Hermes Reference + 5 Skill & Prompt Engineering + 4 Development Workflow + 2 AI Team Methodologies + 1 Agent Collaboration + 2 Knowledge Management = 38 — minus the MOC entry itself = 34 cards listed here. (Excludes 3 placeholder template references and the 2 raw/ files.)
+39 cards (as of 2026-07-01): 3 Agentic Coding + 16 Agent Architecture (added moa-virtual-models, hermesbench, blank-slate-setup) + 10 Hermes Reference (added cronjob, messaging) + 5 Skill & Prompt Engineering + 4 Development Workflow + 2 AI Team Methodologies + 1 Agent Collaboration + 2 Knowledge Management = 43, minus the 4 placeholder template references (PARA, Atomic Habits, etc.) = 39 cards listed here. (Excludes 3 placeholder template references in KB-EVOLUTION-DESIGN + kb-evolution-plan, the 2 raw/ files, and this MOC entry itself.)
 
 ## Last Updated
-2026-06-28 (weekly review: fixed 3 inconsistent `hermes/*` wikilinks to use `engineering/hermes/*` prefix; added 8 missing Hermes Reference cards, hermes-stripe-partnership, hermes-portal-teams, agent-observability-opentelemetry, gstack-process-pattern, dispatch-routing-tiers; created AI Team Methodologies cluster; refreshed card count)
+2026-07-01 (Hermes batch from gap analysis: added 2026-06-27-hermes-moa-virtual-models, 2026-06-27-hermesbench, 2026-06-21-hermes-blank-slate-setup in Agent Architecture cluster; added hermes/cronjob and hermes/messaging in Hermes Reference cluster; patched hermes/architecture.md for async delegate_task + README.md for Blank Slate mode; refreshed card count from 34 to 39)

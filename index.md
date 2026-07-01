@@ -63,6 +63,11 @@
 | [[engineering/hermes/network-egress-isolation]] | Docker network segmentation — internal + egress (proxy allowlist) networks for prompt injection defense | Security |
 | [[engineering/hermes/contributing]] | Dev setup, skill vs tool decision, cross-platform rules, dependency pinning, PR process | Contributing |
 | [[engineering/hermes-kanban]] | Durable SQLite-backed multi-agent task board with kanban_* tools; peer coordination vs delegate_task's hierarchical model | Agent Collaboration |
+| [[engineering/2026-06-27-hermes-moa-virtual-models]] | MoA (mixture-of-agents) presets exposed as virtual models in the routing layer; provider-agnostic N-way ensembles; +8%/+11% HermesBench deltas vs Opus 4.8 / GPT 5.5 | Agent Architecture |
+| [[engineering/2026-06-27-hermesbench]] | Nous Research's internal benchmark suite (reasoning, coding, tool-use, multi-step); basis for MoA virtual-models release numbers; full leaderboard pre-announced | Evals |
+| [[engineering/2026-06-21-hermes-blank-slate-setup]] | `hermes setup` third mode (Quick / Full / Blank Slate) — minimal-baseline install with provider + model + file + terminal only | Agent Framework |
+| [[engineering/hermes/cronjob]] | Scheduled-task subsystem — gateway-owned 60s tick, single `cronjob` tool, skill attachments, multi-platform delivery, no-agent mode for watchdogs | Automation |
+| [[engineering/hermes/messaging]] | Gateway — 22+ platform adapters (Telegram, Discord, Slack, WhatsApp, Signal, Email, etc.), allowlist + pairing + admin/user tiers, shared slash commands, circuit breakers | Agent Framework |
 
 ## First Principles (`/first-principles`)
 | Page | Summary | Category |
@@ -91,4 +96,4 @@
 | [[raw/2026-06-19-raw-claude-agentic-loop-design-report]] | Claude research report (38 KB cleaned transcript) on agentic loop design — Anthropic + OpenAI engineering, Hermes Agent internals, MiniMax interleaved-thinking specifics | Claude Artifact |
 
 ---
-*Last updated: 2026-06-20*
+*Last updated: 2026-07-01*
