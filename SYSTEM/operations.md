@@ -363,3 +363,37 @@ KB is now clean: 25 frontmatter-only cards, no dual type systems, MOC in correct
 - No "skipped" gatekeeping — these are first-class work items, not optional. Andreas approved the Hermes-first / engineering-second split when he said "Ok do it" on 2026-07-01 21:24.
 
 **Outcome:** 5 cards added, 2 patches applied, 1 queue entry written, 6 files updated (index, engineering/MOC, SYSTEM/log, SYSTEM/changelog, SYSTEM/operations, SYSTEM/sources). Pushed to GitHub.
+
+## 2026-07-16 — Anatoli Kopadze "Loops explained" thread → fold into existing cards, no new curated card
+**Source:** @AnatoliKopadze long-form X thread 2026-06-20 (https://x.com/anatolikopadze/status/2068328135611822149, 6,759 likes / 1,026 reposts / 185 replies), shared by Andreas via Telegram on 2026-07-16.
+**Material:** ~14 KB of agentic-loop explainer covering the canonical loop shape, three pieces every loop needs (verify / state / stop), a four-box "do you even need one" test, the cost-per-accepted-change metric with a 50% accept-rate tripwire, the Geoffrey Huntley "Ralph Wiggum loop" silent-failure mode, a 4-step build-order ladder (manual → skill → loop → schedule), and a self-checking loop prompt template. Tail of the thread is promotional for Mira, a Telegram-launched competitor agent product; deliberately skipped.
+
+**Decisions:**
+
+### Why no new curated card
+- Considered `engineering/2026-07-16-anatoli-loops-thread.md` as a one-stop additional-content card. Rejected — opens us up to parallel cards for every reviewed source, which the Herme s Kanban duplicate merge (2026-06-28) demonstrated we actively lose to.
+- Considered `concepts/agentic-loop-pattern-variants.md` and `concepts/loop-cost-metrics.md` as separate concept cards. Rejected — the 5-stage variant is a *naming* extension of the inner loop, not a new concept (the steps already exist in our `agentic-loop-pattern` § "Practical Synthesis — The Loop Skeleton", just under different names: Plan / Gather / Act / Verify / Manage context / Stop). The cost metric is the *economics* of the inner loop, also staying in the same card.
+- Final layout: one raw card + two existing curated cards get four surgical additions. Card count stays at 39.
+
+### Placement decisions per addition
+- **Five-stage variant (DISCOVER → PLAN → EXECUTE → VERIFY → ITERATE)** → `engineering/2026-06-19-engineering-agentic-loop-pattern.md` § "The Canonical Loop > The Five-Stage Variant". Considered putting in `concepts/` as a new mental model. Rejected — it's a naming variant of the canonical loop we already curate, not a separate concept. Also note inline that the stage count is not load-bearing; both forms are valid.
+- **Ralph Wiggum loop** → `engineering/2026-06-19-engineering-agentic-loop-pattern.md` § "The Seven Failure Modes". Considered co-locating with the outer-loop card (`loop-engineering`). Rejected — Huntley's coinage describes behavior *inside* a single loop (agent declares done too early, loop keeps billing), so the failure-mode layer is the inner loop, not the outer scheduling loop.
+- **Cost-per-accepted-change metric** → `engineering/2026-06-19-engineering-agentic-loop-pattern.md` § "The Cost That Matters" (new, between failure modes and Hermes specifics). Discussed putting in a new `concepts/loop-economics.md` card. Rejected — it's the inner loop's cost profile; the metric only makes sense alongside the failure modes it justifies (esp. Ralph Wiggum as a cost failure, not just a correctness failure).
+- **Build-order ladder (manual → skill → loop → schedule)** → `engineering/loop-engineering.md` § "The Build Order That Works" (new, after "A Real Loop Example"). Considered placing in a new `concepts/agent-loop-rollout.md`. Rejected — it's the *operational rollout* of the outer-loop primitives Osmani's card enumerates. Best treated as an inline extension rather than a parallel card. The deliberate cross-links to `progressive-disclosure-pattern` (step 1→2) and `agentic-loop-pattern` (step 2→3 hardening) make the layering explicit.
+
+### Mira product promotion — deliberately skipped
+- The tail of the thread pitches Mira, a Telegram-launched competitor agent product. Summary: same loop-on-a-trigger idea as Hermes/OpenClaw, 500+ app integrations via Composio (≈ MCP catalog), content pipeline, voice transcription, scheduled triggers, etc.
+- Pulling the Mira examples into a KB entry would mean **cataloguing competitors**, which our KB isn't for. Hermes and OpenClaw entries explicitly cover "our stack" — not "what other stacks exist."
+- Editorial-skip comment added to the raw (`> Editorial skip:`) so a future reader sees the deliberate decision, not a gap. The conceptual overlap with our existing cards (loop-engineering, model-context-protocol) is named in the comment so future maintainers don't re-litigate.
+
+### Soft commitments flagged
+- **50% accept rate** is presented as a *tripwire*, not a *law*. The source material is practitioner lore, not a controlled study. Captured in the new card section.
+- **"Prove it once, harden it, then automate it."** Build-order ladder framing is restated verbatim from Kopadze for quote-worthiness, with explicit cross-links back to the underlying primitives (`progressive-disclosure-pattern`, `agentic-loop-pattern` failure modes, `agentic-coding-principles` on comprehension debt).
+
+### Provenance & git hygiene
+- Raw card filename `2026-07-16-raw-anatoli-kopadze-loops.md` — follows the existing raw-prefix convention used by `2026-06-19-raw-claude-agentic-loop-design-report.md`.
+- Updated `SYSTEM/sources.md`, `SYSTEM/log.md`, `SYSTEM/changelog.md`, `SYSTEM/operations.md`, `index.md`, `engineering/MOC.md`, `memory/kb-state.md` in the same commit. Splitting would create an inconsistent intermediate state where raw references point at log entries that haven't shipped yet.
+- Frontmatter `date:` on the existing curated cards unchanged — `date:` is creation date, not edit date. Edit provenance tracked in `SYSTEM/log.md` and `SYSTEM/operations.md`.
+
+**Outcome:** 1 raw card added, 2 existing curated cards edited (3 + 1 additions), 7 supporting files updated (log, changelog, operations, sources, index, engineering/MOC, kb-state). Card count unchanged at 39. Pushed to GitHub.
+

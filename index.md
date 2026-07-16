@@ -29,8 +29,8 @@
 | [[engineering/vibe-coder-security-checklist]] | Pre-launch security/privacy checklist for AI-built products — env vars, OWASP, rate limits, secrets management | Engineering Practice |
 | [[engineering/agentic-coding-principles]] | Six principles and 28 practices for moving beyond vibe coding to production-quality AI-assisted development | Engineering Practice |
 | [[engineering/harness-engineering]] | New discipline (Feb 2026) for designing the constraints and feedback loops that make AI agents reliable — Agent = Model + Harness. Five artifacts, three camps, five universal principles, build-to-delete paradox. | Engineering Practice |
-| [[engineering/loop-engineering]] | Next evolution beyond harness engineering (Jun 2026) — designing systems that prompt agents for you. Five building blocks + external memory compose into self-running loops. Tool-agnostic (works in Claude Code or Codex). | Engineering Practice |
-| [[engineering/2026-06-19-engineering-agentic-loop-pattern]] | Inner-loop pattern (gather → act → verify → repeat) for an agent task — activation gate, six controls, six failure modes. Curated distillation of a Claude research synthesis on Anthropic + OpenAI engineering guidance, applied to Hermes + MiniMax. | Engineering Practice |
+| [[engineering/loop-engineering]] | Next evolution beyond harness engineering (Jun 2026) — designing systems that *prompt* agents for you. Five building blocks + external memory compose into self-running outer loops; manual → skill → loop → schedule build order. Tool-agnostic (works in Claude Code or Codex). | Engineering Practice |
+| [[engineering/2026-06-19-engineering-agentic-loop-pattern]] | Inner-loop pattern (gather → act → verify → repeat) for an agent task — activation gate, six controls, **seven** failure modes (incl. the Ralph Wiggum silent-billing failure), cost-per-accepted-change tripwire. Curated distillation of a Claude research synthesis on Anthropic + OpenAI engineering guidance, applied to Hermes + MiniMax. | Engineering Practice |
 | [[engineering/async-subagents]] | The delegate tool is now non-blocking — parent agent continues while subagents run in the background | Agent Architecture |
 | [[engineering/2026-06-18-hermes-portal-teams]] | Hermes Portal team billing — shared credit pool, per-member spend caps, Spend Intelligence dashboard, multi-team membership | Agent Framework |
 | [[engineering/hermes-stripe-partnership]] | Hermes + Stripe partnership bringing three new skills for web payments, per-call APIs, and SaaS provisioning | Agent Framework |
@@ -94,6 +94,7 @@
 | [[raw/anthropic-building-skills-guide]] | "The Complete Guide to Building Skills for Claude" — full PDF with skill architecture, triggering, testing patterns | Anthropic PDF |
 | [[raw/openai-how-openai-uses-codex]] | "How OpenAI Uses Codex" — 7 use cases, best practices, engineering anecdotes from OpenAI teams | OpenAI PDF |
 | [[raw/2026-06-19-raw-claude-agentic-loop-design-report]] | Claude research report (38 KB cleaned transcript) on agentic loop design — Anthropic + OpenAI engineering, Hermes Agent internals, MiniMax interleaved-thinking specifics | Claude Artifact |
+| [[raw/2026-07-16-raw-anatoli-kopadze-loops]] | @AnatoliKopadze long-form thread (6,759 likes) explaining agentic loops — 5-stage pattern, three crucial pieces, "Ralph Wiggum loop" failure mode, cost-per-accepted-change metric, build-order ladder, self-checking loop prompt template. Mira product promotion deliberately skipped. | @AnatoliKopadze X Thread (2026-06-20) |
 
 ---
-*Last updated: 2026-07-01*
+*Last updated: 2026-07-16*

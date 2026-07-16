@@ -5,7 +5,7 @@ date: 2026-06-09
 summary: The next evolution beyond harness engineering — designing systems that prompt agents for you, instead of prompting them directly. Five building blocks + external memory, composable into self-running loops.
 tags: [engineering-practice, agentic-coding, loop-engineering, automation, multi-agent]
 related: [[engineering/harness-engineering]], [[engineering/multi-agent-orchestration-patterns]], [[engineering/skill-trigger-design]], [[concepts/model-context-protocol]], [[engineering/scaffolding-for-ai-agents]], [[engineering/agentic-coding-principles]], [[engineering/ask-mode-before-code-mode]], [[engineering/2026-06-19-engineering-agentic-loop-pattern]]
-sources: [https://x.com/addyosmani/status/2064127981161959567 (Addy Osmani, 2026-06-08)]
+sources: [https://x.com/addyosmani/status/2064127981161959567 (Addy Osmani, 2026-06-08), https://x.com/anatolikopadze/status/2068328135611822149 (Anatoli Kopadze, 2026-06-20)]
 ---
 
 # Loop Engineering
@@ -92,6 +92,25 @@ One thread, composed together:
 6. **External memory** remembers what got tried, what passed, what stayed open → tomorrow's run picks up where today stopped
 
 You designed it one time. You did not prompt any of those steps.
+
+## The Build Order That Works
+
+The primitives above (automations, worktrees, skills, MCP, sub-agents, external memory) are the building blocks. The order you stack them matters more than which tools you pick — per Anatoli Kopadze (2026-06-20, `raw/2026-07-16-raw-anatoli-kopadze-loops.md`), the people who ship loops that survive in production all do it the same way:
+
+```
+1. Get ONE manual run reliable first.
+2. Turn that into a skill (save the instructions).
+3. Wrap the skill in a loop (add the gate + stop condition).
+4. THEN put it on a schedule.
+```
+
+Skipping ahead, scheduling something you have not made reliable by hand, is exactly how loops blow up while you sleep. **Prove it once, harden it, then automate it.** Practical consequences:
+
+- **Step 1 → 2** is where the [[engineering/progressive-disclosure-pattern]] pays off. A manual procedure you ran three times *is* a skill waiting to be saved — write it down once instead of re-pasting every loop.
+- **Step 2 → 3** is where you actually need the hardening that [[engineering/2026-06-19-engineering-agentic-loop-pattern]] covers: a verifier that can *fail* the work, an iteration ceiling, and a stop condition. A loop with a skill but no gate is the [Ralph Wiggum loop](raw/2026-07-16-raw-anatoli-kopadze-loops.md) failure mode in disguise — it's billing, it's not running.
+- **Step 3 → 4** is where comprehension debt and verification risk compound. The faster the loop ships code you didn't write, the bigger the gap between what exists and what you actually understand ([[engineering/agentic-coding-principles]] Principle 2: Understand and Verify). Same load-bearing caveat as Osmani's "build the loop like someone who intends to stay the engineer" — scheduling is amplification, not immunity.
+
+This sequencing also sidesteps the most common trap Osmani flags: jumping straight to scheduling a workflow you haven't validated. Step 1 is your validation. Steps 2–3 are the hardening. Step 4 is the only one that costs you unattended time, and by the time you get there you should know whether the loop is honest about its accept rate (per the *cost per accepted change* metric in the agentic-loop-pattern card).
 
 ## What the Loop Still Doesn't Do For You
 

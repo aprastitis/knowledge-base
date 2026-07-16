@@ -26,6 +26,20 @@ OpenAI's *Practical Guide to Building Agents* says the same thing differently: *
 
 **The harness is a dumb loop.** Barry Zhang (Anthropic) at AI Engineer Summit 2025: an agent is *"models using tools in a loop"* and *"the loop itself is mechanically simple (often just a while loop); the intelligence lives in the model, not the harness."* Don't over-engineer the harness. Most of the work is in the model + the description/prompt + the tools, not in custom loop code.
 
+### The Five-Stage Variant
+
+The same loop, named with one extra stage for code-oriented work — from Anatoli Kopadze (2026-06-20, 6,759 likes — `raw/2026-07-16-raw-anatoli-kopadze-loops.md`):
+
+```
+DISCOVER  →  work out what needs doing
+PLAN      →  decide how to do it
+EXECUTE   →  do the work
+VERIFY    →  check it against the goal
+ITERATE   →  not there yet? feed the result back in and repeat
+```
+
+Three of these five (verify, state, stop) do the real work and are where loops break — Kopadze's framing. The 4-stage Anthropic *gather → act → verify → repeat* shape is a compressed form of the same skeleton; the 5-stage form is more useful for code loops because it splits *discover* (gather context — search, read, just-in-time retrieval) from *plan* (decide what to do next) and makes both explicit. Both framings are valid; don't treat the stage count as load-bearing.
+
 ## The Activation Gate (When to Loop)
 
 The most important design rule from both labs: **don't loop for everything.** Use an agent loop only when the task is:
@@ -104,7 +118,7 @@ The litmus test: *"If a human engineer can't definitively say which tool should 
 
 Keep failed actions visible — they're evidence for the model. OpenAI's SDK supports retries, max-turn caps, guardrail tripwires (input/output/tool), and human-in-the-loop approval (`needs_approval=True` pauses the run as a *resumable* interruption; treat approvals as paused runs, not as new turns). Anthropic recommends formal rules for repeated failures and tool/credential checks before irreversible actions.
 
-## The Six Failure Modes (Name Them to Defend Against Them)
+## The Seven Failure Modes (Name Them to Defend Against Them)
 
 Both labs and the practitioner literature converge on the same named failure modes. Defending against them is what separates a working loop from a runaway one.
 
@@ -116,6 +130,30 @@ Both labs and the practitioner literature converge on the same named failure mod
 | **Context overflow / rot** | Recall degrades before the hard limit hits | Compaction + note-taking + sub-agent isolation; keep tool outputs lean |
 | **Hallucinated completion** | Model confidently praises mediocre work | Require execution-based or separate-critic verification, not inline self-approval |
 | **Hallucinated tool selection** | Agent picks the wrong tool from an overlapping set | Few, clearly-named, non-overlapping tools; split agents when tool clarity fails |
+| **Ralph Wiggum loop** 🆕 | Agent decides it's done too early, exits on a half-finished job; the loop keeps billing and producing nothing. Coined by Geoffrey Huntley (per Kopadze, 2026-06-20). | Hard gate that can *fail* the work, not just succeed — every loop needs a verifier strong enough to reject bad output. Worse than "premature stopping" because the loop *appears* to be working (it just doesn't) and only the bill tells you something's wrong. |
+
+## The Cost That Matters
+
+Most loop cost talk focuses on *tokens spent per run*. That's the wrong metric. The metric that actually determines whether a loop pays for itself is **cost per accepted change** (per Kopadze, 2026-06-20):
+
+```
+ROUGH COST OF ONE LOOP
+single agent, one medium task:       ~50,000 – 200,000 tokens
+context re-sent every iteration:     grows each pass
+maker + checker pattern:             ~doubles the bill (two reads of the work)
+a fleet of agents in parallel:       multiply all of the above
+```
+
+If your loop yields 10 results and you reject 6, you're doing the review work the loop was supposed to save — and the loop costs more than it returns. **Below a 50% accept rate, a loop costs more than it gives back.** The 50% rule of thumb is from practitioner lore, not a controlled study — treat it as a tripwire, not a law.
+
+This also reframes the Ralph Wiggum failure mode above as a *cost* failure, not just a correctness failure: a silent loop that produces nothing is more expensive than a noisy loop that fails loudly, because only the noisy one teaches you to stop. If your loop can't surface its own waste, instrument the spend (per [[engineering/agent-observability-opentelemetry]]) so you can see when accept rate is silently collapsing.
+
+**Practical leverage points when accept-rate drops or cost spikes:**
+
+- Lower the default iteration/budget ceiling (e.g. cap at 8, not 90).
+- Switch the boring steps to a cheaper model (cf. maker-checker split in §4 below and [[engineering/2026-06-27-hermes-moa-virtual-models]]).
+- Strengthen the verifier so the loop fails loudly on bad output instead of accepting it.
+- Add a convergence check: stop when revisions produce minimal change, not just when the budget runs out.
 
 ## Hermes + MiniMax Specifics
 
@@ -172,6 +210,7 @@ Both labs are emphatic: start with evaluation. Find capability gaps by running r
 
 ## See Also
 - `raw/2026-06-19-raw-claude-agentic-loop-design-report.md` — the full Claude research synthesis (38 KB, all source links preserved).
+- `raw/2026-07-16-raw-anatoli-kopadze-loops.md` — full verbatim of @AnatoliKopadze's 2026-06-20 long-form thread (6,759 likes, 1,026 reposts); the source for the 5-stage variant (§1), the "Ralph Wiggum loop" failure mode (§5), and the cost-per-accepted-change metric (§6) added in this revision.
 - Anthropic, *Building Effective Agents* (Dec 2024) — the foundational text.
 - Anthropic, *Effective context engineering for AI agents* — the three-lever context discipline.
 - OpenAI, *A Practical Guide to Building Agents* (2025; updated April 2026) — the parallel guide from the other lab.

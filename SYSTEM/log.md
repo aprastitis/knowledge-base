@@ -315,6 +315,47 @@ Both were indexed. The newer subfolder card had unique operational content (Rate
 ### New Gap Noted (medium priority)
 - **Hermes operational gotchas** — the rate-limit crash-loop pattern we discovered during the Kanban merge is exactly the kind of operational warning that should have its own card (or at least a "Hermes operational gotchas" cluster). Not enough material yet for a dedicated card — log it and watch for more.
 
+## [2026-07-16] ingest | Anatoli Kopadze — "Loops explained" (curated into existing loop-engineering + agentic-loop-pattern cards; no new curated cards)
+**Source:** @AnatoliKopadze X thread 2026-06-20 (https://x.com/anatolikopadze/status/2068328135611822149, 6,759 likes, 1,026 reposts, 185 replies) — long-form explainer on agentic loops. Andreas shared link directly (Telegram).
+
+**Action:** No new curated cards. Three genuinely new additions surfaced; all folded into existing cards where they belong.
+
+**Raw dropped:** `raw/2026-07-16-raw-anatoli-kopadze-loops.md` (verbatim full thread, ~14 KB). Provenance flagged in frontmatter as a source/x-thread entry; Mira product promotion at the tail deliberately skipped with an `> Editorial skip:` comment.
+
+**Card edits (2 existing cards):**
+
+- `engineering/2026-06-19-engineering-agentic-loop-pattern.md` — three additions:
+  1. **Five-stage variant subsection** (§ "### The Five-Stage Variant" under "The Canonical Loop"). Frames DISCOVER → PLAN → EXECUTE → VERIFY → ITERATE as a useful code-oriented expansion of our 4-stage Anthropic *gather → act → verify → repeat* shape. Explicit note: stage count isn't load-bearing; both forms are valid.
+  2. **Seventh failure mode: Ralph Wiggum loop** (Geoffrey Huntley's coinage, per Kopadze). Table row added; rationale: silent-billing failure — loop appears to be working but isn't. Worse than "premature stopping" because only the bill tells you something's wrong.
+  3. **New § "The Cost That Matters"** — cost-per-accepted-change metric + 50% accept-rate rule of thumb. Frames Ralph Wiggum as a *cost* failure, not just a correctness failure. Practical leverage points (lower ceiling, cheaper model on boring steps, stronger verifier, convergence check) cross-linked to existing cards (`agent-observability-opentelemetry`, `hermes-moa-virtual-models`).
+  4. **See Also updated** — new raw entry.
+
+- `engineering/loop-engineering.md` — one addition:
+  1. **New § "The Build Order That Works"** after "A Real Loop Example". Four-step ladder (manual → skill → loop → schedule) with explicit cross-links to `progressive-disclosure-pattern` (step 1→2), `agentic-loop-pattern` hardening (step 2→3), and the agentic-coding-principles comprehension-debt caveat (step 3→4). Source list frontmatter extended.
+
+**Card count:** 39 → 39 (no new curated cards).
+
+**Cross-link graph:**
+- New raw card links → [[engineering/2026-06-19-engineering-agentic-loop-pattern]], [[engineering/loop-engineering]], [[engineering/harness-engineering]], [[engineering/multi-agent-orchestration-patterns]], [[concepts/context-engineering]]
+- Edited cards add the new raw entry to their See Also / source lists.
+- engineering/MOC.md — Last Updated section rewritten, footer date bumped to 2026-07-16. Card count line untouched (still 39).
+- index.md — new row in Raw Sources table; two existing-loop-engineering / agentic-loop-pattern summaries refreshed to surface the new content; footer date bumped to 2026-07-16.
+
+**Decisions (full rationale in SYSTEM/operations.md):**
+
+- **No new curated cards.** Considered creating `engineering/2026-07-16-anatoli-loops-thread.md` or a `concepts/agentic-loop-pattern-variants.md` and a separate `concepts/loop-cost-metrics.md`. Rejected: all four additions slot cleanly into cards we already curate (canonical-loop variant + cost metric → agentic-loop-pattern; build order → loop-engineering). Creating parallel cards would create the exact duplicate-card problem we just merged away (`hermes-kanban` duplicate, 2026-06-28). New cards cost more than the consolidation saves.
+- **The 50% accept-rate rule of thumb is presented as a tripwire, not a law.** Kopadze's source doesn't cite a controlled study. Flagged inline in the new card section.
+- **Mira product promotion skipped.** Mira is a Telegram-launched competitor product (500+ integrations via Composio, scheduled triggers, content pipeline, voice transcription — a meaningful fraction of what Hermes + OpenClaw do). Not extracting the promotion would have been the easy call; treating it as KB material would have set a precedent of cataloguing competitors, which our KB isn't for. The conceptual overlap with our existing cards ([[engineering/loop-engineering]], [[concepts/model-context-protocol]]) is noted in the raw's editorial-skip comment so future readers can see the deliberation.
+- **Build-order ladder placed in loop-engineering, not a new card.** It's a natural extension of Osmani's framing (his card talks about automation + external memory but doesn't spell out the assembly order). Adding it inline keeps the layer coherent.
+- **Ralph Wiggum loop lives with the inner-loop failure modes.** Huntley's coinage describes an agent's behavior inside a single loop — wrong layer for the outer-loop card. Placed in `agentic-loop-pattern` to keep the failure-mode catalog together; `loop-engineering` references it by raw link.
+
+**Cross-links added (3 cards affected):**
+- `engineering/2026-06-19-engineering-agentic-loop-pattern.md` — See Also section now includes the new raw card
+- `engineering/loop-engineering.md` — See Also implicit (new section references `agentic-loop-pattern` + `agentic-coding-principles`)
+- `raw/2026-07-16-raw-anatoli-kopadze-loops.md` — frontmatter `related:` lists the edited curated cards
+
+**Outcome:** Pushed to GitHub.
+
 ## [2026-07-01] ingest | Hermes batch — MoA, HermesBench, Blank Slate, cronjob, messaging
 **Person:** Cerebro (self-initiated, after Andreas asked for KB review)
 **Trigger:** Andreas request "do a thorough review of our KB and tell me what new material would nicely fill any gaps" (2026-07-01)
