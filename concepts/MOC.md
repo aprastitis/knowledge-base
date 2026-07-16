@@ -54,7 +54,7 @@ Map of Content for all concept cards in `/concepts/`. This MOC provides a topic-
 - Do we need a `card-quality.md` standard to evaluate whether a concept card is "complete"?
 
 ## Card Count
-8 cards (as of 2026-06-21)
+8 cards (as of 2026-07-16)
 
 ## Last Updated
-2026-06-21 (weekly review: added context-engineering, model-context-protocol, krea-2-image-generation — these were added to the KB on 2026-06-07 and 2026-05-28 but the MOC was never refreshed)
+2026-07-16 (mid-week review: footer refresh — content unchanged, count claim was behind since 2026-06-21)
