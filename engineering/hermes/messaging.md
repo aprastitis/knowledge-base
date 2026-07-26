@@ -16,6 +16,7 @@ related:
   - engineering/hermes/cronjob
   - engineering/hermes/profiles
   - engineering/hermes/observer-hooks
+  - engineering/hermes/2026-07-26-hermes-v0-18-judgment-release
 ---
 
 # Hermes Messaging Gateway
@@ -61,6 +62,10 @@ Each platform adapter receives messages, routes them through a per-chat session 
 | Raft | — | — | — | — | — | — | — |
 
 The API server is OpenAI-compatible, so any front-end that speaks OpenAI's API (Open WebUI, etc.) can use Hermes as a drop-in backend.
+
+## Production Lifecycle (v0.18)
+
+Hermes v0.18.0 added **scale-to-zero** for idle hosted/relay gateways and **drain coordination** for restart, migration, and auto-update. The gateway can quiesce without dropping in-flight conversations, then wake on demand. See [[engineering/hermes/2026-07-26-hermes-v0-18-judgment-release]] for the release-level context.
 
 ## Quick Setup
 

@@ -44,6 +44,12 @@ platforms: [linux, macos]
 - User corrects its approach
 - Discovers a non-trivial workflow worth preserving
 
+### Deliberate Learning with `/learn`
+
+Hermes v0.18.0 added a user-directed path alongside passive trajectory learning: `/learn` can distill a skill from a directory, a URL, or a workflow just demonstrated in conversation. It writes to the repository's `CONTRIBUTING.md` standards. This changes skill creation from only “the agent noticed a reusable success” to also “the user deliberately pointed at material worth compiling.”
+
+See [[engineering/hermes/2026-07-26-hermes-v0-18-judgment-release]] for the release context, including `/journey` as the inspection and correction surface for accumulated memories and skills.
+
 ### Skill Authoring Tool Actions
 `skill_manage`: create, patch (preferred — token-efficient), edit (full rewrite), delete, write_file, remove_file.
 

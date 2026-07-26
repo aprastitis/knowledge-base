@@ -22,6 +22,8 @@ The shape every successful agent loop takes, in Anthropic's words from *Building
 
 The **verify** step is what separates real agents from chatbots — it's where most of the quality comes from. A loop that gathers and acts without verifying is just an expensive autocomplete.
 
+Hermes v0.18.0 turned this principle into a first-class completion mechanism: `/goal` accepts a completion contract, coding work records verification evidence, and the loop judges that evidence before stopping. See [[engineering/hermes/2026-07-26-hermes-v0-18-judgment-release]].
+
 OpenAI's *Practical Guide to Building Agents* says the same thing differently: *"This concept of a while loop is central to the functioning of an agent… run multiple steps until an exit condition is met."* Exit conditions are either a structured final-output type, or `max_turns`.
 
 **The harness is a dumb loop.** Barry Zhang (Anthropic) at AI Engineer Summit 2025: an agent is *"models using tools in a loop"* and *"the loop itself is mechanically simple (often just a while loop); the intelligence lives in the model, not the harness."* Don't over-engineer the harness. Most of the work is in the model + the description/prompt + the tools, not in custom loop code.

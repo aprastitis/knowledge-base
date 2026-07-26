@@ -13,6 +13,7 @@ related:
   - engineering/hermes-three-tier-memory
   - engineering/hermes/messaging
   - engineering/hermes/cronjob
+  - engineering/hermes/2026-07-26-hermes-v0-18-judgment-release
   - engineering/2026-06-21-hermes-blank-slate-setup
   - engineering/agentic-coding-principles
 ---
@@ -33,6 +34,7 @@ Hermes is the only agent with a built-in learning loop — it creates skills fro
 | **Closed learning loop** | Agent-curated memory, autonomous skill creation, FTS5 session search, Honcho dialectic user modeling |
 | **Scheduled automations** | Built-in cron with delivery to any platform |
 | **Delegation** | Spawn isolated subagents for parallel workstreams |
+| **Evidence-based completion** | Completion contracts and project verification evidence determine whether work is actually done |
 | **Runs anywhere** | Local, Docker, SSH, Singularity, Modal, Daytona — $5 VPS to GPU cluster |
 
 ## Quick Install
@@ -94,6 +96,10 @@ That logs you in via OAuth, sets Nous as your provider, and turns on the Tool Ga
 | Retry/undo | `/retry`, `/undo` | `/retry`, `/undo` |
 | Compress context | `/compress`, `/usage` | `/compress`, `/usage` |
 | Interrupt work | `Ctrl+C` or send new message | `/stop` or send new message |
+
+## v0.18.0 Reliability Milestone
+
+The July 2026 “Judgment Release” made completion contracts, coding-verification evidence, `/learn`, `/journey`, parallel background fan-out, first-class MoA models, and gateway scale-to-zero/draining part of the product. See [[engineering/hermes/2026-07-26-hermes-v0-18-judgment-release]] for the release-level synthesis and cross-links to the underlying patterns.
 
 ## Architecture
 

@@ -28,7 +28,12 @@ This is a material architectural change. Prior KB documentation explicitly descr
 - Enables true concurrent task execution — agent can fire off multiple subagents and handle their results as they complete
 - Architectural pattern shifts from "hierarchical wait" to "fire-and-receive"
 
+## v0.18 Background Fan-Out
+
+Hermes v0.18.0 extended the non-blocking primitive into a batch fork-join workflow: `delegate_task` can launch multiple subagents in parallel, keep the parent chat usable, and return one consolidated completion turn after all children finish. That consolidation boundary is the key addition over single-task async delegation.
+
 ## Related
 
 - [[engineering/multi-agent-orchestration-patterns]] — Five coordination patterns including the concurrent pattern this enables
 - [[engineering/hermes/architecture]] — Core agent loop and delegation architecture
+- [[engineering/hermes/2026-07-26-hermes-v0-18-judgment-release]] — Release synthesis for parallel fan-out and consolidated completion

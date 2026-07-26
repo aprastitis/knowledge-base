@@ -67,6 +67,10 @@ providers/__init__.py._discover_providers()
 
 The general PluginManager records `kind: model-provider` manifests but does NOT import them (would double-instantiate `ProviderProfile`). Plugins without an explicit `kind:` get auto-coerced via source-text heuristic.
 
+### Vertex AI Provider (v0.18)
+
+Hermes v0.18.0 added first-class Gemini access through Google Vertex AI. Unlike a static custom endpoint, the provider mints and refreshes short-lived OAuth2 access tokens from a GCP service-account JSON or Application Default Credentials. This prevents the mid-session expiry that occurs when a one-hour Vertex token is pasted as if it were a permanent API key. See [[engineering/hermes/2026-07-26-hermes-v0-18-judgment-release]].
+
 ## Context Engine / Image-Gen Plugins
 
 `plugins/context_engine/`, `plugins/image_gen/`, etc. follow the same pattern (ABC + orchestrator + per-plugin directory):

@@ -66,6 +66,7 @@
 | [[engineering/2026-06-27-hermes-moa-virtual-models]] | MoA (mixture-of-agents) presets exposed as virtual models in the routing layer; provider-agnostic N-way ensembles; +8%/+11% HermesBench deltas vs Opus 4.8 / GPT 5.5 | Agent Architecture |
 | [[engineering/2026-06-27-hermesbench]] | Nous Research's internal benchmark suite (reasoning, coding, tool-use, multi-step); basis for MoA virtual-models release numbers; full leaderboard pre-announced | Evals |
 | [[engineering/2026-06-21-hermes-blank-slate-setup]] | `hermes setup` third mode (Quick / Full / Blank Slate) — minimal-baseline install with provider + model + file + terminal only | Agent Framework |
+| [[engineering/hermes/2026-07-26-hermes-v0-18-judgment-release]] | Hermes v0.18.0 release synthesis — completion contracts + verification evidence, `/learn` and `/journey`, background fan-out, first-class MoA, gateway scale-to-zero/draining, desktop coding projects, Vertex AI, and security hardening | Agent Framework |
 | [[engineering/hermes/cronjob]] | Scheduled-task subsystem — gateway-owned 60s tick, single `cronjob` tool, skill attachments, multi-platform delivery, no-agent mode for watchdogs | Automation |
 | [[engineering/hermes/messaging]] | Gateway — 22+ platform adapters (Telegram, Discord, Slack, WhatsApp, Signal, Email, etc.), allowlist + pairing + admin/user tiers, shared slash commands, circuit breakers | Agent Framework |
 
@@ -97,4 +98,4 @@
 | [[raw/2026-07-16-raw-anatoli-kopadze-loops]] | @AnatoliKopadze long-form thread (6,759 likes) explaining agentic loops — 5-stage pattern, three crucial pieces, "Ralph Wiggum loop" failure mode, cost-per-accepted-change metric, build-order ladder, self-checking loop prompt template. Mira product promotion deliberately skipped. | @AnatoliKopadze X Thread (2026-06-20) |
 
 ---
-*Last updated: 2026-07-16*
+*Last updated: 2026-07-26*

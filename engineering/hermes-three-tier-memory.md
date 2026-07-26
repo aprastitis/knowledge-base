@@ -40,6 +40,10 @@ Every CLI and messaging conversation stored in SQLite with full-text search (FTS
 
 This is the core tradeoff design: Tier 1 is expensive to keep full (token cost) but always present. Tier 2 is cheap to store but requires an active retrieval action.
 
+## Inspection and Governance Layer (v0.18)
+
+Storage tiers need a way for the user to inspect what accumulated. Hermes v0.18.0 added `/journey`, an editable CLI/TUI timeline of memories and skills, plus a desktop radial memory graph. These surfaces let the user see, correct, and prune learned state rather than treating memory as a black box. See [[engineering/hermes/2026-07-26-hermes-v0-18-judgment-release]].
+
 ## Related Concepts
 - [[concepts/soul-md-identity-layer]] — Memory is the "moving part inside the fixed frame" of SOUL.md
 - [[concepts/self-evolving-skills]] — Skills are procedural memory; memory is factual memory. Different tiers for different types of knowledge

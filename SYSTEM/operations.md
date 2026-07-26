@@ -397,3 +397,34 @@ KB is now clean: 25 frontmatter-only cards, no dual type systems, MOC in correct
 
 **Outcome:** 1 raw card added, 2 existing curated cards edited (3 + 1 additions), 7 supporting files updated (log, changelog, operations, sources, index, engineering/MOC, kb-state). Card count unchanged at 39. Pushed to GitHub.
 
+
+## 2026-07-26 — Weekly Review: Process Hermes v0.18 as One Release Synthesis + Targeted Backlinks
+**Source:** Queued item `memory/kb-queue/2026-07-05-hermes-v0-18-judgment-release.md`; primary release notes at https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.1.
+
+**Decision:** Create one umbrella release card at `engineering/hermes/2026-07-26-hermes-v0-18-judgment-release.md`, then add concise backlinks/patches to seven existing cards.
+
+**Why an umbrella card instead of distributing everything:**
+- The primary notes reveal a coherent release thesis: execution, evidence-based judgment, self-improvement, and oversight became one operating model.
+- Purely distributed patches would preserve facts but lose the release-level relationship between completion contracts, `/learn`, `/journey`, background fan-out, lifecycle maturity, and visible MoA deliberation.
+- Separate cards for `/journey`, desktop Projects, lifecycle, and verification would over-fragment one release and create thin product cards. The umbrella card is the retrieval entry point; existing cards retain their domain-specific context through targeted patches.
+
+**Placement:** `engineering/hermes/` because this is a Hermes release/reference synthesis, not a general engineering methodology. Generalizable mechanisms are linked into the existing concept/practice cards rather than duplicated as new concept cards.
+
+**Naming:** Used ingest date `2026-07-26` under the established `YYYY-MM-DD-<topic>.md` convention. The release date (2026-07-01) is explicit in the card body and sources.
+
+**Queue decisions:**
+- Hermes v0.18 item processed completely from primary release notes; queue entry marked done in place for provenance.
+- Hermes Pets remains pending. The queue entry still contains only a teaser and no primary feature surface. Creating a card would still require speculation, so the prior decision stands.
+
+**Audit decisions:**
+- Three unresolved wikilink strings in `SYSTEM/operations.md` are quoted examples documenting earlier intentional placeholders (`card-name`, `PARA Method`, and `Atomic Habits`), not navigation links; left unchanged.
+- No curated orphans found. Did not expand short cards simply to increase line count: `async-subagents`, Portal Teams, Stripe partnership, and similar product cards are intentionally scoped and linked to deeper architecture/reference cards.
+
+**Gap priorities:**
+1. Tool-use / tool-definition design remains highest priority: schema design, error semantics, idempotency, validation, and safe tool descriptions.
+2. Prompt chaining / decomposition should distinguish hidden chain-of-thought from auditable staged workflows with typed intermediate artifacts.
+3. Model routing needs a general card beyond the MoA-specific implementation: policy, cost/quality/latency tradeoffs, fallback, and eval-driven routing.
+4. Prompt versioning/diffing remains a practical reproducibility gap.
+5. Verification contracts now have strong Hermes material; consider a later general card only after adding non-Hermes sources, to avoid generalizing from one implementation.
+
+**Outcome:** 1 new curated card, 7 domain-card patches, index/MOC updates, queue status update, weekly state refresh; commit and push.

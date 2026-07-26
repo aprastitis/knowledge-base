@@ -409,3 +409,13 @@ Both were indexed. The newer subfolder card had unique operational content (Rate
 **Outcome:** Pushed to GitHub (knowledge-base repo).
 
 **Engineering batch (4 cards from the 06-21 / 06-07 gap list) — NOT done in this session.** Items deferred: `engineering/tool-use-design.md`, `engineering/chain-of-thought-prompt-chaining.md`, `engineering/model-routing.md`, `engineering/prompt-versioning-diffing.md`. My stated default plan was "Hermes batch now, engineering batch in a dedicated session" — confirmed at 21:24 by Andreas ("Ok do it"), preserving this split. The next dedicated research session will source these from Anthropic blog, OpenAI docs, model routing writeups, and prompt versioning platforms.
+
+## [2026-07-26] weekly-review + ingest | Hermes v0.18.0 “The Judgment Release”
+**Source:** NousResearch announcement (https://x.com/NousResearch/status/2072413332665962617) and primary GitHub release notes (https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.1).
+**Queue processed:** `memory/kb-queue/2026-07-05-hermes-v0-18-judgment-release.md`.
+**Action:** Created `engineering/hermes/2026-07-26-hermes-v0-18-judgment-release.md`, an umbrella synthesis covering completion contracts and verification evidence, `/learn`, `/journey` + memory graph, cheaper background review, multi-subagent fan-out, first-class MoA models, desktop coding Projects, gateway scale-to-zero + drain coordination, Vertex AI, `/prompt`, and security hardening.
+**Existing cards updated:** `engineering/hermes/README.md`, `concepts/self-evolving-skills.md`, `engineering/async-subagents.md`, `engineering/hermes-three-tier-memory.md`, `engineering/2026-06-19-engineering-agentic-loop-pattern.md`, `engineering/hermes/messaging.md`, `engineering/hermes/plugins.md`.
+**Indexing:** Added to `index.md` and `engineering/MOC.md`; engineering curated count 39 → 40.
+**Audit:** 0 real broken wikilinks; 3 unresolved examples remain intentionally documented (`card-name`, `PARA Method`, and `Atomic Habits` in SYSTEM/operations.md). 0 orphaned curated cards among 57 checked. Short-card scan found only intentionally scoped product/reference cards; no forced expansion.
+**Queue remaining:** Hermes Pets teaser remains pending because no primary announcement or technical documentation was available in the queue material.
+**Outcome:** Committed and pushed to GitHub.
