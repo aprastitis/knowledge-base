@@ -47,10 +47,13 @@ Map of Content for all engineering cards in `/engineering/`. This MOC organizes 
 | [[engineering/hermes/middleware]] | Behavior-changing plugin hooks — llm_request, llm_execution, tool_request, tool_execution. |
 | [[engineering/hermes/profiles]] | Multi-instance isolated profiles — profile-aware paths, gateway token locks, multi-gateway deployment. |
 | [[engineering/hermes/network-egress-isolation]] | Docker network segmentation — internal + egress (proxy allowlist) networks for prompt injection defense. |
+| [[engineering/hermes/2026-07-24-hermes-credential-firewall]] | Token-substituting proxy at the Docker sandbox network boundary. Real provider keys stay outside the sandbox; leaked tokens are useless outside the firewall. Pairs with [[engineering/hermes/network-egress-isolation]]. |
 | [[engineering/hermes/contributing]] | Dev setup, skill vs tool decision, cross-platform rules, dependency pinning, PR process. |
 | [[engineering/hermes/cronjob]] | Scheduled-task subsystem — gateway-owned 60s tick, single `cronjob` tool, skill attachments, multi-platform delivery, no-agent mode for watchdogs, `wakeAgent` gate. |
 | [[engineering/hermes/messaging]] | Gateway — 22+ platform adapters (Telegram, Discord, Slack, WhatsApp, Signal, Email…), allowlist + pairing + admin/user tiers, shared slash commands, circuit breakers, day-2 ops. |
 | [[engineering/hermes/2026-07-26-hermes-v0-18-judgment-release]] | v0.18.0 release synthesis — evidence-based completion, `/learn` + `/journey`, background fan-out, first-class MoA, scale-to-zero/draining, desktop Projects, Vertex AI, security hardening. |
+| [[engineering/hermes/2026-08-02-hermes-v0-19-quicksilver-release]] | v0.19.0 release synthesis — Quicksilver speed spine (~80% cold-start cut), live reasoning streams, smart approvals, durable response delivery, terminal subscriptions, Bitwarden/1Password secrets, desktop/TUI polish, v0.19.1 patch. |
+| [[engineering/hermes/2026-07-23-tldraw-offline-skill]] | Optional skill under `optional-skills/creative/tldraw-offline` driving tldraw desktop over MCP. Embeds scripts in the saved `.tldr` for self-executing artifacts. Parallel to the Blender MCP card. |
 
 ### Skill & Prompt Engineering
 | Card | Summary |
@@ -99,7 +102,7 @@ Map of Content for all engineering cards in `/engineering/`. This MOC organizes 
 - Should the Hermes Reference cluster be merged into Agent Architecture, or kept separate? The reference cards are more "docs" than "patterns" — kept separate for now.
 
 ## Card Count
-40 cards (as of 2026-07-26): 3 Agentic Coding + 16 Agent Architecture + 11 Hermes Reference + 5 Skill & Prompt Engineering + 4 Development Workflow + 2 AI Team Methodologies + 1 Agent Collaboration + 2 Knowledge Management = 44, minus the 4 placeholder template references (PARA, Atomic Habits, etc.) = 40 cards listed here. (Excludes placeholder template references in schema/example docs, raw source files, and this MOC entry itself.)
+43 cards (as of 2026-08-02): 3 Agentic Coding + 16 Agent Architecture + 14 Hermes Reference + 5 Skill & Prompt Engineering + 4 Development Workflow + 2 AI Team Methodologies + 1 Agent Collaboration + 2 Knowledge Management = 47, minus the 4 placeholder template references (PARA, Atomic Habits, etc.) = 43 cards listed here. (Excludes placeholder template references in schema/example docs, raw source files, and this MOC entry itself.)
 
 ## Last Updated
-2026-07-26 (Weekly review: processed the queued Hermes v0.18.0 release notes into [[engineering/hermes/2026-07-26-hermes-v0-18-judgment-release]]. Added one Hermes Reference card; engineering count is now 40.)
+2026-08-02 (Weekly review: processed the v0.19.0 "Quicksilver" release, the credential firewall primitive, and the tldraw-offline optional skill — all net-new in the v0.19 window. Engineering count 40 → 43.)

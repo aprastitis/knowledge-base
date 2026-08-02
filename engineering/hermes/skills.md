@@ -162,4 +162,4 @@ Background skill-maintenance system that tracks usage on agent-created skills an
 
 ## See Also
 
-- [[2026-06-20-hermes-blender-mcp-skill]] — concrete example of a creative optional skill that bridges to a desktop GUI app (Blender) over MCP/TCP. Useful as a reference for desktop-automation skills.
+- [[engineering/hermes/2026-06-20-hermes-blender-mcp-skill]] — concrete example of a creative optional skill that bridges to a desktop GUI app (Blender) over MCP/TCP. Useful as a reference for desktop-automation skills. See [[engineering/hermes/2026-07-23-tldraw-offline-skill]] for the same pattern applied to tldraw's offline desktop whiteboard (added in Hermes v0.19).

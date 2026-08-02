@@ -419,3 +419,49 @@ Both were indexed. The newer subfolder card had unique operational content (Rate
 **Audit:** 0 real broken wikilinks; 3 unresolved examples remain intentionally documented (`card-name`, `PARA Method`, and `Atomic Habits` in SYSTEM/operations.md). 0 orphaned curated cards among 57 checked. Short-card scan found only intentionally scoped product/reference cards; no forced expansion.
 **Queue remaining:** Hermes Pets teaser remains pending because no primary announcement or technical documentation was available in the queue material.
 **Outcome:** Committed and pushed to GitHub.
+
+## [2026-08-02] weekly-review + ingest | Hermes v0.19.0 "Quicksilver" + credential firewall + tldraw-offline skill
+**Source:** Combined from (a) NousResearch v0.19.0 announcement https://x.com/NousResearch/status/2079278653997809984 and GitHub release notes, (b) tweet-scan 2026-07-28 (https://x.com/NousResearch/status/2080728699100406042 credential firewall, https://x.com/NousResearch/status/2080319476243861569 tldraw skill, https://x.com/NousResearch/status/2080745634710139113 Opus 5 in catalog), and (c) local tweet-scans 2026-07-20 and 2026-07-28.
+**Note on timing:** the 2026-07-20 tweet-scan ran at 15:05 UTC; the v0.19.0 announcement tweet posted at 18:53 UTC the same day. The scan therefore did not capture v0.19.0 because the announcement had not yet posted when the scan window closed. This is a known timing limitation, not a missed detection.
+
+**Action:** Three new cards in `engineering/hermes/`, one wikilink fix, plus index/MOC refreshes.
+
+**Cards added (3):**
+
+1. **`engineering/hermes/2026-08-02-hermes-v0-19-quicksilver-release.md`** — umbrella release synthesis for v0.19.0 "Quicksilver". Sections: speed spine (cold start ~4.3s → ~0.9s, ~80% cut), live reasoning streams (MoA aggregator reasoning rendered live; pairs with v0.18 MoA architecture), smart approvals (smallest-reasonable-permission default), durable response delivery (journaled response finalization across gateway restarts, complements v0.18 scale-to-zero/drain), Bitwarden + 1Password first-class secrets (no more hand-pasted API keys), terminal subscription management (long-output tail streaming into separate pane), desktop/TUI polish, Claude Opus 5 in catalog (via Nous Portal / OpenRouter / Anthropic Direct, model-availability addendum not standalone card), v0.19.1 patch (WhatsApp Baileys Docker build pin). Numbers since v0.18.0: ~2,245 commits, ~1,065 merged PRs, ~2,465 files changed, ~300K insertions, ~36K deletions, ~3,300 issues closed, 450+ community contributors.
+
+2. **`engineering/hermes/2026-07-24-hermes-credential-firewall.md`** — token-substituting proxy at the Docker sandbox network boundary. Real provider keys stay outside the sandbox; leaked tokens are useless outside the firewall. Explicitly complements (does not replace) [[engineering/hermes/network-egress-isolation]]; the two together cover both *where* a sandbox can reach and *what credentials* it sees on the wire. Closes a gap the existing `hermes/security` card explicitly acknowledged ("in-process heuristics... are not real boundaries"). Install via `hermes egress setup`.
+
+3. **`engineering/hermes/2026-07-23-tldraw-offline-skill.md`** — optional skill under `optional-skills/creative/tldraw-offline` that drives a running tldraw desktop whiteboard over MCP. Same architectural pattern as the Blender MCP card (official skill + MCP/desktop bridge) with one notable twist: the skill can embed a script in the saved `.tldr` so the drawing opens with working buttons and state. Card surfaces the "executable artifact" framing — agent produces a file whose state evolves when opened, not a static image. Install via `hermes skills install optional-skills/creative/tldraw-offline`.
+
+**Wikilink fix (1):**
+
+- `engineering/hermes/skills.md` — `[[2026-06-20-hermes-blender-mcp-skill]]` (bare) → `[[engineering/hermes/2026-06-20-hermes-blender-mcp-skill]]` (folder-prefixed). This was the last real broken wikilink in the KB. See Also section also updated to cross-link the new tldraw-offline skill.
+
+**Indexing:** 3 rows added to `index.md` and `engineering/MOC.md`. Engineering curated count 40 → 43.
+
+**Audit (this review):**
+- Real broken wikilinks: 1 (`engineering/hermes/skills.md` → fixed)
+- Intentional placeholder wikilinks: 3 (`card-name`, `PARA Method`, `Atomic Habits` in SYSTEM/operations.md), unchanged
+- Orphaned curated cards: 0 across all content folders
+- Short cards: 35 with ≤60 body lines, all intentionally scoped (product/reference cards or thin concept/mental-model cards). No forced expansion.
+
+**Queue this review:**
+- `memory/kb-queue.md` (legacy single file): empty below template marker.
+- `memory/kb-queue/2026-07-01-hermes-pets.md`: **still pending.** Reviewed again — primary announcement still not visible, no docs page, no clarifying follow-up beyond the 2026-06-29 teaser. Decision unchanged: do not draft from speculation. Queue entry will keep its existing URL + spotted-context + ingestion rule.
+- `memory/kb-queue/2026-07-05-hermes-v0-18-judgment-release.md`: already marked done in last review.
+- `memory/kb-queue/2026-05-20-queue-migration.md`: legacy migration note, no action needed.
+
+**Out-of-scope material logged this week (not ingested):**
+- Claude Opus 5 in Hermes catalog — model-availability change, not architecture. Mentioned in v0.19 card's "Provider Updates" section; not a standalone card.
+- NVIDIA Open Secure AI Alliance (NousResearch as founding member) — institutional context, not KB material.
+- Three provider promos in the v0.19 window (Laguna S 2.1, Hy3, Ling-3.0-flash) — promotional, logged in tweet-scan only.
+- Block featured-preset PRs awaiting merge — nothing shipped, nothing to ingest.
+
+**Decisions:**
+- **One umbrella card for v0.19.0, separate cards for the v0.19-window net-new features.** Same shape as the v0.18 review: an umbrella release synthesis captures the release-level narrative (Quicksilver speed + visibility + durability + approval ergonomics), while the credential firewall and tldraw-offline skill each get their own card because they have their own deep architecture and are individually retrievable.
+- **Date stamps: all three new cards use 2026-08-02 (today's ingest date).** Same convention as the v0.18 card (`2026-07-26-hermes-v0-18-judgment-release.md`). The actual announcement dates (Jul 20/23/24) are explicit in each card's body. Using the ingest date keeps the MOC cluster visually coherent and makes KB diff history readable by commit.
+- **Opus 5 not given a standalone card.** Adding a card per model-availability change would create an unbounded parallel track; the v0.18→v0.19 MoA card already tracks the relevant model lineup.
+- **Pets remains queued, not drafted.** Source material still too thin after another 4 weeks. Will continue to wait for primary announcement or docs.
+
+**Outcome:** 3 new curated cards, 1 wikilink fix, 0 broken links, 0 orphans. Engineering curated count 40 → 43. Committed and pushed to GitHub.

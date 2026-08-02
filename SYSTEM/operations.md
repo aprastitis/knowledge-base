@@ -428,3 +428,53 @@ KB is now clean: 25 frontmatter-only cards, no dual type systems, MOC in correct
 5. Verification contracts now have strong Hermes material; consider a later general card only after adding non-Hermes sources, to avoid generalizing from one implementation.
 
 **Outcome:** 1 new curated card, 7 domain-card patches, index/MOC updates, queue status update, weekly state refresh; commit and push.
+
+## 2026-08-02 — Weekly Review: v0.19 Quicksilver + Credential Firewall + tldraw-offline
+**Source:** Combined from (a) NousResearch v0.19.0 announcement (https://x.com/NousResearch/status/2079278653997809984) and GitHub release notes, (b) tweet-scan 2026-07-28 covering the v0.19 follow-on announcements.
+
+**Decisions:**
+
+### One umbrella card for v0.19.0, separate cards for the v0.19-window net-new features
+- Same shape as the v0.18 review: an umbrella release synthesis captures the release-level narrative; the credential firewall and tldraw-offline skill each get their own card because they have their own deep architecture worth tracking individually.
+- Considered distributed patches (only update existing cards). Rejected: v0.19 has a clear thesis (Quicksilver speed + visible reasoning + durable delivery + approval ergonomics) that disappears if everything is folded into existing cards; also two of the three features (`credential firewall`, `tldraw skill`) genuinely do not exist in any existing card.
+- Considered one card per v0.19 feature. Rejected: v0.19's headline features (cold-start cut, live reasoning, smart approvals, durable delivery, Bitwarden/1Password) are small enough individually that a card per feature would be over-fragmented. The umbrella card is the right unit.
+
+### Date stamps: all three new cards use 2026-08-02 (today's ingest date)
+- Same convention as v0.18 (`2026-07-26-hermes-v0-18-judgment-release.md`). Actual announcement dates (Jul 20/23/24) are explicit in each card body.
+- Using ingest date keeps the MOC cluster visually coherent and makes KB diff history readable by commit.
+- Alternative considered: source-date stamps (Jul 20 for Quicksilver, Jul 23 for tldraw, Jul 24 for credential firewall). Rejected because the spread would scatter the cluster's date prefixes and break the visual grouping established by v0.18.
+
+### Wikilink fix in `engineering/hermes/skills.md`
+- The card had `[[2026-06-20-hermes-blender-mcp-skill]]` (bare basename) in its See Also section. Worked in Obsidian's basename-resolution mode but broke everywhere else, including this KB's plain-wikilink resolution rules.
+- Fix: `[[2026-06-20-hermes-blender-mcp-skill]]` → `[[engineering/hermes/2026-06-20-hermes-blender-mcp-skill]]`. Same fix shape applied to the v0.18-card-related wikilinks earlier.
+- Same edit also cross-linked the new tldraw skill via `[[engineering/hermes/2026-07-23-tldraw-offline-skill]]` so the See Also section now mentions both desktop-bridge skills together.
+
+### Credential firewall placed in `engineering/hermes/` subfolder
+- Same placement logic as `hermes/network-egress-isolation` and `hermes/security`: it's a Hermes-specific security primitive, not a general engineering methodology. Pairing the firewall card with the network-egress-isolation card is a deliberate cross-link.
+- Considered placing in `concepts/` as a general "credential isolation" pattern. Rejected: there are no other concrete implementations to abstract against yet; premature generalization would mirror the v0.18 verification-contracts decision (deferred until non-Hermes sources are available).
+
+### tldraw-offline placed in `engineering/hermes/` subfolder
+- Same placement logic as the Blender MCP card: it's a concrete optional skill that bridges to a desktop app. Parallel cards in the same subfolder make the pattern recognizable.
+- Cross-links to the Blender MCP card in the tldraw card's See Also make the architectural parallel explicit.
+
+### Opus 5 in catalog — mentioned in v0.19 card, not a standalone card
+- Model-availability change, not a new architecture.
+- Considered a dated addendum card. Rejected: a card per model-availability change would create an unbounded parallel track; the MoA card already tracks the relevant model lineup.
+- Mentioned in the v0.19 card's "Provider Updates" section with explicit note that operators using Opus 5 as a reference model should expect the aggregator's quality/latency profile to shift.
+
+### Pets — still queued
+- Same decision as the prior three weekly reviews. Primary announcement still not visible after 4 weeks; no docs page; no clarifying follow-up beyond the 2026-06-29 teaser. Queue entry will keep its existing URL + spotted-context + ingestion rule.
+- Not drafted even though we're at the 4-week mark — the prior decision rule (do not draft from speculation) still holds. If a primary announcement surfaces in the next 4 weeks, ingest then. If it doesn't, queue the item for archive at the 12-week mark.
+
+### Skipped (logged, not ingested)
+- Claude Opus 5 standalone — model availability, mentioned in v0.19 card.
+- NVIDIA Open Secure AI Alliance — institutional context, not KB material.
+- Three provider promos in the v0.19 window (Laguna S 2.1, Hy3, Ling-3.0-flash) — promotional, logged in tweet-scan only.
+- Block featured-preset PRs awaiting merge — nothing shipped, nothing to ingest.
+
+### v0.19 detection timing note
+- The 2026-07-20 tweet-scan ran at 15:05 UTC; the v0.19.0 announcement tweet posted at 18:53 UTC the same day. The scan therefore did not capture v0.19.0 because the announcement had not yet posted when the scan window closed.
+- This is a known timing limitation of the cron-driven scan (runs daily at a fixed time, not continuously). Not a missed detection. v0.19.0 was caught this week via direct `bird read` + web search during the weekly review.
+- No code change needed: the cron scan is best-effort, and the weekly review is the catch-up safety net. Documented here so future-me understands the gap pattern (any major release that lands after the daily scan on Sunday may not be captured until the next weekly review).
+
+**Outcome:** 3 new curated cards, 1 wikilink fix, 0 broken links, 0 orphans. Engineering curated count 40 → 43. Committed and pushed to GitHub.
