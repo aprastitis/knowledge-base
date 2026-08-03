@@ -2,7 +2,7 @@
 type: card
 status: active
 date: 2026-06-12
-summary: General plugins, memory providers, model providers, context engines, image-gen — ABC + orchestrator pattern
+summary: General plugins, memory providers, model providers, context engines, image-gen — ABC + orchestrator pattern. Distinct from the Desktop plugin surface (page / sidebar / hotkeys / status bar / backend endpoints / SDK) introduced in `engineering/hermes/2026-07-31-hermes-desktop-kanban-plugin`.
 tags: [hermes, plugins, architecture, extensibility]
 sources:
   - https://github.com/NousResearch/hermes-agent/blob/main/AGENTS.md
@@ -10,6 +10,7 @@ related:
   - engineering/hermes/architecture
   - engineering/hermes/observer-hooks
   - engineering/hermes/middleware
+  - engineering/hermes/2026-07-31-hermes-desktop-kanban-plugin
 ---
 
 # Hermes Plugin System
@@ -84,3 +85,11 @@ Reference plugins (`example-dashboard`, `strike-freedom-cockpit`, `plugin-llm-ex
 Plugins **MUST NOT** modify core files (`run_agent.py`, `cli.py`, `gateway/run.py`, `hermes_cli/main.py`, etc.). If a plugin needs a capability the framework doesn't expose, expand the generic plugin surface (new hook, new ctx method) — never hardcode plugin-specific logic into core.
 
 PR #5295 removed 95 lines of hardcoded honcho argparse from `main.py` for exactly this reason.
+
+## See Also: Desktop Plugin Surface (New, July 2026)
+
+This card covers the **general plugin system** — extending the agent's runtime. In July 2026 Nous Research introduced a separate **Desktop plugin surface** for extending the desktop UI shell: a plugin can add its own page, sidebar row, hotkeys, status bar actions, and backend endpoints, with an SDK for writing or importing plugins. The first official Desktop plugin is Kanban.
+
+The two surfaces do not overlap. The general plugin system gives you `register(ctx)` for tools, CLI commands, and lifecycle hooks; the Desktop plugin system gives you a page in the shell. Code targeting one does not automatically get the other's affordances.
+
+See [[engineering/hermes/2026-07-31-hermes-desktop-kanban-plugin]] for the Desktop surface.

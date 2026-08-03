@@ -478,3 +478,42 @@ KB is now clean: 25 frontmatter-only cards, no dual type systems, MOC in correct
 - No code change needed: the cron scan is best-effort, and the weekly review is the catch-up safety net. Documented here so future-me understands the gap pattern (any major release that lands after the daily scan on Sunday may not be captured until the next weekly review).
 
 **Outcome:** 3 new curated cards, 1 wikilink fix, 0 broken links, 0 orphans. Engineering curated count 40 → 43. Committed and pushed to GitHub.
+
+## 2026-08-03 — Mid-week NousResearch scan: Desktop Kanban plugin + podcast appearance
+Source: Cron-driven tweet scan (week of 2026-07-27 → 2026-08-03); tweets read with `bird read` per Twitter rule.
+
+### Desktop plugin card placed in `engineering/hermes/`
+- Same subfolder as the v0.18, v0.19, credential-firewall, tldraw-offline cards. The Desktop plugin is a Hermes-specific UI architecture primitive, not a general engineering methodology.
+- Considered placing at `engineering/` root (next to `hermes-kanban.md`, `hermes-stripe-partnership.md`, etc.). Rejected: the cluster of recent Hermes feature cards lives in `engineering/hermes/`; scattering the new one would make the cluster harder to find. The Desktop plugin card explicitly cross-links to `engineering/hermes-kanban.md` (the SQLite task board) and `engineering/hermes/plugins.md` (the general plugin system) so the relationships are visible regardless of folder location.
+
+### Date stamps: tweet dates, not ingest date
+- Used 2026-07-31 (Kanban plugin tweet) and 2026-08-02 (podcast tweet), not 2026-08-03 (today's ingest).
+- This is a deliberate deviation from the v0.18/v0.19 convention which used ingest dates. Reason: the Desktop plugin and podcast appearance are *point-in-time events* (an announcement, an appearance), not multi-week release syntheses. Aligning the date with the event makes future searches ("what did Nous ship in late July?") more reliable. The v0.18/v0.19 cards were multi-week release syntheses where the ingest date was the natural "synthesis" date.
+- The MOC's "Last Updated" footer carries the ingest date so the commit history is still readable by ingest time.
+
+### Desktop plugin card emphasizes the surface distinction, not the kanban product
+- Tempting to spend half the card re-describing what Kanban is. Resisted: `engineering/hermes-kanban.md` already does that comprehensively. The new content is the plugin *surface model* — page, sidebar, hotkeys, status bar, backend endpoints, SDK. Card explicitly walks through "What a Desktop Plugin Is Not" (skill, memory provider, model provider, CLI subcommand) to head off future confusion with the general plugin system.
+- The "SDK Implications" section lists three architectural points that are *inferred* (manifest shape, permission boundary, lifecycle hooks) — flagged as guesses from the general plugin system's pattern, not confirmed by docs. Includes a "What to Watch For" checklist for the next weekly review when the SDK repo drops.
+
+### Podcast card: thin but explicit
+- 32-like "thank you" tweet would normally not justify a card. Made the cut because (a) the scan explicitly flagged it as "not in the KB", (b) the public-presence track is currently empty, (c) thin cards with explicit "What We Don't Know" sections are a legitimate KB primitive for category-of-one entries.
+- Card has explicit upgrade and archive rules: if episode details surface, upgrade; if not, archive at the 12-week mark.
+- Considered placing in `people/` (a `people/petergyang-karan4d.md`). Rejected: the show is the relevant unit, not the individuals. If they appear as recurring Hermes interlocutors, the hosts may warrant their own `people/` cards later.
+
+### 1-2/week AI/ML briefing cap — held
+- Scan processed promo/banter content (DeepSeek V4 Flash 90% off, FLUX 3 free tier, one-liners) and rejected all of it under the cap. No general AI/ML briefings ingested this week. Decision logged in `log.md` for visibility.
+
+### Backlinks: 3 explicit, not 5
+- Considered adding a backlink in `hermes/architecture.md` (the agent loop / TUI / CLI architecture that the desktop shell extends). Rejected: the architecture card is foundational reference; the v0.19 release card already links to Desktop plugin and is the more discoverable entry. Adding a low-value backlink to a foundational card creates noise.
+- Considered adding a backlink in `hermes/skills.md` to head off the "is this a skill?" confusion. Rejected: the Desktop plugin card itself has an explicit "What a Desktop Plugin Is Not" section. Self-contained beats duplicated cross-references.
+- Net: 3 high-quality backlinks (plugins.md, hermes-kanban.md, v0.19 release card) over 5 mediocre ones.
+
+### v0.18 / v0.19 backlink update in Desktop plugin card
+- The v0.19 release card is updated to add Desktop plugin to "Parallel Net-New Features in the v0.19 Window" and the related-links block. The card frames this as: v0.18 introduced the desktop as a host for code work, v0.19 made the host feel fast, and the Desktop plugin is the first third-party content for that host. The shell is becoming a platform, not just a wrapper around the agent loop.
+
+### Skipped (logged, not ingested)
+- DeepSeek V4 Flash 90% off promo — promotional, no architecture content.
+- FLUX 3 free tier — promotional.
+- Other scan-detected banter/one-liners — none qualified.
+
+**Outcome:** 2 new curated cards, 3 backlink updates, 0 broken links, 0 archived items. Engineering curated count 43 → 45. Committing and pushing.

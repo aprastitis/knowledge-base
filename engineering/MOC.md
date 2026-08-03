@@ -102,7 +102,8 @@ Map of Content for all engineering cards in `/engineering/`. This MOC organizes 
 - Should the Hermes Reference cluster be merged into Agent Architecture, or kept separate? The reference cards are more "docs" than "patterns" — kept separate for now.
 
 ## Card Count
-43 cards (as of 2026-08-02): 3 Agentic Coding + 16 Agent Architecture + 14 Hermes Reference + 5 Skill & Prompt Engineering + 4 Development Workflow + 2 AI Team Methodologies + 1 Agent Collaboration + 2 Knowledge Management = 47, minus the 4 placeholder template references (PARA, Atomic Habits, etc.) = 43 cards listed here. (Excludes placeholder template references in schema/example docs, raw source files, and this MOC entry itself.)
+45 cards (as of 2026-08-03): 3 Agentic Coding + 16 Agent Architecture + 16 Hermes Reference + 5 Skill & Prompt Engineering + 4 Development Workflow + 2 AI Team Methodologies + 1 Agent Collaboration + 2 Knowledge Management = 49, minus the 4 placeholder template references (PARA, Atomic Habits, etc.) = 45 cards listed here. (Excludes placeholder template references in schema/example docs, raw source files, and this MOC entry itself.)
 
 ## Last Updated
+2026-08-03 (Mid-week NousResearch scan ingest: (1) **new** Desktop Kanban plugin card — first official Hermes Desktop plugin, establishes UI-shell extension surface (page/sidebar/hotkeys/status-bar/backend-endpoints/SDK) architecturally distinct from the general plugin system; (2) **new** thin public-presence card for the Hermes team's 2026-08-02 appearance on the Peter Yang / Karan 4D show. Backlinks added in `hermes/plugins`, `hermes-kanban`, and the v0.19 release card. Engineering count 43 → 45.)
 2026-08-02 (Weekly review: processed the v0.19.0 "Quicksilver" release, the credential firewall primitive, and the tldraw-offline optional skill — all net-new in the v0.19 window. Engineering count 40 → 43.)

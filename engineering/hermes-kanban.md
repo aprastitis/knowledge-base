@@ -2,14 +2,15 @@
 type: engineering
 status: active
 date: 2026-06-28
-summary: Durable SQLite-backed multi-agent task board with kanban_* tools; peer coordination vs hierarchical delegate_task. Includes operational warnings (rate-limit crash loop) and multi-gateway dispatch config.
-tags: [hermes, agent-design, kanban, multi-agent]
+summary: Durable SQLite-backed multi-agent task board with kanban_* tools; peer coordination vs hierarchical delegate_task. Includes operational warnings (rate-limit crash loop) and multi-gateway dispatch config. The same `kanban_db` also fronts the new Desktop plugin (page/sidebar/hotkeys) — see `engineering/hermes/2026-07-31-hermes-desktop-kanban-plugin`.
+tags: [hermes, agent-design, kanban, multi-agent, desktop-plugin]
 related:
   - engineering/hermes-three-tier-memory
   - engineering/advisor-pattern-for-ai-agents
   - engineering/hermes/architecture
   - engineering/hermes/profiles
   - engineering/multi-agent-orchestration-patterns
+  - engineering/hermes/2026-07-31-hermes-desktop-kanban-plugin
 sources:
   - internal
   - https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban

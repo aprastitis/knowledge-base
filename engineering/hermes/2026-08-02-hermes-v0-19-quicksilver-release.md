@@ -90,6 +90,7 @@ Two substantial features landed in the same window but are documented separately
 
 - **[[engineering/hermes/2026-07-24-hermes-credential-firewall]]** — a token-substituting proxy at the network boundary for Docker sandboxes. Real keys stay outside the sandbox; the sandbox sees tokens that are valid only inside the firewall. Complements (does not replace) [[engineering/hermes/network-egress-isolation]]; together they cover both *where* a sandbox can reach and *what credentials* it sees on the wire.
 - **[[engineering/hermes/2026-07-23-tldraw-offline-skill]]** — optional skill under `optional-skills/creative/tldraw-offline` that drives a running tldraw desktop whiteboard. Same architectural pattern as [[engineering/hermes/2026-06-20-hermes-blender-mcp-skill]] (official skill + MCP/desktop bridge), with one notable twist: the skill can embed a script in the saved `.tldr` so the drawing opens with working buttons and state — the closest published example of an agent producing *executable artifacts*.
+- **[[engineering/hermes/2026-07-31-hermes-desktop-kanban-plugin]]** — first official Hermes **Desktop** plugin (Kanban). Establishes a new UI-shell extension surface (page, sidebar, hotkeys, status bar, backend endpoints, SDK) that is architecturally distinct from the general plugin system in [[engineering/hermes/plugins]]. The Quicksilver speed cuts are the precondition for hotkey-driven plugins feeling right; the desktop Projects surface added in v0.18 is the surface the plugin system now extends. The desktop shell is no longer just a wrapper around the agent loop — it is becoming a platform.
 
 ## Why This Release Matters
 
@@ -109,3 +110,4 @@ The release is also a maturity signal. v0.18 was "judgment"; v0.19 is "ergonomic
 - [[engineering/hermes-kanban]] — multi-agent coordination surface benefiting from TUI speed
 - [[engineering/hermes/2026-07-24-hermes-credential-firewall]] — net-new security primitive in the v0.19 window
 - [[engineering/hermes/2026-07-23-tldraw-offline-skill]] — net-new optional skill in the v0.19 window
+- [[engineering/hermes/2026-07-31-hermes-desktop-kanban-plugin]] — net-new Desktop plugin surface in the v0.19-window (announced 2026-07-31)

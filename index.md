@@ -68,6 +68,8 @@
 | [[engineering/2026-06-21-hermes-blank-slate-setup]] | `hermes setup` third mode (Quick / Full / Blank Slate) — minimal-baseline install with provider + model + file + terminal only | Agent Framework |
 | [[engineering/hermes/2026-07-26-hermes-v0-18-judgment-release]] | Hermes v0.18.0 release synthesis — completion contracts + verification evidence, `/learn` and `/journey`, background fan-out, first-class MoA, gateway scale-to-zero/draining, desktop coding projects, Vertex AI, and security hardening | Agent Framework |
 | [[engineering/hermes/2026-08-02-hermes-v0-19-quicksilver-release]] | Hermes v0.19.0 release synthesis — Quicksilver speed spine (~80% cold-start cut), live reasoning streams, smart approvals, durable response delivery, terminal subscription management, Bitwarden/1Password secrets, plus v0.19.1 patch | Agent Framework |
+| [[engineering/hermes/2026-07-31-hermes-desktop-kanban-plugin]] | First official Hermes Desktop plugin (Kanban) — establishes a UI-shell extension surface (page, sidebar, hotkeys, status bar, backend endpoints, SDK) architecturally distinct from the general plugin system | Extensibility |
+| [[engineering/hermes/2026-08-02-hermes-podcast-appearance-petergyang-karan4d]] | Thin public-presence marker — Hermes team appeared on the Peter Yang / Karan 4D show on 2026-08-02 (no substantive technical content in the post; upgrade if episode details surface) | Public Presence |
 | [[engineering/hermes/2026-07-24-hermes-credential-firewall]] | Token-substituting proxy at the Docker sandbox network boundary. Real provider keys stay outside the sandbox; leaked tokens are useless outside the firewall. Pairs with [[engineering/hermes/network-egress-isolation]]. | Security |
 | [[engineering/hermes/2026-07-23-tldraw-offline-skill]] | Optional skill under `optional-skills/creative/tldraw-offline` driving a running tldraw desktop whiteboard over MCP. Can embed scripts in the saved `.tldr` so the drawing opens with working buttons and state — agent producing *executable artifacts*. | Skills |
 | [[engineering/hermes/cronjob]] | Scheduled-task subsystem — gateway-owned 60s tick, single `cronjob` tool, skill attachments, multi-platform delivery, no-agent mode for watchdogs | Automation |
@@ -101,4 +103,4 @@
 | [[raw/2026-07-16-raw-anatoli-kopadze-loops]] | @AnatoliKopadze long-form thread (6,759 likes) explaining agentic loops — 5-stage pattern, three crucial pieces, "Ralph Wiggum loop" failure mode, cost-per-accepted-change metric, build-order ladder, self-checking loop prompt template. Mira product promotion deliberately skipped. | @AnatoliKopadze X Thread (2026-06-20) |
 
 ---
-*Last updated: 2026-08-02*
+*Last updated: 2026-08-03*
