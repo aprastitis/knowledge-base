@@ -101,6 +101,10 @@ That logs you in via OAuth, sets Nous as your provider, and turns on the Tool Ga
 
 The July 2026 “Judgment Release” made completion contracts, coding-verification evidence, `/learn`, `/journey`, parallel background fan-out, first-class MoA models, and gateway scale-to-zero/draining part of the product. See [[engineering/hermes/2026-07-26-hermes-v0-18-judgment-release]] for the release-level synthesis and cross-links to the underlying patterns.
 
+## v0.20.0 Herald Release
+
+The August 2026 "Herald" release made the agent a *participant* in the world alongside other agents, devices, and humans listening for it. Headline shifts: conversational voice with barge-in + on-device wake words + hands-free "stop"; A2A v1.0 bundled plugin (Hermes-to-other-agent wire protocol — closes 4-year-old issue #514); signed outbound webhooks (push lifecycle events to any HTTP endpoint with HMAC verification); Desktop becomes a platform (the v0.19 Kanban plugin was the first third-party content); smarter loop compression; full CLI power-commands wave. See [[engineering/hermes/2026-08-03-hermes-v0-20-herald-release]] for the release-level synthesis, [[engineering/hermes/2026-08-03-a2a-v1-bundled-plugin]] for the A2A plugin, and [[engineering/hermes/2026-08-03-hermes-cloud-launch]] for the hosted distribution shift.
+
 ## Architecture
 
 The core loop: `User message → AIAgent._run_agent_loop()`:

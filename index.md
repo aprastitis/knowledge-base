@@ -72,6 +72,9 @@
 | [[engineering/hermes/2026-08-02-hermes-podcast-appearance-petergyang-karan4d]] | Thin public-presence marker — Hermes team appeared on the Peter Yang / Karan 4D show on 2026-08-02 (no substantive technical content in the post; upgrade if episode details surface) | Public Presence |
 | [[engineering/hermes/2026-07-24-hermes-credential-firewall]] | Token-substituting proxy at the Docker sandbox network boundary. Real provider keys stay outside the sandbox; leaked tokens are useless outside the firewall. Pairs with [[engineering/hermes/network-egress-isolation]]. | Security |
 | [[engineering/hermes/2026-07-23-tldraw-offline-skill]] | Optional skill under `optional-skills/creative/tldraw-offline` driving a running tldraw desktop whiteboard over MCP. Can embed scripts in the saved `.tldr` so the drawing opens with working buttons and state — agent producing *executable artifacts*. | Skills |
+| [[engineering/hermes/2026-08-03-hermes-v0-20-herald-release]] | Hermes v0.20.0 "Herald" release synthesis — conversational voice with barge-in + wake words, A2A v1.0 wire protocol, signed outbound webhooks, Desktop becomes a platform, smarter loop compression, ~3,650 commits since v0.19 | Agent Framework |
+| [[engineering/hermes/2026-08-03-a2a-v1-bundled-plugin]] | Hermes bundled plugin implementing the Agent-to-Agent v1.0 protocol — discover, talk to, and be driven by other A2A-compatible agents regardless of framework. Closes 4-year-old issue #514. | Agent Framework |
+| [[engineering/hermes/2026-08-03-hermes-cloud-launch]] | Hermes Cloud — first officially hosted, multi-tenant deployment billed through Nous Portal. Two-click, 60-second provisioning; auto-discovers in Hermes Desktop. | Agent Framework |
 | [[engineering/hermes/cronjob]] | Scheduled-task subsystem — gateway-owned 60s tick, single `cronjob` tool, skill attachments, multi-platform delivery, no-agent mode for watchdogs | Automation |
 | [[engineering/hermes/messaging]] | Gateway — 22+ platform adapters (Telegram, Discord, Slack, WhatsApp, Signal, Email, etc.), allowlist + pairing + admin/user tiers, shared slash commands, circuit breakers | Agent Framework |
 
@@ -103,4 +106,4 @@
 | [[raw/2026-07-16-raw-anatoli-kopadze-loops]] | @AnatoliKopadze long-form thread (6,759 likes) explaining agentic loops — 5-stage pattern, three crucial pieces, "Ralph Wiggum loop" failure mode, cost-per-accepted-change metric, build-order ladder, self-checking loop prompt template. Mira product promotion deliberately skipped. | @AnatoliKopadze X Thread (2026-06-20) |
 
 ---
-*Last updated: 2026-08-03*
+*Last updated: 2026-08-08*

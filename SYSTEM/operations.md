@@ -517,3 +517,33 @@ Source: Cron-driven tweet scan (week of 2026-07-27 → 2026-08-03); tweets read 
 - Other scan-detected banter/one-liners — none qualified.
 
 **Outcome:** 2 new curated cards, 3 backlink updates, 0 broken links, 0 archived items. Engineering curated count 43 → 45. Committing and pushing.
+
+## 2026-08-08 — v0.20 "Herald" batch ingest (resumed from 2026-08-03 mid-week scan)
+Source: Hermes release notes `v2026.8.3` (https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.3) + PR #77109 (A2A plugin); cards drafted 2026-08-03 22:17-22:22 Athens but the original commit was interrupted by the fallback-chain API-key error. Re-ingesting on 2026-08-08 now that the fallback chain is clean.
+
+### Why one umbrella card + 2 feature cards, not 5 separate cards
+- The original 2026-08-03 mid-week scan produced 5 candidate cards: the 2 that already committed (Desktop Kanban plugin + podcast appearance), plus 3 net-new (v0.20 release, A2A plugin, Hermes Cloud).
+- Of the 3 net-new, the v0.20 release is genuinely *umbrella* — it ties together many cross-cutting themes. Standalone cards for A2A and Cloud are justified because each has its own deep architecture / distribution story and is independently retrievable. The Herald card explicitly forward-refs to A2A and Cloud cards, matching the v0.18/v0.19 pattern.
+- Did NOT make A2A / Cloud subsections of the Herald card. Tempting — fewer files, tighter cluster. Resisted: each card has its own cross-link graph (A2A → MCP catalog, multi-agent orchestration, async subagents; Cloud → Portal teams billing, Desktop discovery). Folding them into the release card would make those cross-link graphs invisible.
+
+### Forward-references in the v0.20 release card
+- The Herald card's "related" list points to two cards that don't exist yet: `engineering/hermes/2026-08-03-grounded-citations-skill` and `engineering/hermes/2026-08-03-outbound-webhooks`.
+- Decision: leave the wikilinks as-is. Same convention as the v0.18 release card, which forward-refs to v0.19 cards that landed later. Obsidian/standard wikilink renderers handle missing-target gracefully (often as red link or "create?" prompt). Better to have the structural hint in place than to strip the relationship.
+- These will be filled by the next batch that has primary source for the grounded-citations skill and outbound-webhooks skill.
+
+### Why no reverse-backlink updates in this commit
+- Considered adding backlinks from `engineering/hermes/architecture.md`, `messaging.md`, `skills.md`, `security.md` to the v0.20 release card — all four are referenced from the Herald's "related" list, so the symmetry is tempting.
+- Decision: skip. Backlink updates are quality-of-life improvements, not blockers. Doing them here would expand this commit from "resume the v0.20 batch" to "full KB cross-link audit". Next weekly review (Sunday 2026-08-10) is the natural slot.
+- Same call as the 2026-08-03 mid-week batch — that one explicitly rejected a `hermes/architecture.md` backlink for the Desktop plugin card on similar grounds.
+
+### Date stamp conventions in this batch
+- Card file names use 2026-08-03 (ingest date), same as the v0.18/v0.19 release cards.
+- The Cloud card body explicitly notes its actual launch date (2026-07-08) inside the body. The 2026-08-03 file stamp is the *KB ingest* date, not the event date.
+- This is the same convention as v0.18 (file: 2026-07-26, body: "July 2026") and v0.19 (file: 2026-08-02, body: "August 2026"). The Mid-week batch used *event* dates for point-in-time announcements (Desktop plugin: file 2026-07-31, body 2026-07-31) — that was an explicit deviation, documented in the previous operations.md entry.
+
+### The original API-key error in retrospect
+- The 2026-08-03 mid-week scan (e1bc3d5) committed 2 of 5 cards. The other 3 were drafted but the agent's next model call hit "Missing API key for the selected provider on the gateway" because the fallback chain walked all the way down to `minimax/MiniMax-M2.7` which had no API key configured.
+- The fallback fix (drop the dead `#3` from the chain) was applied 2026-08-08 16:48. This commit (2026-08-08 ~17:30) is the first KB ingest since the fix and is the verification that the chain is healthy.
+- Lesson logged: any agentTurn isolated run that touches `minimax-portal/MiniMax-M2.7` as a fallback will fail cleanly if the OAuth profile is healthy (it is, expires 2027-06-28); the dead `#3` was the silent killer.
+
+**Outcome:** 3 new curated cards, 5 system files updated (index, MOC, README, log, changelog, operations), 0 broken links, 0 archived items. Engineering curated count 45 → 48. Committing and pushing.

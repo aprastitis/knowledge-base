@@ -484,3 +484,27 @@ Both were indexed. The newer subfolder card had unique operational content (Rate
 - **No general AI/ML briefings this week.** The scan ran a 1-2/week cap and the rest of the week's content (DeepSeek V4 Flash promo, FLUX 3 free tier, banter) didn't qualify. Logged here so the cap is visible in operations.
 - **Folder placement:** both cards in `engineering/hermes/` — same cluster as the v0.18, v0.19, credential-firewall, tldraw-offline cards. The Desktop plugin is a Hermes-specific UI architecture primitive, the podcast appearance is a Hermes-team public-presence marker. Neither warrants its own subfolder.
 **Outcome:** 2 new curated cards, 3 backlink updates, 0 broken links. Engineering curated count 43 → 45. Committing and pushing.
+
+## [2026-08-08] ingest | v0.20 "Herald" batch — A2A v1.0, Hermes Cloud, v0.20 release synthesis (resumed)
+**Source:** NousResearch mid-week scan 2026-08-03 (originally drafted same day; commit was interrupted by the fallback-chain API-key error). Primary source: Hermes release notes `v2026.8.3` (https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.3) and PR #77109 (A2A plugin).
+**Action:** Created 3 new curated cards + index/MOC/README/log/changelog/operations updates.
+**Cards added:**
+- `engineering/hermes/2026-08-03-hermes-v0-20-herald-release.md` — umbrella release synthesis. Voice with barge-in + wake words, A2A v1.0, signed outbound webhooks, Desktop becomes a platform, smarter loop compression. Pulls together the v0.19.1 patch + the v0.20.0 net-new. ~3,650 commits / 1,400 merged PRs since v0.19.0; 647 contributor handles in credits block.
+- `engineering/hermes/2026-08-03-a2a-v1-bundled-plugin.md` — first bundled plugin in Hermes that gives the agent a standard wire format for talking to *other agents*. Implements A2A v1.0 (discovery, structured comms, task lifecycle, auth, versioning). Closes 4-year-old issue #514. PR #77109, ships in `bundled-plugins/a2a/`.
+- `engineering/hermes/2026-08-03-hermes-cloud-launch.md` — first officially hosted, multi-tenant Hermes deployment, billed through Nous Portal. Two-click, 60-second provisioning. Auto-discovers in Hermes Desktop; team provisioning built in.
+**Index/MOC/README updates:**
+- `index.md` — added 3 new cards under Engineering; updated "Last updated" footer to 2026-08-08.
+- `engineering/MOC.md` — added 3 new cards under Hermes Reference (after v0.19 release); refreshed card count 45 → 48; updated "Last Updated" footer with this batch's narrative.
+- `engineering/hermes/README.md` — added v0.20.0 Herald Release section (mirrors the v0.18 Reliability Milestone section).
+**Decisions:**
+- **Date stamps use ingest date (2026-08-03), not commit date (2026-08-08).** Same convention as the v0.18/v0.19 release cards — these are multi-event release syntheses, not point-in-time announcements. The MOC "Last Updated" footer carries the actual commit date (2026-08-08) so the KB history is still readable by commit time.
+- **One umbrella card + 2 feature cards, not 5 separate cards.** The A2A protocol and Hermes Cloud launch are both *referenced from* the v0.20 release card; promoting them to standalone cards is justified because (a) each has its own deep architecture / distribution story, (b) each is independently retrievable, (c) the A2A plugin specifically has a PR-able implementation surface. This matches the v0.18/v0.19 pattern: umbrella + per-feature cards for net-new architectural primitives.
+- **Two forward-references kept as-is:** the v0.20 release card links to `engineering/hermes/2026-08-03-grounded-citations-skill` and `engineering/hermes/2026-08-03-outbound-webhooks`, which do not yet exist as cards. Same convention as v0.18's forward-refs to v0.19 cards. Will be filled in by the next batch that has source material for them.
+- **No cross-link updates to existing cards in this commit.** The release card's "related" list pulls in the Desktop plugin card (committed 2026-08-03) and the credential firewall (committed 2026-07-24) which is the right shape — they're already wired up. Adding reverse backlinks from `hermes/architecture.md`, `hermes/messaging.md`, `hermes/skills.md`, `hermes/security.md` to v0.20 is a follow-up task for the next weekly review; skipping it here keeps this commit scoped.
+- **The original 2026-08-03 mid-week scan was 5 cards total; only 2 (Desktop Kanban + podcast) committed cleanly before the API-key wall hit.** This batch (3 cards, 5 system files) closes the gap. No additional NousResearch scan material was added — only the previously-drafted-but-uncommitted cards.
+- **Hermes Cloud launch is dated 2026-07-08 in its body but the card file uses 2026-08-03 (ingest date convention).** The cloud launch is technically a separate event from v0.20 (one month earlier) but it's folded into the v0.20 narrative because the v0.20 release card explicitly references Cloud as part of the v0.20 distribution context. Treating them as one batch keeps the cluster coherent; the cloud launch date is explicit in the card body for those who want the timeline.
+**Skipped (logged, not ingested):**
+- Two forward-referenced cards (`grounded-citations-skill`, `outbound-webhooks`) — no source material in the current scan; queue for next batch with primary source.
+- Pets (`memory/kb-queue/2026-07-01-hermes-pets.md`) — unchanged decision: do not draft cold.
+
+**Outcome:** 3 new curated cards, 4 system/MOC/README updates, 0 broken links, 0 archived items. Engineering curated count 45 → 48. Committing and pushing.
