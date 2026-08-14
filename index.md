@@ -77,6 +77,9 @@
 | [[engineering/hermes/2026-08-03-hermes-cloud-launch]] | Hermes Cloud — first officially hosted, multi-tenant deployment billed through Nous Portal. Two-click, 60-second provisioning; auto-discovers in Hermes Desktop. | Agent Framework |
 | [[engineering/hermes/cronjob]] | Scheduled-task subsystem — gateway-owned 60s tick, single `cronjob` tool, skill attachments, multi-platform delivery, no-agent mode for watchdogs | Automation |
 | [[engineering/hermes/messaging]] | Gateway — 22+ platform adapters (Telegram, Discord, Slack, WhatsApp, Signal, Email, etc.), allowlist + pairing + admin/user tiers, shared slash commands, circuit breakers | Agent Framework |
+| [[engineering/hermes/2026-08-10-hermes-browser-use-mode]] | Browser Use mode replaces ~12 individual browser tools with a single tool that writes scripts via the @browser_use CLI 3.0 backend — 48–66% token cut on browser-using requests, no accuracy drop. Establishes the "toolset key resolves to swappable backend" pattern. | Agent Architecture |
+| [[engineering/hermes/2026-08-12-portable-profiles-export-import]] | `/export` and `/import` make profiles portable and shareable — one file packs skills, memory, persona, crons, plugins, settings, and desktop themes with credentials stripped. Sibling to [[engineering/hermes/profiles]] (runtime story); this is the distribution story. | Profiles |
+| [[engineering/hermes/2026-08-06-hermes-actual-computer-local-inference]] | Hermes × Actual Computer — out-of-the-box pairing with a local inference stack so the user's own hardware is the inference backend. Part of the "user's machine as the agent's substrate" pattern (siblings: tldraw, Desktop Kanban, Blender MCP). | Agent Framework |
 
 ## First Principles (`/first-principles`)
 | Page | Summary | Category |
@@ -106,4 +109,4 @@
 | [[raw/2026-07-16-raw-anatoli-kopadze-loops]] | @AnatoliKopadze long-form thread (6,759 likes) explaining agentic loops — 5-stage pattern, three crucial pieces, "Ralph Wiggum loop" failure mode, cost-per-accepted-change metric, build-order ladder, self-checking loop prompt template. Mira product promotion deliberately skipped. | @AnatoliKopadze X Thread (2026-06-20) |
 
 ---
-*Last updated: 2026-08-08*
+*Last updated: 2026-08-14*

@@ -547,3 +547,71 @@ Source: Hermes release notes `v2026.8.3` (https://github.com/NousResearch/hermes
 - Lesson logged: any agentTurn isolated run that touches `minimax-portal/MiniMax-M2.7` as a fallback will fail cleanly if the OAuth profile is healthy (it is, expires 2027-06-28); the dead `#3` was the silent killer.
 
 **Outcome:** 3 new curated cards, 5 system files updated (index, MOC, README, log, changelog, operations), 0 broken links, 0 archived items. Engineering curated count 45 → 48. Committing and pushing.
+
+---
+
+## [2026-08-14] ingest | nousresearch-weekly-2026-08-13 — three net-new Hermes features
+
+**Trigger.** NousResearch weekly scan (Thu Aug 13 21:48 EEST) surfaced three Hermes updates with no existing KB cards: Browser Use mode (Mon Aug 10), portable profile export/import (Wed Aug 12), Hermes × Actual Computer local inference (Thu Aug 6). All three net-new to the KB per the duplication check in the scan.
+
+**Action.** Created three standalone curated cards. Updated index.md, log.md, changelog.md, operations.md.
+
+### One bundle or three standalone cards?
+
+The scan presented three features sharing a unifying narrative — "driving the agent's surface area outward." Tempting to bundle them into a single "Hermes expands outward" card or a small cluster summary card. Resisted for the same reason as the A2A / Cloud standalone split in the v0.20 batch:
+
+- Each has its own cross-link graph (Browser Use → architecture, scaffolding, loop-pattern; portable profiles → profiles, credentials, plugins, desktop; Actual → plugins, security, tldraw/Kanban/Blender pattern siblings).
+- Each is independently retrievable — a future reader asking "how do I cut token cost on browser work?" should land on Browser Use, not a bundle card.
+- The unifying narrative is thinner than v0.20's — three discrete features that happen to share a marketing frame, not three facets of one release.
+
+### Date stamps: event date, not ingest date
+
+- Browser Use mode: 2026-08-10 (event date — tweet Mon Aug 10 18:25 UTC)
+- Portable profiles: 2026-08-12 (event date — tweet Wed Aug 12 17:28 UTC)
+- Actual Computer: 2026-08-06 (event date — Actual's tweet Thu Aug 6 01:59 UTC, Nous quote-tweet same time)
+
+All three are point-in-time announcements, not release syntheses spanning multiple events. Same convention as the 2026-08-03 mid-week batch (Desktop Kanban: 2026-07-31, podcast: 2026-08-02). The v0.20 batch used ingest date (2026-08-03) because the cards synthesize v0.19.1 patch + v0.20.0 net-new across multiple days. The convention is now explicit: **syntheses use ingest date; point-in-time announcements use event date.**
+
+### Why the Actual Computer card is thin
+
+The scan itself flagged Actual Computer as "lower-priority KB candidate: an addendum to the model-catalog notes or a small note on the `local-inference-runtimes` pattern. Not a standalone card on its own unless Actual usage materializes." Decision: write the standalone card anyway, but keep it thin and explicitly scoped.
+
+Rationale:
+- **Pattern completion.** The "user's machine as agent's substrate" cluster now has four members (tldraw-offline, Desktop Kanban, Blender MCP, Actual Computer). A single card that names the pattern across all four is the natural follow-up — but a thin card per instance is the right granularity until the cluster is large enough to warrant a "pattern card" of its own.
+- **Cheap to expand.** If Actual × Hermes usage materializes (Andreas actually wires it up, Nous ships a dedicated plugin instead of bare OpenAI-compat), this card is the natural place to expand. Cost of carrying a thin card now is ~150 lines of markdown; cost of having to reconstruct the integration context later is higher.
+- **Self-aware scope.** The card body explicitly flags "treat as a pattern marker, not a feature deep-dive" so future-me knows it was scoped that way intentionally, not just thin because I ran out of time.
+
+### Why the portable profiles card is standalone, not a section of `engineering/hermes/profiles.md`
+
+Same reasoning as A2A / Cloud in the v0.20 batch — folding it into the existing profiles card would make the cross-link graph invisible. The portable profiles card has six distinct outbound themes (onboarding, teams, backups, public profile galleries, credentials-stripping posture, desktop themes); the existing profiles card has three (multi-instance, gateway token locks, profile-safe code rules). The intersection is small; the union is meaningful.
+
+Tradeoff accepted: two cards now exist where one would have sufficed for "document the profiles feature." Same tradeoff taken for A2A / Cloud. The v0.20 Herald card's umbrella-plus-feature-cards pattern is the precedent this follows.
+
+### Why Browser Use mode is its own card and not a section of `engineering/hermes/architecture.md`
+
+Same reasoning, applied to a different parent. Architecture.md is the right home for "what is a toolset key"; Browser Use mode adds "what is a toolset backend and how does it plug into a toolset key." Putting the backend-pluggable discussion into architecture.md would expand a tightly-scoped reference doc into a feature discussion. Standalone keeps both clean.
+
+The architecture card already gets a wikilink from Browser Use's "Related" section. The reverse backlink from architecture.md → Browser Use is a natural follow-up for next weekly review.
+
+### What was deliberately not updated in this commit
+
+- **No backlink updates to existing cards.** Four candidates: `engineering/hermes/profiles.md` → portable profiles (sibling), `engineering/hermes/security.md` → portable profiles (credentials-stripping posture) + Actual Computer (user-controlled compute substrate), `engineering/hermes/architecture.md` → Browser Use (backend-pluggable layer). All four are queued for next weekly review (Sunday 2026-08-17 or whenever the next KB maintenance session lands). Skipping keeps this commit scoped — same call as the v0.20 batch.
+- **No MOC updates.** engineering/MOC.md was last touched in the v0.20 batch (2026-08-08). The three new cards belong in the same Hermes Reference cluster as the v0.20 cards. Adding them in this commit is a small mechanical change; skipping keeps the commit tight. Will fold into the next weekly review.
+- **No README update to `engineering/hermes/README.md`.** The README is structured around major releases (v0.18 / v0.19 / v0.20 sections). None of these three features warrant a top-level README section; they live as standalone cards with strong cross-links. Same call as the 2026-08-03 mid-week batch, which also skipped README updates.
+- **No `engineering/MOC.md` "Last Updated" footer refresh.** Will batch with the next MOC touch.
+
+### Cross-link symmetry check
+
+Each new card back-links to ≥3 existing cards via the `related:` frontmatter. Spot-check:
+
+- **Browser Use mode** → architecture, v0.20 Herald, tldraw-offline, Blender MCP, agentic-loop-pattern, scaffolding-for-ai-agents (6 outbound)
+- **Portable profiles** → profiles, architecture, skills, plugins, cronjob, Desktop Kanban, credential-firewall, network-egress-isolation (8 outbound)
+- **Actual Computer** → architecture, tldraw-offline, Desktop Kanban, Blender MCP, agentic-loop-pattern, plugins (6 outbound)
+
+Reverse backlinks from these targets to the new cards: 0 (deferred to weekly review, as documented above). Will not leave this asymmetry past the next weekly maintenance window.
+
+### Date stamp convention now formally captured in operations.md
+
+After this batch, the convention is: **point-in-time announcements use event date; multi-event syntheses use ingest date.** Documented in the operations entry above ("Why the Actual Computer card is thin" was the trigger; "Date stamps" was the place). Future batches should follow without re-litigating.
+
+**Outcome:** 3 new curated cards, 4 system files updated (index, log, changelog, operations), 0 broken links, 0 archived items, 0 backlink updates (deferred to weekly review). Engineering curated count 48 → 51. Committing and pushing.

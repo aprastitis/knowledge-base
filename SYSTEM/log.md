@@ -508,3 +508,27 @@ Both were indexed. The newer subfolder card had unique operational content (Rate
 - Pets (`memory/kb-queue/2026-07-01-hermes-pets.md`) — unchanged decision: do not draft cold.
 
 **Outcome:** 3 new curated cards, 4 system/MOC/README updates, 0 broken links, 0 archived items. Engineering curated count 45 → 48. Committing and pushing.
+
+## [2026-08-14] ingest | nousresearch-weekly-2026-08-13 — Browser Use mode, portable profiles, Actual Computer local inference
+**Source:** NousResearch weekly scan 2026-08-13 (`memory/tweet-scans/2026-08-13-nousresearch.md`). Three net-new Hermes features, all architecturally distinct from existing KB cards.
+**Action:** Created 3 new curated cards + index/log/changelog/operations updates. No MOC/README updates needed (all three cards live in `engineering/hermes/`, an MOC section already exists there from the v0.20 batch; only `index.md` row additions).
+**Cards added:**
+- `engineering/hermes/2026-08-10-hermes-browser-use-mode.md` — Browser Use mode replaces ~12 individual browser tools with one tool that writes scripts via `@browser_use` CLI 3.0 backend. 48–66% token reduction on browser-using requests, no accuracy drop. Activation: `browser.backend: browser-use`. Establishes the "toolset key resolves to swappable backend" pattern.
+- `engineering/hermes/2026-08-12-portable-profiles-export-import.md` — `/export` and `/import` make profiles portable and shareable. One file packs skills, memory, persona, crons, plugins, settings, and desktop themes with credentials stripped. Sibling to `engineering/hermes/profiles` (isolation/runtime story); this is the distribution/portability story.
+- `engineering/hermes/2026-08-06-hermes-actual-computer-local-inference.md` — Hermes × Actual Computer local inference integration, out-of-the-box. User's own hardware as the inference backend, with low CPU impact and multi-platform portability. Fourth instance of the "user's machine as agent's substrate" pattern (siblings: tldraw-offline skill, Desktop Kanban plugin, Blender MCP skill).
+**Index/MOC/README updates:**
+- `index.md` — added 3 new cards under Engineering; updated "Last updated" footer to 2026-08-14.
+**Decisions:**
+- **Date stamps use the event date (tweet dates), not ingest date (2026-08-14).** Same convention as the 2026-08-03 mid-week batch (Desktop Kanban: 2026-07-31, podcast: 2026-08-02). These are point-in-time announcements, not release syntheses, so the event date is the right stamp. The v0.20 batch used ingest date because the cards synthesize multiple events spanning the v0.19→v0.20 window.
+- **Three standalone cards, not one bundled "browser / profile / inference" card.** Each has its own cross-link graph and is independently retrievable. Same reasoning as the v0.20 batch's A2A/Cloud standalone cards.
+- **The Actual Computer card is intentionally thin.** Scan flagged it as lower-priority ("not a standalone card on its own unless Actual usage materializes"). Created anyway because (a) it completes the "user's machine as substrate" pattern cluster, (b) future expand is cheap if usage materializes, (c) a single card names the pattern even if no deep architecture is available yet. Card body explicitly flags "treat as a pattern marker, not a feature deep-dive" so future-me knows the scope.
+- **The portable profiles card stands alone, not as a section of `engineering/hermes/profiles`.** Same reasoning as A2A/Cloud in the v0.20 batch — the cross-link graph (onboarding, backups, teams, credentials-stripping, desktop themes, Hermes Cloud) is wider than the isolation card can hold, and the cross-link symmetry (export/import ↔ onboarding, ↔ backups, ↔ team workflows) is the point. Backlink from `profiles.md` is queued for next weekly review.
+- **No backlink updates in this commit.** The portable profiles card should ideally backlink from `engineering/hermes/profiles.md` (sibling relationship) and from `engineering/hermes/security.md` (credentials-stripping posture). The Browser Use card should backlink from `engineering/hermes/architecture.md` (adds the backend-pluggable layer to the toolset model). The Actual Computer card should backlink from `engineering/hermes/security.md` (user-controlled compute substrate). All four are follow-up tasks for next weekly review; skipping keeps this commit scoped.
+- **No reverse-backlink update to v0.20 Herald release card.** The Herald card already covers "around the spine" of v0.20; Browser Use mode arrived Aug 10, *after* the Herald card shipped Aug 8, so it is correctly not referenced there. Forward-references in the Herald card to `grounded-citations-skill` and `outbound-webhooks` remain unfilled; still no source material in the current scan.
+**Skipped (logged, not ingested):**
+- FLUX 3 short film contest winners — follow-up to the contest announced Jul 30; films are creative output, not Hermes features. Skipped per scan filter.
+- Nous Portal promo quintet (Solar Pro 4 free / 20% off extension / promo summary / DeepSeek V4 Flash / LongCat-2.0) — promotional only, no architectural content. Skipped per scan filter.
+- Two forward-referenced cards from v0.20 release (`grounded-citations-skill`, `outbound-webhooks`) — no source material in the current scan; queue for next batch with primary source.
+- Pets (`memory/kb-queue/2026-07-01-hermes-pets.md`) — unchanged decision: do not draft cold.
+
+**Outcome:** 3 new curated cards, 1 index update, 0 broken links, 0 archived items, 0 backlink updates (deferred to weekly review). Engineering curated count 48 → 51. Committing and pushing.
