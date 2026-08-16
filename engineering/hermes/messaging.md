@@ -17,6 +17,7 @@ related:
   - engineering/hermes/profiles
   - engineering/hermes/observer-hooks
   - engineering/hermes/2026-07-26-hermes-v0-18-judgment-release
+  - engineering/hermes/2026-08-03-hermes-v0-20-herald-release
 ---
 
 # Hermes Messaging Gateway

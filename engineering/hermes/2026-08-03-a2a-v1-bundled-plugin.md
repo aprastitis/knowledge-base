@@ -42,7 +42,7 @@ The closest analog in the existing KB is the relationship between MCP and the [[
 
 ## What the Bundled Plugin Does in Hermes
 
-The Hermes-side plugin ([[https://github.com/NousResearch/hermes-agent/pull/77109|PR #77109]]) ships in `bundled-plugins/a2a/` and provides:
+The Hermes-side plugin ([PR #77109](https://github.com/NousResearch/hermes-agent/pull/77109)) ships in `bundled-plugins/a2a/` and provides:
 
 - **A2A server mode** — Hermes advertises its capabilities via an A2A agent card and accepts A2A requests from other agents.
 - **A2A client mode** — Hermes can discover and call other A2A agents as if they were local tools, routing the request through the standard Hermes request pipeline (so it benefits from streaming, retries, approval gates, observability hooks).

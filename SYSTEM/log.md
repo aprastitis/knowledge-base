@@ -532,3 +532,56 @@ Both were indexed. The newer subfolder card had unique operational content (Rate
 - Pets (`memory/kb-queue/2026-07-01-hermes-pets.md`) — unchanged decision: do not draft cold.
 
 **Outcome:** 3 new curated cards, 1 index update, 0 broken links, 0 archived items, 0 backlink updates (deferred to weekly review). Engineering curated count 48 → 51. Committing and pushing.
+
+## [2026-08-16] maintenance | weekly KB review — backlink catch-up + MOC sync + 1 wikilink fix
+
+**Trigger.** Scheduled weekly KB maintenance cron. Review period: 2026-08-09 → 2026-08-16.
+
+**Action.** Closed all five backlink tasks explicitly deferred from the 2026-08-14 ingest commit (`operations.md` "What was deliberately not updated" section), plus two backlinks deferred from the 2026-08-08 v0.20 batch. Brought `engineering/MOC.md` back in sync with `index.md`. Fixed one malformed URL wikilink.
+
+### Backlinks landed (5 files)
+
+- **`engineering/hermes/architecture.md`** ← v0.20 Herald (compression overhaul + iteration-limit 90 → 500) + Browser Use mode (backend-pluggable layer for the `browser` toolset key). Both as frontmatter `related` entries AND as `See Also` bullets with one-line framing.
+- **`engineering/hermes/security.md`** ← portable-profiles (credentials-stripping posture is the same architectural posture as the credential firewall + network egress isolation: boundary-enforced isolation, not in-process heuristics) + Actual Computer (user-controlled compute substrate — adds the "model weights can be local" primitive to the OS-level isolation stance) + v0.20 Herald (the release's security hardening: DNS-pinned SSRF-safe fetches, Slack CDN allowlist, strict redaction at compaction boundaries, ReDoS elimination in redaction patterns, Tier-3 credential scoping, Windows subprocess decode hardening, new Docker/podman approval gate). All three as frontmatter `related` entries.
+- **`engineering/hermes/profiles.md`** ← portable-profiles-export-import (sibling, the distribution half of the profiles feature). New "Sibling: Distribution via Export/Import" section added to make the runtime/distribution split explicit, mirroring the portable-profiles card's own "Two Halves" section. Same content, opposite framing.
+- **`engineering/hermes/skills.md`** ← v0.20 Herald (release added the `grounded-citations` skill and the curator's `adopt` flow). Frontmatter `related` entry.
+- **`engineering/hermes/messaging.md`** ← v0.20 Herald (release added Buzz platform adapter, conversational voice across audio-capable adapters, HSP personal+org skill sync). Frontmatter `related` entry.
+
+### MOC catch-up
+
+The 2026-08-14 ingest commit added three new Hermes Reference cards (`browser-use-mode`, `portable-profiles-export-import`, `actual-computer-local-inference`) to `index.md` and the SYSTEM files, but the `engineering/MOC.md` was not updated — the previous commit deliberately skipped it. Closed the gap:
+
+- Added three rows to the Hermes Reference cluster, after the `tldraw-offline-skill` row (chronologically consistent with the 2026-07-23 → 2026-08-12 date spread).
+- Refreshed the "Card Count" footer: 48 → 51 cards (19 Hermes Reference → 22).
+- Added a new "Last Updated" entry for 2026-08-16 with the full summary.
+
+### Wikilink fix
+
+`engineering/hermes/2026-08-03-a2a-v1-bundled-plugin.md` line 45 contained a malformed URL wikilink `[[https://github.com/NousResearch/hermes-agent/pull/77109|PR #77109]]`. Obsidian would render it but the link target is a URL, not a card name. Rewrote to a regular markdown link `[PR #77109](https://github.com/NousResearch/hermes-agent/pull/77109)`. The proper markdown link at line 123 is unchanged. This was a duplicate reference, not a missing one.
+
+### Audit
+
+- **Real broken wikilinks: 1** (the malformed URL wikilink above) — fixed.
+- **Forward-reference wikilinks remaining: 4** — two each for `grounded-citations-skill` and `outbound-webhooks` from the v0.20 Herald card and the A2A plugin card. Intentional per the v0.18 → v0.19 → v0.20 forward-ref convention; will fill in when source material surfaces.
+- **Orphaned curated cards: 0.** Comprehensive file-vs-index check confirmed all 51 cards have an `index.md` row and an MOC row.
+- **Anchor links: 2.** `[[...v0-20-herald-release#smart-approvals-grow-up]]` and `[[...v0-19-quicksilver-release#provider-updates]]` look like broken wikilinks to a naive regex (they contain `#`) but resolve correctly in Obsidian via the header-slug mechanism. Both target files have the named sections. No fix needed.
+- **Thin cards: unchanged from last review.** The 2026-08-14 cards (Browser Use, portable profiles, Actual Computer) are intentionally scoped by the operations.md "Why thin" rationale; no forced expansion.
+
+### Queue this review
+
+- **`memory/kb-queue/2026-07-01-hermes-pets.md` — still pending, 6+ weeks queued.** Primary announcement still absent. Decision unchanged: do not draft cold.
+- **`memory/kb-queue/2026-07-05-hermes-v0-18-judgment-release.md` — already processed** (release synthesis exists).
+- **`memory/kb-queue/2026-05-20-queue-migration.md` — legacy migration note**, no action needed.
+- **`memory/kb-queue.md` (legacy single file) — empty below template marker**, no new queue items added this week.
+- **No new queue items added this review** — the v0.20 forward-references (`grounded-citations-skill`, `outbound-webhooks`) remain implicitly queued with the v0.20 card as their documentation anchor. Pets remains explicitly queued.
+
+### Decisions
+
+- **All five deferred backlinks landed in one commit.** Spreading them across multiple commits would have created more diff noise than necessary; they're a natural unit (catch-up to the 2026-08-14 batch). Same trade-off as the v0.20 batch's "umbrella + per-feature cards" pattern.
+- **MOC catch-up is its own line in the diff.** Kept separate from the backlink pass because the MOC gap was a separate oversight (commit-scoped deferral in operations.md) — calling it out separately makes the KB audit trail clearer.
+- **Malformed URL wikilink fixed in place.** Could have rewritten as a proper Obsidian external link syntax (`[PR #77109](https://...)` is functionally identical for an external URL) but markdown link is the more conventional choice. Already a duplicate of the line 123 link, so no information loss.
+- **Forward-references left as-is.** Same call as last review and the v0.18 → v0.19 convention. The v0.20 card's "Parallel Net-New Features" section names the two pending cards, so the KB is navigable even without the standalone cards existing.
+- **Anchor links left as-is.** They resolve in Obsidian; my Python wikilink audit script was too naive to recognize `#section` suffixes. Documented here so future audits account for the pattern.
+- **No new content this review.** Pure maintenance — backlinks, MOC sync, one link fix. Net-zero curated card delta.
+
+**Outcome:** 0 new curated cards, 5 existing content cards updated (architecture, security, profiles, skills, messaging — all backlinks + See Also), 1 wikilink fix (a2a-v1-bundled-plugin), engineering/MOC.md updated (3 rows + footer + count refresh), 4 SYSTEM files updated (log, changelog, operations, plus the 3 just listed). 0 archived items. Engineering curated count unchanged at 51. Committing and pushing.

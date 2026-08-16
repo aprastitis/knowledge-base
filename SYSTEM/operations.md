@@ -615,3 +615,51 @@ Reverse backlinks from these targets to the new cards: 0 (deferred to weekly rev
 After this batch, the convention is: **point-in-time announcements use event date; multi-event syntheses use ingest date.** Documented in the operations entry above ("Why the Actual Computer card is thin" was the trigger; "Date stamps" was the place). Future batches should follow without re-litigating.
 
 **Outcome:** 3 new curated cards, 4 system files updated (index, log, changelog, operations), 0 broken links, 0 archived items, 0 backlink updates (deferred to weekly review). Engineering curated count 48 → 51. Committing and pushing.
+
+## [2026-08-16] maintenance | weekly KB review — backlink catch-up + MOC sync + 1 wikilink fix
+
+**Trigger.** Scheduled weekly KB maintenance cron. Review period: 2026-08-09 → 2026-08-16.
+
+### Why this review is a backlink catch-up rather than new content
+
+Two prior commits explicitly punted backlink work to "next weekly review":
+- **2026-08-14** (`23691a6`): "No backlink updates in this commit... All four are follow-up tasks for next weekly review" — covering portable profiles → profiles/security, Browser Use → architecture, Actual Computer → security.
+- **2026-08-08** (`0f53b5a`): "Adding reverse backlinks from `hermes/architecture.md`, `hermes/messaging.md`, `hermes/skills.md`, `hermes/security.md` to v0.20 is a follow-up task for the next weekly review; skipping it here keeps this commit scoped."
+
+This review closed both queues plus the related-but-unlisted v0.20 → architecture backlink. Net effect: every card from the 2026-08-08 batch and the 2026-08-14 batch now has its expected reverse-backlinks in place.
+
+### MOC gap root-cause
+
+The 2026-08-14 commit's operations.md "What was deliberately not updated" section explicitly listed `engineering/MOC.md` as a deferred follow-up: "Engineering/MOC.md was last touched in the v0.20 batch (2026-08-08). The three new cards belong in the same Hermes Reference cluster as the v0.20 cards. Adding them in this commit is a small mechanical change; skipping keeps the commit tight. Will fold into the next weekly review."
+
+Followed through. Three rows added, count refreshed (48 → 51), new "Last Updated" entry. Same pattern for the 2026-08-08 batch — it correctly updated the MOC at the time, so this review only added the 2026-08-14 catch-up.
+
+### Why the malformed URL wikilink slipped past the 2026-08-08 review
+
+The 2026-08-08 batch was the commit that *created* the A2A plugin card. The malformed `[[https://github.com/...|PR #77109]]` was in the original draft. My script's wikilink audit (`rglob` + regex) flagged it on this review — last week's review didn't catch it because the audit was scoped to navigation wikilinks (which the URL form isn't, technically). Treating it as a "navigation broken link" was a category error on my part; treating it as "malformed Markdown that should be a regular link" is the right frame.
+
+Lesson logged: future audits should include a regex pass for `\[\[https?://[^\]]+\|[^\]]+\]\]` (URL-form wikilinks) and convert or flag them. Cheap to add to the existing audit.
+
+### Anchor-link handling in audit scripts
+
+Two wikilinks look broken to a naive regex but resolve correctly in Obsidian:
+- `[[engineering/hermes/2026-08-03-hermes-v0-20-herald-release#smart-approvals-grow-up]]` (A2A card) — `#smart-approvals-grow-up` matches the v0.20 Herald card's section header "Smart Approvals Grow Up" via Obsidian's standard header-slug mechanism.
+- `[[engineering/hermes/2026-08-02-hermes-v0-19-quicksilver-release#provider-updates]]` (Hermes Cloud card) — same story, matches "Provider Updates" section header in the v0.19 card.
+
+Documented here so the next review's audit script can match `#section` suffixes and recognize these as valid. Two patterns to look for: `[[.*#.*]]` should be split on `#` before basename resolution; the target path component resolves normally; the anchor is appended after.
+
+### The asymmetry principle, restated
+
+Two months ago, the review principle became: **new cards get outbound backlinks; existing cards get reverse-backlinks in the next weekly review.** This review is the third or fourth instance of "next weekly review" actually being honored — and it works. The 2026-08-08 batch's deferral + 2026-08-14 batch's deferral + this week's catch-up all landed cleanly. The pattern holds.
+
+The risk is the deferral slipping multiple weeks. Mitigation: a separate "deferred backlink" checklist in operations.md would help — but adding bureaucracy for its own sake is not worth it when the weekly cron is reliably firing and the items are recoverable. If we ever miss a weekly cron, the asymmetry becomes a KB-quality bug. For now, the discipline holds.
+
+### Decisions
+
+- **All five deferred backlinks landed in one commit.** Single batched "catch-up" commit is the right shape — it's a natural unit, the diff is reviewable, the asymmetry is closed.
+- **MOC catch-up is its own line.** Kept separate from the backlink pass for traceability in the audit trail. Net diff is one MOC + 5 cards + 1 wikilink fix + 4 SYSTEM files.
+- **Malformed URL wikilink fixed in place.** Rewrote as regular markdown link `[PR #77109](https://...)` instead of Obsidian external-link syntax (`[PR #77109](https://...)` is the same shape). No information loss; the proper link at line 123 is the canonical reference, the line 45 fix is just deduplication.
+- **Forward-references and anchor links left as-is.** Documented for the next audit. No real broken links.
+- **No new content this review.** Pure maintenance. Net-zero curated card delta. Engineering count stays at 51.
+
+**Outcome:** 0 new curated cards, 5 existing content cards updated (architecture, security, profiles, skills, messaging), 1 wikilink fix (a2a-v1-bundled-plugin), engineering/MOC.md updated (3 rows + footer + count refresh 48 → 51), 4 SYSTEM files updated. 0 archived items. Engineering curated count unchanged at 51. Committing and pushing.

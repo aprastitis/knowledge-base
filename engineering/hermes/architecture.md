@@ -11,6 +11,8 @@ related:
   - engineering/hermes/plugins
   - engineering/hermes/skills
   - engineering/hermes-kanban
+  - engineering/hermes/2026-08-03-hermes-v0-20-herald-release
+  - engineering/hermes/2026-08-10-hermes-browser-use-mode
 ---
 
 # Hermes Architecture
@@ -187,3 +189,5 @@ Core mechanism: `_apply_profile_override()` sets `HERMES_HOME` before any module
 - [[engineering/hermes/cronjob]] — The `cronjob` tool (referenced in the durability rule above)
 - [[engineering/hermes/messaging]] — The gateway platform adapters and overall architecture
 - [[engineering/hermes/profiles]] — Profile-based multi-instance isolation (referenced in the gateway token-lock rule)
+- [[engineering/hermes/2026-08-03-hermes-v0-20-herald-release]] — v0.20 overhauled compression (proactive tool-result pruning, per-turn micro-compaction, guaranteed tail, ghost-skill defense) and raised the default tool-calling iteration limit 90 → 500; the agent loop shape is unchanged but the bounds are much wider
+- [[engineering/hermes/2026-08-10-hermes-browser-use-mode]] — adds the "toolset key resolves to a swappable backend" layer; this card documents `browser` as a toolset key, Browser Use mode is the pluggable-backend extension of that contract

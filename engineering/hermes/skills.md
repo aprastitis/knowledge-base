@@ -11,6 +11,7 @@ related:
   - engineering/hermes/README
   - engineering/hermes/architecture
   - concepts/self-evolving-skills
+  - engineering/hermes/2026-08-03-hermes-v0-20-herald-release
 ---
 
 # Hermes Skills System

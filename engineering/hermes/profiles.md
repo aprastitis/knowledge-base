@@ -9,6 +9,7 @@ sources:
 related:
   - engineering/hermes/architecture
   - engineering/hermes/kanban
+  - engineering/hermes/2026-08-12-portable-profiles-export-import
 ---
 
 # Hermes Profiles — Multi-Instance Support
@@ -82,3 +83,12 @@ A dashboard-native profile creation experience is being designed. A profile = a 
 - `SOUL.md` / `USER.md` — identity
 
 Per-profile scoping of Model, MCPs, and Skills is **native** — no data-model change needed. The gap is purely UX.
+
+## Sibling: Distribution via Export/Import
+
+The two halves of the profiles feature:
+
+- **This card — isolation.** How do multiple agents coexist on one host without stomping on each other?
+- **[[engineering/hermes/2026-08-12-portable-profiles-export-import]] — portability.** How do I share an agent with another host/user? `/export` and `/import` make profiles portable and shareable; the export envelope explicitly strips credentials so the file is safe to hand across trust boundaries.
+
+Both cards share the same data model (`~/.hermes/profiles/<name>/`) but expose different surfaces — isolation is a runtime story, portability is a distribution story.

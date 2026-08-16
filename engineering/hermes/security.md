@@ -10,6 +10,9 @@ related:
   - engineering/hermes/README
   - engineering/hermes/architecture
   - engineering/hermes/plugins
+  - engineering/hermes/2026-08-03-hermes-v0-20-herald-release
+  - engineering/hermes/2026-08-12-portable-profiles-export-import
+  - engineering/hermes/2026-08-06-hermes-actual-computer-local-inference
 ---
 
 # Hermes Security Policy
