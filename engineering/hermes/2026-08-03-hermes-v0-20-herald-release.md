@@ -22,6 +22,9 @@ related:
   - engineering/hermes/2026-07-24-hermes-credential-firewall
   - engineering/hermes/network-egress-isolation
   - engineering/hermes-kanban
+  - engineering/hermes/2026-08-16-hermes-desktop-19x-session-load
+  - engineering/hermes/2026-08-16-hermes-desktop-cross-platform
+  - engineering/hermes/2026-08-17-hermes-2500-contributors-milestone
 sources:
   - https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.3
   - https://x.com/NousResearch/status/2084325600643445095
@@ -218,4 +221,7 @@ The release is also the first one where the *shape of the company* is visible in
 - [[engineering/hermes/2026-08-03-outbound-webhooks]] — signed outbound integration pattern
 - [[engineering/hermes/2026-07-24-hermes-credential-firewall]] — security primitive from v0.19 window; re-landed in v0.20
 - [[engineering/hermes/network-egress-isolation]] — paired with credential firewall for full sandbox defense
+- [[engineering/hermes/2026-08-16-hermes-desktop-19x-session-load]] — Aug 16 perf milestone: Desktop session load 19× faster; first Desktop-specific perf number, extends v0.20's 60fps wave to the window-open path
+- [[engineering/hermes/2026-08-16-hermes-desktop-cross-platform]] — Aug 16 distribution milestone: Hermes Desktop GUI ships for macOS, Windows, and Linux; the ship-channel for the v0.20 Desktop-platform work
+- [[engineering/hermes/2026-08-17-hermes-2500-contributors-milestone]] — post-v0.20 trajectory: contributor base went from 650+ (v0.20) to 2,500+ in two weeks. Inverts the contribution-supply bottleneck to a review-triage one
 - [[engineering/hermes-kanban]] — multi-agent coordination surface benefiting from voice + speed

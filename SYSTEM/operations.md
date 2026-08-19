@@ -663,3 +663,74 @@ The risk is the deferral slipping multiple weeks. Mitigation: a separate "deferr
 - **No new content this review.** Pure maintenance. Net-zero curated card delta. Engineering count stays at 51.
 
 **Outcome:** 0 new curated cards, 5 existing content cards updated (architecture, security, profiles, skills, messaging), 1 wikilink fix (a2a-v1-bundled-plugin), engineering/MOC.md updated (3 rows + footer + count refresh 48 → 51), 4 SYSTEM files updated. 0 archived items. Engineering curated count unchanged at 51. Committing and pushing.
+
+## 2026-08-17 — NousResearch weekly scan 2026-08-17: 4 net-new cards
+
+**Source:** NousResearch tweet scan 2026-08-17 (memory/tweet-scans/2026-08-17-nousresearch.md); 4 primary tweets verified via `bird read`:
+- https://x.com/NousResearch/status/2089186329431265599 (2,500 contributors)
+- https://x.com/NousResearch/status/2089055111125307813 (Desktop 19× session load)
+- https://x.com/NousResearch/status/2089070483366871529 (Desktop macOS/Windows/Linux)
+- https://x.com/NousResearch/status/2088962906356380119 (zero-data-retention opt-out)
+
+**Decisions:**
+
+### Card structure: 4 standalone cards, not 1 umbrella
+
+Considered writing a single "Aug 16-17 NousResearch scan" umbrella card. Decided against — each of the 4 items is independently retrievable on its own query:
+- "is Hermes HIPAA-friendly?" or "can I keep my prompts out of provider logs?" → zero-data-retention card
+- "how fast is Hermes Desktop on Windows?" or "what's new with Desktop?" → cross-platform + 19× cards
+- "how big is the Hermes contributor base?" or "is Hermes active?" → 2,500 contributors card
+
+An umbrella card would require a future reader to read the whole thing to find the answer to any one question. Standalone cards make each item its own entry point, which is the same reasoning used for the per-feature cards in the v0.20 batch (A2A plugin, Cloud launch, grounded-citations skill, outbound webhooks all got standalone cards rather than being folded into the v0.20 release card).
+
+### Why zero-data-retention is a standalone card, not a section in `security.md`
+
+`security.md` is organized by trust-model layers: OS boundary, in-process heuristics, plugin trust, credential scoping, external surfaces, deployment hardening, supply chain. Zero-data-retention is a **provider-layer privacy primitive**, not a trust-model layer. The boundary-by-boundary framing of `security.md` would benefit from having zero-data-retention as a *sibling* card (cross-linked via See Also) rather than as a section break inside the trust-model narrative.
+
+Also: the existing `security.md` posture is "OS-level isolation is the only real boundary; everything else is a heuristic or a policy commitment." Zero-data-retention is a policy commitment by the provider, not a technical boundary — it fits more naturally in a standalone card that can make that distinction explicit than in a section that has to navigate the trust-model framing.
+
+A backlink from `security.md` to the new card (added in the See Also section) preserves the discoverability for anyone reading the trust model who wants to know about provider-layer retention.
+
+### Why the Desktop 19× and cross-platform cards are siblings, not merged
+
+The 19× perf card and the cross-platform distribution card share a date (Aug 16 2026) and were probably coordinated, but they answer different questions:
+- 19× card → "is the Desktop UI fast?" (performance)
+- cross-platform card → "can I install Desktop on my OS?" (distribution)
+
+The cross-link is in both cards' Related sections, so a reader landing on one is pointed to the other. A merged card would have buried the perf number inside a distribution story, and vice versa.
+
+### The 2,500-contributors card as a community-scale marker, not a release
+
+Considered folding the 2,500 number into the v0.20 Herald release card (which has 650+) as an update. Decided against:
+- The v0.20 card is about the v0.20 release; the 2,500 number is a *post-v0.20* trajectory datapoint
+- A standalone card makes the milestone retrievable on its own search query
+- The v0.20 card's contributor count (650+) stays accurate as "contributors at v0.20 release time" — adding 2,500 there would conflate release-time and post-release counts
+- The standalone card tracks the trajectory (450 → 650 → 2,500 in ~30 days) and the implications (review-triage is now the bottleneck) in one place
+
+Backlink from the v0.19 card (450+) and v0.20 card (650+) anchors the trajectory.
+
+### Inferred-mechanism transparency
+
+Two of the cards (Desktop 19× and zero-data-retention) describe mechanisms that are **inferred, not confirmed**:
+- 19×: Teknium did not name the change. The card lists the likely candidates (query rewrite, new index, JSON-parse improvement, schema migration) and flags that the exact mechanism is unconfirmed until a changelog or PR reference surfaces.
+- Zero-data-retention: Nous's reply is 14 words. The card flags 5 open questions as "Not Yet Confirmed by Primary Source" — how the opt-out is configured, which providers support it, what "zero retention" actually means per provider, what the cost is, and whether it propagates to subagents.
+
+This is the same transparency pattern as the Browser Use mode card (mechanism inferred, 48–66% number confirmed) and the Actual Computer card (no deep architecture, just a config-switch example). Better to flag inference explicitly than to over-claim from a thin tweet.
+
+### Backlink strategy: same-day, same-batch
+
+All reverse-backlinks for the 4 new cards were added in the same commit, not deferred to next weekly review. The 2026-08-16 weekly review (commit a58ff5c) explicitly closed the deferred-backlink queue from the 2026-08-14 batch; the asymmetry principle (new cards get outbound backlinks; existing cards get reverse-backlinks in next weekly review) is the established pattern. But for this batch the 4 new cards' most-relevant existing siblings are all within the same Hermes ecosystem, and the 5 affected existing cards were already up to date — there was no "deferred work" to absorb. Batching the reverse-backlinks now keeps the next weekly review focused on its own review-window work.
+
+The 5 affected existing cards: v0.19 release, v0.20 release, desktop-kanban-plugin, browser-use-mode, actual-computer-local-inference, security.md (6 total). All got See Also / Related additions pointing at the new cards.
+
+**Outgoing links added (10 new edges in 6 existing cards):**
+- `v0-19-quicksilver-release` → 2,500 contributors
+- `v0-20-herald-release` → 2,500 contributors, Desktop 19×, Desktop cross-platform
+- `desktop-kanban-plugin` → Desktop 19×, Desktop cross-platform
+- `browser-use-mode` → Desktop 19× (sibling pattern)
+- `actual-computer-local-inference` → zero-data-retention opt-out (sibling pattern)
+- `security.md` → zero-data-retention opt-out (trust-model extension)
+
+**Indexing:** added 4 rows to `index.md` (Engineering section), added 4 rows to `engineering/MOC.md` (Hermes Reference cluster), refreshed card count 51 → 55, added 2026-08-17 entry to "Last Updated" in both. Updated 4 SYSTEM files (log, changelog, operations, plus the just-listed). Updated 6 existing content cards with backlinks.
+
+**Outcome:** Engineering curated count 51 → 55. 4 new cards, 6 existing cards updated (backlinks), 4 SYSTEM files updated. 0 archived items. Pending commit and push to GitHub.

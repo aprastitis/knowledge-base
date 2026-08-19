@@ -12,6 +12,8 @@ related:
   - engineering/hermes/architecture
   - engineering/hermes/2026-08-02-hermes-v0-19-quicksilver-release
   - engineering/hermes/2026-07-26-hermes-v0-18-judgment-release
+  - engineering/hermes/2026-08-16-hermes-desktop-19x-session-load
+  - engineering/hermes/2026-08-16-hermes-desktop-cross-platform
 ---
 
 # Hermes Desktop Plugin Architecture — Kanban First
@@ -76,3 +78,5 @@ Practically: the first thing to watch after the SDK repo drops is whether the su
 - [[engineering/hermes/architecture]] — the agent loop, TUI, and CLI architecture that the desktop shell extends.
 - [[engineering/hermes/2026-08-02-hermes-v0-19-quicksilver-release]] — Quicksilver release; the speed cuts make the desktop shell feel instant, which is the precondition for hotkey-driven plugins to feel right.
 - [[engineering/hermes/2026-07-26-hermes-v0-18-judgment-release]] — Judgment release; introduced the desktop coding Projects surface that the plugin system now extends.
+- [[engineering/hermes/2026-08-16-hermes-desktop-19x-session-load]] — Aug 16 perf milestone: Desktop session load 19× faster. The 19× speedup makes the plugin-heavy Desktop UX feel instant on cold-start.
+- [[engineering/hermes/2026-08-16-hermes-desktop-cross-platform]] — Aug 16 distribution milestone: Hermes Desktop GUI ships for macOS, Windows, and Linux. The plugin SDK is now reachable on the dominant desktop OS.

@@ -11,6 +11,7 @@ related:
   - engineering/hermes/2026-06-20-hermes-blender-mcp-skill
   - engineering/2026-06-19-engineering-agentic-loop-pattern
   - engineering/scaffolding-for-ai-agents
+  - engineering/hermes/2026-08-16-hermes-desktop-19x-session-load
 sources:
   - https://x.com/NousResearch/status/2086881660658663469
   - https://x.com/NousResearch/status/2086881662781051249
@@ -119,3 +120,4 @@ The thread across all three is **Hermes as a harness that can plug into whicheve
 - [[engineering/hermes/2026-06-20-hermes-blender-mcp-skill]] — sibling pattern (desktop app as external substrate)
 - [[engineering/2026-06-19-engineering-agentic-loop-pattern]] — Browser Use mode operates inside the inner loop
 - [[engineering/scaffolding-for-ai-agents]] — the general principle that tooling around the model determines outcomes; Browser Use is a tooling-side change
+- [[engineering/hermes/2026-08-16-hermes-desktop-19x-session-load]] — sibling card: another "concrete quantitative win" (19× on Desktop session load vs 48–66% on browser-using requests) with the speedup mechanism inferred rather than confirmed. Same pattern as this card.

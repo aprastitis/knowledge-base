@@ -13,6 +13,7 @@ related:
   - engineering/hermes/2026-08-03-hermes-v0-20-herald-release
   - engineering/hermes/2026-08-12-portable-profiles-export-import
   - engineering/hermes/2026-08-06-hermes-actual-computer-local-inference
+  - engineering/hermes/2026-08-16-zero-data-retention-opt-out
 ---
 
 # Hermes Security Policy
@@ -109,3 +110,7 @@ After the litellm compromise (March 2026) and Mini Shai-Hulud worm campaign (May
 - **Credit:** reporters credited in release notes unless anonymity requested
 
 Report privately via [GitHub Security Advisories](https://github.com/NousResearch/hermes-agent/security/advisories/new) or **security@nousresearch.com**. Do not open public issues for security vulnerabilities.
+
+## See Also
+
+- [[engineering/hermes/2026-08-16-zero-data-retention-opt-out]] — provider-layer privacy primitive. Extends the trust model with a third boundary (inference provider) alongside the OS boundary and the subprocess/network boundaries already documented here. The opt-out is a **policy commitment by the provider**, not a technical boundary; it complements but does not replace the OS-level isolation posture above.

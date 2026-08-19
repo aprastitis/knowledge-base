@@ -585,3 +585,37 @@ The 2026-08-14 ingest commit added three new Hermes Reference cards (`browser-us
 - **No new content this review.** Pure maintenance — backlinks, MOC sync, one link fix. Net-zero curated card delta.
 
 **Outcome:** 0 new curated cards, 5 existing content cards updated (architecture, security, profiles, skills, messaging — all backlinks + See Also), 1 wikilink fix (a2a-v1-bundled-plugin), engineering/MOC.md updated (3 rows + footer + count refresh), 4 SYSTEM files updated (log, changelog, operations, plus the 3 just listed). 0 archived items. Engineering curated count unchanged at 51. Committing and pushing.
+
+## [2026-08-17] ingest | NousResearch weekly scan 2026-08-17 — 4 net-new Hermes cards
+
+**Source:** NousResearch tweet scan 2026-08-17 (memory/tweet-scans/2026-08-17-nousresearch.md); primary tweets:
+- https://x.com/NousResearch/status/2089186329431265599 (2,500 contributors, QT of Teknium)
+- https://x.com/NousResearch/status/2089055111125307813 (Desktop 19× session load, QT of Teknium)
+- https://x.com/NousResearch/status/2089070483366871529 (Desktop macOS/Windows/Linux)
+- https://x.com/NousResearch/status/2088962906356380119 (zero-data-retention opt-out)
+
+**Action:** Created 4 new cards in `engineering/hermes/`. Updated 5 existing cards with reverse-backlinks.
+
+**Cards created:**
+- `engineering/hermes/2026-08-17-hermes-2500-contributors-milestone.md` — community-scale inflection; 450 (v0.19) → 650 (v0.20) → 2,500 (Aug 17). Review and triage are now the bottleneck.
+- `engineering/hermes/2026-08-16-hermes-desktop-19x-session-load.md` — first Desktop-specific perf number in the KB; likely a session-state SQLite query/index/JSON-parse improvement. Extends the Quicksilver + Herald speed spine to the window-open path.
+- `engineering/hermes/2026-08-16-hermes-desktop-cross-platform.md` — distribution milestone for the user-facing Desktop GUI (macOS, Windows, Linux). Distinct from CLI cross-platform and from v0.20's Windows hardening wave. Coordinated launch with the 19× perf fix.
+- `engineering/hermes/2026-08-16-zero-data-retention-opt-out.md` — privacy primitive on the inference-provider layer. Third boundary (provider) alongside OS and subprocess/network boundaries. Pairs with the local-inference story in `actual-computer-local-inference`.
+
+**Backlinks added (5 existing cards):**
+- `engineering/hermes/2026-08-03-hermes-v0-20-herald-release.md` ← Desktop 19× session load, Desktop cross-platform, 2,500 contributors
+- `engineering/hermes/2026-08-02-hermes-v0-19-quicksilver-release.md` ← 2,500 contributors (trajectory: 450 → 650 → 2,500)
+- `engineering/hermes/2026-07-31-hermes-desktop-kanban-plugin.md` ← Desktop 19× session load, Desktop cross-platform
+- `engineering/hermes/2026-08-10-hermes-browser-use-mode.md` ← Desktop 19× session load (sibling "concrete quantitative win" pattern)
+- `engineering/hermes/2026-08-06-hermes-actual-computer-local-inference.md` ← zero-data-retention opt-out (sibling: same privacy question, different primitive answer)
+- `engineering/hermes/security.md` ← zero-data-retention opt-out (extends trust model with provider-layer primitive)
+
+**Index/MOC updates:** `index.md` (4 new rows + last-updated bump to 2026-08-17), `engineering/MOC.md` (4 new rows in Hermes Reference cluster, card count 51 → 55, last-updated entry).
+
+**Decisions:**
+- All 4 items get standalone cards rather than being folded into existing release cards. Reasoning: each is independently retrievable on its own search query (e.g., "is Hermes HIPAA-friendly?" → zero-data-retention card; "how fast is Hermes Desktop on Windows?" → cross-platform + 19× cards), and folding would lose the discrete signal.
+- Considered folding zero-data-retention into `security.md` as a new section. Decided against: it is a privacy primitive, not a trust-model boundary; the boundary-by-boundary framing of `security.md` benefits from having zero-data-retention as a sibling card rather than as a section break.
+- Naming: two cards dated 2026-08-16 (Desktop 19×, Desktop cross-platform, zero-data-retention) and one card dated 2026-08-17 (2,500 contributors) — the dates match the primary tweet dates, not the ingest date, per the established convention.
+- Each card has explicit `## Source Notes` and/or `## Open Questions` sections flagging what is confirmed (claim) vs inferred (mechanism / implications). The zero-data-retention card is the most explicit on this — five open questions are flagged as "Not Yet Confirmed by Primary Source."
+
+**Outcome:** Engineering curated count 51 → 55. Pending commit and push to GitHub.

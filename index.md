@@ -80,6 +80,10 @@
 | [[engineering/hermes/2026-08-10-hermes-browser-use-mode]] | Browser Use mode replaces ~12 individual browser tools with a single tool that writes scripts via the @browser_use CLI 3.0 backend — 48–66% token cut on browser-using requests, no accuracy drop. Establishes the "toolset key resolves to swappable backend" pattern. | Agent Architecture |
 | [[engineering/hermes/2026-08-12-portable-profiles-export-import]] | `/export` and `/import` make profiles portable and shareable — one file packs skills, memory, persona, crons, plugins, settings, and desktop themes with credentials stripped. Sibling to [[engineering/hermes/profiles]] (runtime story); this is the distribution story. | Profiles |
 | [[engineering/hermes/2026-08-06-hermes-actual-computer-local-inference]] | Hermes × Actual Computer — out-of-the-box pairing with a local inference stack so the user's own hardware is the inference backend. Part of the "user's machine as the agent's substrate" pattern (siblings: tldraw, Desktop Kanban, Blender MCP). | Agent Framework |
+| [[engineering/hermes/2026-08-16-hermes-desktop-19x-session-load]] | Desktop session load 19× faster (Aug 16 2026) — first Desktop-specific perf number in the KB. Likely a session-state SQLite query rewrite, index, or JSON-parsing improvement. Extends the Quicksilver + Herald speed spine to the window-open path. | Performance |
+| [[engineering/hermes/2026-08-16-hermes-desktop-cross-platform]] | Hermes Desktop GUI now distributed for macOS, Windows, and Linux (Aug 16 2026). Distinct from CLI cross-platform and from v0.20's Windows hardening wave — this is the distribution milestone for the user-facing Desktop app. Coordinated launch with the 19× perf fix. | Distribution |
+| [[engineering/hermes/2026-08-16-zero-data-retention-opt-out]] | Zero-data-retention opt-out at the inference-provider layer (Aug 16 2026). Privacy primitive on the cloud-side answer to "where do my inferences go?" — complements the OS-boundary primitives in `security.md` and pairs with the local-inference story in `actual-computer-local-inference`. | Security |
+| [[engineering/hermes/2026-08-17-hermes-2500-contributors-milestone]] | Hermes Agent crossed 2,500 contributors on the weekend of Aug 15-17 2026 — roughly 4× the v0.20 Herald base (~650) in two weeks. Community-scale inflection; review and triage are now the bottleneck, not contribution supply. | Community |
 
 ## First Principles (`/first-principles`)
 | Page | Summary | Category |
@@ -109,4 +113,4 @@
 | [[raw/2026-07-16-raw-anatoli-kopadze-loops]] | @AnatoliKopadze long-form thread (6,759 likes) explaining agentic loops — 5-stage pattern, three crucial pieces, "Ralph Wiggum loop" failure mode, cost-per-accepted-change metric, build-order ladder, self-checking loop prompt template. Mira product promotion deliberately skipped. | @AnatoliKopadze X Thread (2026-06-20) |
 
 ---
-*Last updated: 2026-08-14*
+*Last updated: 2026-08-17*

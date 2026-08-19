@@ -11,6 +11,7 @@ related:
   - engineering/hermes/2026-06-20-hermes-blender-mcp-skill
   - engineering/2026-06-19-engineering-agentic-loop-pattern
   - engineering/hermes/plugins
+  - engineering/hermes/2026-08-16-zero-data-retention-opt-out
 sources:
   - https://x.com/actualinc/status/2085172429895172136
   - https://x.com/NousResearch/status/2085184069302935999
@@ -92,3 +93,4 @@ If a more substantive integration lands (Actual → Hermes plugin instead of bar
 - [[engineering/hermes/2026-06-20-hermes-blender-mcp-skill]] — sibling pattern (local app as external substrate)
 - [[engineering/2026-06-19-engineering-agentic-loop-pattern]] — local inference changes the cost-per-accepted-change calculation in the inner loop
 - [[engineering/hermes/plugins]] — model-providers is one of the four plugin categories
+- [[engineering/hermes/2026-08-16-zero-data-retention-opt-out]] — sibling card. Same privacy question ("where do my inferences go?") answered from the cloud-provider side: an opt-out that routes inference through a provider pipeline that does not retain logs. Local inference (Actual) and zero-retention (cloud) are the two primitive answers.

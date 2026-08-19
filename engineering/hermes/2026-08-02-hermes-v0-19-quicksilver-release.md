@@ -13,6 +13,7 @@ related:
   - engineering/hermes/security
   - engineering/hermes/network-egress-isolation
   - engineering/hermes-kanban
+  - engineering/hermes/2026-08-17-hermes-2500-contributors-milestone
 sources:
   - https://x.com/NousResearch/status/2079278653997809984
   - https://github.com/NousResearch/hermes-agent/releases
@@ -111,3 +112,4 @@ The release is also a maturity signal. v0.18 was "judgment"; v0.19 is "ergonomic
 - [[engineering/hermes/2026-07-24-hermes-credential-firewall]] — net-new security primitive in the v0.19 window
 - [[engineering/hermes/2026-07-23-tldraw-offline-skill]] — net-new optional skill in the v0.19 window
 - [[engineering/hermes/2026-07-31-hermes-desktop-kanban-plugin]] — net-new Desktop plugin surface in the v0.19-window (announced 2026-07-31)
+- [[engineering/hermes/2026-08-17-hermes-2500-contributors-milestone]] — post-v0.20 trajectory: v0.19 had 450+ contributors, v0.20 had 650+, by Aug 17 it's 2,500+
